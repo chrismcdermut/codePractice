@@ -9,7 +9,9 @@
     "mergeSort": "node -e 'require(\"./mergeSort-4-6-19\").runMergeSort()'",
     "quickSort": "node -e 'require(\"./quickSort-4-6-19\").runQuickSort()'",
     "selectionSort": "node -e 'require(\"./selectionSort-4-6-19\").runSelectionSort()'",
-    "binarySearch": "node -e 'require(\"./binarySearch-4-6-19\").runBinarySearch()'"
+    "binarySearch": "node -e 'require(\"./binarySearch-4-6-19\").runBinarySearch()'",
+    "heapSort": "node -e 'require(\"./heapSort2-4-9-19\").runHeapSort()'",
+    "insertionSort": "node -e 'require(\"./insertionSort2-4-9-19\").runInsertionSort()'"
   },
   "repository": {
     "type": "git",
