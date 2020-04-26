@@ -13,14 +13,14 @@
     "heapSort": "node -e 'require(\"./heapSort2-4-9-19\").runHeapSort()'",
     "insertionSort": "node -e 'require(\"./insertionSort2-4-9-19\").runInsertionSort()'",
     "jumpToZero": "node -e 'require(\"./jumpToZero-4-9-19\").runJumpToZero()'",
-    "yakovChain": "node -e 'require(\"./krogerInterview\").runYakovChain()'",
-    "printHello": "node -e 'require(\"./krogerInterview\").printHello()'",
-    "seniorAge": "node -e 'require(\"./krogerInterview\").seniorAge()'",
-    "curryMultiply": "node -e 'require(\"./krogerInterview\").curryMultiply()'",
-    "iifeWindow": "node -e 'require(\"./krogerInterview\").iifeWindow()'",
-    "iife": "node -e 'require(\"./krogerInterview\").iife()'",
-    "domLoaded": "node -e 'require(\"./krogerInterview\").domLoaded()'",
-    "circleArea": "node -e 'require(\"./krogerInterview\").circleArea()'"
+    "yakovChain": "node -e 'require(\"./jsOOPConcepts\").runYakovChain()'",
+    "printHello": "node -e 'require(\"./jsOOPConcepts\").printHello()'",
+    "seniorAge": "node -e 'require(\"./jsOOPConcepts\").seniorAge()'",
+    "curryMultiply": "node -e 'require(\"./jsOOPConcepts\").curryMultiply()'",
+    "iifeWindow": "node -e 'require(\"./jsOOPConcepts\").iifeWindow()'",
+    "iife": "node -e 'require(\"./jsOOPConcepts\").iife()'",
+    "domLoaded": "node -e 'require(\"./jsOOPConcepts\").domLoaded()'",
+    "circleArea": "node -e 'require(\"./jsOOPConcepts\").circleArea()'"
   },
   "repository": {
     "type": "git",
