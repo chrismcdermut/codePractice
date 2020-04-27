@@ -50,6 +50,11 @@ const testTen ={
     output:1
 }
 
+const testEleven ={
+    input:[0,0,1,2,3,4,5,6,7],
+    output:8
+}
+
 test(`${testOne.input} test`, () => {
   let result = missingIntTest(testOne.input)
   expect(result).toBe(testOne.output);
@@ -98,4 +103,9 @@ test(`${testNine.input} test`, () => {
 test(`${testTen.input} test`, () => {
   let result = missingIntTest(testTen.input)
   expect(result).toBe(testTen.output);
+});
+
+test(`${testEleven.input} test`, () => {
+  let result = missingIntTest(testEleven.input)
+  expect(result).toBe(testEleven.output);
 });
