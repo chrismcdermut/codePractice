@@ -4,8 +4,8 @@
   "description": "Data Structure and Algorithm practice",
   "main": "algorithm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-	  "bubbleSort": "node -e 'require(\"./bubbleSort-4-6-19\").bubbleSort()'",
+    "test": "jest",
+    "bubbleSort": "node -e 'require(\"./bubbleSort-4-6-19\").bubbleSort()'",
     "mergeSort": "node -e 'require(\"./mergeSort-4-6-19\").runMergeSort()'",
     "quickSort": "node -e 'require(\"./quickSort-4-6-19\").runQuickSort()'",
     "selectionSort": "node -e 'require(\"./selectionSort-4-6-19\").runSelectionSort()'",
@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/chrismcdermut/codePractice/issues"
   },
-  "homepage": "https://github.com/chrismcdermut/codePractice#readme"
+  "homepage": "https://github.com/chrismcdermut/codePractice#readme",
+  "devDependencies": {
+    "jest": "^25.4.0"
+  }
 }
