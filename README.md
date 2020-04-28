@@ -12,11 +12,10 @@ npm install
 
 ## Content
 [x] missingIntTest
-[ ] which branch of binary tree is bigger?
+[x] reorient objects from key to property
 [ ] check for palindrone
 [ ] what is missing from array
-[ ] palindrome
-[ ] reorient objects from type to color
+[ ] which branch of binary tree is bigger?
 
 ## Usage
 

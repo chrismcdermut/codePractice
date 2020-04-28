@@ -55,57 +55,61 @@ const testEleven ={
     output:8
 }
 
-test(`${testOne.input} test`, () => {
-  let result = missingIntTest(testOne.input)
-  expect(result).toBe(testOne.output);
-});
+xdescribe('Missing int module', function () {
 
-test(`${testTwo.input} test`, () => {
-  let result = missingIntTest(testTwo.input)
-  expect(result).toBe(testTwo.output);
-});
+    test(`${testOne.input} test`, () => {
+      let result = missingIntTest(testOne.input)
+      expect(result).toBe(testOne.output);
+    });
 
-test(`${testThree.input} test`, () => {
-  let result = missingIntTest(testThree.input)
-  expect(result).toBe(testThree.output);
-});
+    test(`${testTwo.input} test`, () => {
+      let result = missingIntTest(testTwo.input)
+      expect(result).toBe(testTwo.output);
+    });
 
-test(`${testFour.input} test`, () => {
-  let result = missingIntTest(testFour.input)
-  expect(result).toBe(testFour.output);
-});
+    test(`${testThree.input} test`, () => {
+      let result = missingIntTest(testThree.input)
+      expect(result).toBe(testThree.output);
+    });
 
-test(`${testFive.input} test`, () => {
-  let result = missingIntTest(testFive.input)
-  expect(result).toBe(testFive.output);
-});
+    test(`${testFour.input} test`, () => {
+      let result = missingIntTest(testFour.input)
+      expect(result).toBe(testFour.output);
+    });
 
-test(`${testSix.input} test`, () => {
-  let result = missingIntTest(testSix.input)
-  expect(result).toBe(testSix.output);
-});
+    test(`${testFive.input} test`, () => {
+      let result = missingIntTest(testFive.input)
+      expect(result).toBe(testFive.output);
+    });
 
-test(`${testSeven.input} test`, () => {
-  let result = missingIntTest(testSeven.input)
-  expect(result).toBe(testSeven.output);
-});
+    test(`${testSix.input} test`, () => {
+      let result = missingIntTest(testSix.input)
+      expect(result).toBe(testSix.output);
+    });
 
-test(`${testEight.input} test`, () => {
-  let result = missingIntTest(testEight.input)
-  expect(result).toBe(testEight.output);
-});
+    test(`${testSeven.input} test`, () => {
+      let result = missingIntTest(testSeven.input)
+      expect(result).toBe(testSeven.output);
+    });
 
-test(`${testNine.input} test`, () => {
-  let result = missingIntTest(testNine.input)
-  expect(result).toBe(testNine.output);
-});
+    test(`${testEight.input} test`, () => {
+      let result = missingIntTest(testEight.input)
+      expect(result).toBe(testEight.output);
+    });
 
-test(`${testTen.input} test`, () => {
-  let result = missingIntTest(testTen.input)
-  expect(result).toBe(testTen.output);
-});
+    test(`${testNine.input} test`, () => {
+      let result = missingIntTest(testNine.input)
+      expect(result).toBe(testNine.output);
+    });
 
-test(`${testEleven.input} test`, () => {
-  let result = missingIntTest(testEleven.input)
-  expect(result).toBe(testEleven.output);
+    test(`${testTen.input} test`, () => {
+      let result = missingIntTest(testTen.input)
+      expect(result).toBe(testTen.output);
+    });
+
+    test(`${testEleven.input} test`, () => {
+      let result = missingIntTest(testEleven.input)
+      expect(result).toBe(testEleven.output);
+    });
+
 });
