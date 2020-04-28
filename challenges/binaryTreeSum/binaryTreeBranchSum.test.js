@@ -1,7 +1,7 @@
 const bTreeBranchSum = require('./binaryTreeBranchSumSolution');
 
 const Tree1 = {
-  tree: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+  tree: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
   leftSum: 49,
   rightSum: 70,
   biggerBranch: 'Right',
@@ -9,7 +9,7 @@ const Tree1 = {
 }
 
 const Tree2 = {
-  tree: [1,3,4,2,3,5,6,7,8,9,5,4,6,7],
+  tree: [0,1,3,4,2,3,5,6,7,8,9,5,4,6,7],
   leftSum: 37,
   rightSum: 32,
   biggerBranch: 'Left',
@@ -17,11 +17,11 @@ const Tree2 = {
 }
 
 const Tree3 = {
-  tree: [4,34,2,67,4,12,1,21,5,45,9.1],
+  tree: [0,4,34,2,67,4,12,1,21,5,45,9],
   leftSum: 175.1,
   rightSum: 15,
   biggerBranch: 'Left',
-  biggerSum: 175.1
+  biggerSum: 175
 }
 
 describe('binaryTree branch sum test-suite', () => {
