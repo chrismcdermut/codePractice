@@ -21,7 +21,7 @@ const testThree =  {
 const testFour =  {
     highestNumber:20,
     input:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
-    output:7
+    output:20
 }
 
 const testFive =  {
@@ -30,7 +30,31 @@ const testFive =  {
     output:14
 }
 
-describe('Missing array element module', function () {
+const testSix =  {
+    highestNumber:5,
+    input:[1,2,4,5],
+    output:3
+}
+
+const testSeven =  {
+    highestNumber:3,
+    input:[1,2],
+    output:3
+}
+
+const testEight =  {
+    highestNumber:3,
+    input:[1,3],
+    output:2
+}
+
+const testNine =  {
+    highestNumber:5,
+    input:[1,2,3,5],
+    output:4
+}
+
+describe('Missing array element test suite', function () {
 
     test(`${testOne.input} test`, () => {
       let result = missingArrayElement(testOne.input, testOne.highestNumber)
@@ -55,6 +79,26 @@ describe('Missing array element module', function () {
     test(`${testFive.input} test`, () => {
       let result = missingArrayElement(testFive.input, testFive.highestNumber)
       expect(result).toBe(testFive.output);
+    });
+
+    test(`${testSix.input} test`, () => {
+      let result = missingArrayElement(testSix.input, testSix.highestNumber)
+      expect(result).toBe(testSix.output);
+    });
+
+    test(`${testSeven.input} test`, () => {
+      let result = missingArrayElement(testSeven.input, testSeven.highestNumber)
+      expect(result).toBe(testSeven.output);
+    });
+
+    test(`${testEight.input} test`, () => {
+      let result = missingArrayElement(testEight.input, testEight.highestNumber)
+      expect(result).toBe(testEight.output);
+    });
+
+    test(`${testNine.input} test`, () => {
+      let result = missingArrayElement(testNine.input, testNine.highestNumber)
+      expect(result).toBe(testNine.output);
     });
 
 })

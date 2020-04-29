@@ -14,7 +14,7 @@ npm install
 [x] missingIntTest
 [x] reorient objects from key to property
 [ ] check for palindrone
-[ ] what is missing from array
+[x] what is missing from array
 [ ] which branch of binary tree is bigger?
 
 ## Usage
