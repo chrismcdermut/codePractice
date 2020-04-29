@@ -24,7 +24,7 @@ const Tree3 = {
   biggerSum: 175
 }
 
-describe('binaryTree branch sum test-suite', () => {
+xdescribe('binaryTree branch sum test-suite', () => {
 
   test('Tree1 test', () => {
     let result = bTreeBranchSum(Tree1.tree)
