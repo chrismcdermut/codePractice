@@ -54,7 +54,7 @@ const testNine =  {
     output:4
 }
 
-describe('Missing array element test suite', function () {
+xdescribe('Missing array element test suite', function () {
 
     test(`${testOne.input} test`, () => {
       let result = missingArrayElement(testOne.input, testOne.highestNumber)
