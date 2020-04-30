@@ -25,7 +25,7 @@ const testThree =  {
     output:false
 }
 
-describe('Palindrome Check test suite', function () {
+xdescribe('Palindrome Check test suite', function () {
 
     test(`${testOne.input} palindrome test`, () => {
       let result = palindromeCheck(testOne.input)

@@ -13,9 +13,10 @@ npm install
 ## Content
 1. [x] missingIntTest
 2. [x] reorient objects from key to property
-3. [ ] check for palindrone
-4. [x] what is missing from array
-5. [ ] which branch of binary tree is bigger?
+3. [x] check for palindrone built in methods
+4. [ ] check for palindrone hand rolled
+5. [x] what is missing from array
+6. [ ] which branch of binary tree is bigger?
 
 ## Usage
 
