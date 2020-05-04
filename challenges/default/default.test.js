@@ -5,11 +5,11 @@ const testOne = {
   output: ''
 }
 
-describe('defaultSolution Test', () => {
+xdescribe('defaultSolution Test', () => {
 
-  test('testOne', ()=>{
+  xtest('testOne', ()=>{
     let result = mergeMeetingTimes(testOne.input)
     expect(result).toEqual(testOne.output);
   })
-  
+
 })
