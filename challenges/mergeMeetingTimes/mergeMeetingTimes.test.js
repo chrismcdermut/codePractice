@@ -15,6 +15,18 @@ const testOne = {
     ]
 }
 
+const testThree = {
+    input:[
+        { startTime: 0,  endTime: 1 },
+        { startTime: 3,  endTime: 5 },
+        { startTime: 4,  endTime: 8 }
+    ],
+    output:[
+      { startTime: 0, endTime: 1 },
+      { startTime: 3, endTime: 8 }
+    ]
+}
+
 const testTwo = {
     input:[
       { startTime: 1, endTime: 3 },
@@ -25,15 +37,14 @@ const testTwo = {
     ]
 }
 
-const testThree = {
+const testSix = {
     input:[
-        { startTime: 0,  endTime: 1 },
-        { startTime: 3,  endTime: 5 },
-        { startTime: 4,  endTime: 8 }
+      { startTime: 1, endTime: 3 },
+      { startTime: 1, endTime: 3 },
+      { startTime: 2, endTime: 4 }
     ],
     output:[
-      { startTime: 0, endTime: 1 },
-      { startTime: 3, endTime: 8 }
+      { startTime: 1, endTime: 4 }
     ]
 }
 
@@ -57,24 +68,12 @@ const testFive = {
     ]
 }
 
-describe('mergeMeetingTimes Test', ()=>{
-
-  //FAIL
-  xtest('testOne', ()=>{
-    let result = mergeMeetingTimes(testOne.input)
-    expect(result).toEqual(testOne.output);
-  })
+describe('mergeMeetingTimes Short Test', ()=>{
 
   //PASS
   test('testTwo', ()=>{
     let result = mergeMeetingTimes(testTwo.input)
     expect(result).toEqual(testTwo.output);
-  })
-
-  //FAIL
-  xtest('testThree', ()=>{
-    let result = mergeMeetingTimes(testThree.input)
-    expect(result).toEqual(testThree.output);
   })
 
   //PASS
@@ -87,6 +86,27 @@ describe('mergeMeetingTimes Test', ()=>{
   test('testFive', ()=>{
     let result = mergeMeetingTimes(testFive.input)
     expect(result).toEqual(testFive.output);
+  })
+
+  test('testSix', ()=>{
+    let result = mergeMeetingTimes(testSix.input)
+    expect(result).toEqual(testSix.output);
+  })
+
+})
+
+xdescribe('mergeMeetingTimes Long Test', ()=>{
+
+  //FAIL
+  test('testThree', ()=>{
+    let result = mergeMeetingTimes(testThree.input)
+    expect(result).toEqual(testThree.output);
+  })
+
+  //FAIL
+  test('testOne', ()=>{
+    let result = mergeMeetingTimes(testOne.input)
+    expect(result).toEqual(testOne.output);
   })
 
 })
