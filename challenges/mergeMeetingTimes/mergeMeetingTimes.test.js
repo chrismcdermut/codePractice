@@ -68,7 +68,7 @@ const testFive = {
     ]
 }
 
-describe('mergeMeetingTimes Short Test', ()=>{
+xdescribe('mergeMeetingTimes Short Test', ()=>{
 
   //PASS
   test('testTwo', ()=>{
