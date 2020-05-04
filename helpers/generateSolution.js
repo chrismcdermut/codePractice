@@ -1,7 +1,7 @@
 // writefile.js
 const fs = require('fs');
 
-const solutionName = 'solutionName'
+const solutionName = ''
 
 let spec = `${solutionName} Spec go here!`;
 let notes = `${solutionName} Notes go here!`;
@@ -28,18 +28,15 @@ describe('${solutionName} Test', () => {
 })
 `
 
-//make folder with solution name
-//make notes.md file -> //make ${solution}notes.md file
-//make spec.md file -> //make ${solution}Spec.md file
-//make solution.js file -> //make ${solution}solution.js file
-//make solution.test.js file -> //make ${solution}solution.test.js file
 module.exports.generateDefaultSolution = function() {
 
+  //make folder with solution name
   // Creates /tmp/a/apple, regardless of whether `/tmp` and /tmp/a exist.
   fs.mkdir(`./challenges/${solutionName}`, { recursive: true }, (err) => {
     if (err) throw err;
   });
 
+  //make spec.md file -> //make ${solution}Spec.md file
   fs.writeFile(`./challenges/${solutionName}/${solutionName}Spec.md`, spec, (err) => {
       // throws an error, you could also catch it here
       if (err) throw err;
@@ -47,6 +44,7 @@ module.exports.generateDefaultSolution = function() {
       console.log('Spec.md saved!');
   });
 
+  //make notes.md file -> //make ${solution}notes.md file
   fs.writeFile(`./challenges/${solutionName}/${solutionName}notes.md`, notes, (err) => {
       // throws an error, you could also catch it here
       if (err) throw err;
@@ -54,18 +52,20 @@ module.exports.generateDefaultSolution = function() {
       console.log('notes.md saved!');
   });
 
-  fs.writeFile(`./challenges/${solutionName}/${solutionName}Solution.js`, solutionJS, (err) => {
+  //make solution.js file -> //make ${solution}solution.js file
+  fs.writeFile(`./challenges/${solutionName}/${solutionName}.js`, solutionJS, (err) => {
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log(`${solutionName}Solution.js saved!`);
+      console.log(`${solutionName}.js saved!`);
   });
 
-  fs.writeFile(`./challenges/${solutionName}/${solutionName}Solution.test.js`, solutionTestJS, (err) => {
+  //make solution.test.js file -> //make ${solution}solution.test.js file
+  fs.writeFile(`./challenges/${solutionName}/${solutionName}.test.js`, solutionTestJS, (err) => {
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log(`${solutionName}Solution.test.js saved!`);
+      console.log(`${solutionName}.test.js saved!`);
   });
 
 }
