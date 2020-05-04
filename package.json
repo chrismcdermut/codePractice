@@ -5,6 +5,7 @@
   "main": "algorithm.js",
   "scripts": {
     "test": "jest",
+    "generateSolution": "node -e 'require(\"./helpers/generateSolution\").generateDefaultSolution()'",
     "bubbleSort": "node -e 'require(\"./bubbleSort-4-6-19\").bubbleSort()'",
     "mergeSort": "node -e 'require(\"./mergeSort-4-6-19\").runMergeSort()'",
     "quickSort": "node -e 'require(\"./quickSort-4-6-19\").runQuickSort()'",
