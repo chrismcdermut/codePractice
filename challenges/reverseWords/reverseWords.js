@@ -1,4 +1,28 @@
-///////INTERVIEW CAKE APPROACH///////
+/////////////MY SOLUTION/////////////
+function reverseWords1(message) {
+  let finalMessage = []
+  let tempWord = []
+  // make the new word until space than switch area in the array
+  for(let i=0;i<message.length;i++){
+    if(i===(message.length-1)){
+        tempWord.push(message[i])
+        finalMessage.unshift(...tempWord)
+        continue
+    }
+    if(message[i]!==' '){
+        tempWord.push(message[i])
+        continue
+    }
+    finalMessage.unshift(...tempWord)
+    finalMessage.unshift(' ')
+    tempWord = []
+  }
+  return finalMessage
+}
+
+module.exports = reverseWords1
+
+///////INTERVIEW CAKE + MY APPROACH///////
 function reversePhrase(message){
   const reversedMessage = message.reverse()
   let finalMessage = []
@@ -29,34 +53,6 @@ function reversePhrase(message){
     }
   }
 
-  return finalMessage
-}
-
-// function reverseWord(word){
-//
-// }
-
-module.exports = reversePhrase
-
-/////////////MY SOLUTION/////////////
-function reverseWords1(message) {
-  let finalMessage = []
-  let tempWord = []
-  // make the new word until space than switch area in the array
-  for(let i=0;i<message.length;i++){
-    if(i===(message.length-1)){
-        tempWord.push(message[i])
-        finalMessage.unshift(...tempWord)
-        continue
-    }
-    if(message[i]!==' '){
-        tempWord.push(message[i])
-        continue
-    }
-    finalMessage.unshift(...tempWord)
-    finalMessage.unshift(' ')
-    tempWord = []
-  }
   return finalMessage
 }
 
