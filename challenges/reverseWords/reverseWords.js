@@ -1,17 +1,40 @@
 ///////INTERVIEW CAKE APPROACH///////
 function reversePhrase(message){
-  const reverseMessage = message.reverse()
-  console.log('reverseMessage')
-  console.log(reverseMessage)
+  const reversedMessage = message.reverse()
+  let finalMessage = []
+  console.log('reversedMessage')
+  console.log(reversedMessage)
 
+  let currentWordStartIndex = 0;
+  for (let i = 0; i <= reversedMessage.length; i++) {
 
+    if (i === reversedMessage.length || reversedMessage[i] === ' ') {
 
-  return reverseMessage
+      //remove word
+      let currentWord = reversedMessage.slice(currentWordStartIndex,i)
+      console.log('currentWord')
+      console.log(currentWord)
+      //reverse
+      let currentWordReversed = currentWord.reverse()
+      console.log('currentWordReversed')
+      console.log(currentWordReversed)
+      //add back to front
+      finalMessage.unshift(...currentWordReversed)
+      console.log('finalMessage')
+      console.log(finalMessage)
+
+      // reverseCharacters(message, currentWordStartIndex, i - 1)
+
+      currentWordStartIndex = i + 1;
+    }
+  }
+
+  return finalMessage
 }
 
-function reverseWord(){
-  
-}
+// function reverseWord(word){
+//
+// }
 
 module.exports = reversePhrase
 
