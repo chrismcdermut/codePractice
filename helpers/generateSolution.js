@@ -2,7 +2,7 @@
 const fs = require('fs');
 
 const directory = 'challenges'
-const solutionName = 'reverseWords'
+const solutionName = 'orderChecker'
 
 let spec = `${solutionName} Spec go here!`;
 let notes = `${solutionName} Notes go here!`;
