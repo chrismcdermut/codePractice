@@ -1,11 +1,10 @@
-// const shortestString = require('./shortestString')
 const {removeSection, condenseString, shortestString} = require('./shortestString')
-// module.exports = {removeSection, condenseString, shortestString}
 
 const test1 = {
   input: ['ABBBCCDDCCC', 3],
   bestRemovedSection: 'CDD',
-  modifiedString: 'ABBB4C',
+  condensedString: 'A3B2C2D3C',
+  modifiedString: 'ABBBCCCC',
   condensedModifiedString: 'A3B4C',
   output: 5
 }
@@ -13,6 +12,7 @@ const test1 = {
 const test2 = {
   input: ['AAAAAAAAAAABXXAAAAAAAAAA', 3],
   bestRemovedSection: 'BXX',
+  condensedString: '11AB2X10A',
   modifiedString: 'AAAAAAAAAAAAAAAAAAAAA',
   condensedModifiedString: '21A',
   output: 3
@@ -21,6 +21,7 @@ const test2 = {
 const test3 = {
   input: ['ABCDDDEFG', 2],
   bestRemovedSection: 'EF',
+  condensedString: 'ABC3DEFG',
   modifiedString: 'ABCDDDG',
   condensedModifiedString: 'ABC3DG',
   output: 6
@@ -68,6 +69,21 @@ describe('shortestString Test', () => {
   //   expect(result).toEqual(test3.output);
   // })
 
+  test('test1 condenseString', ()=>{
+    let result = condenseString(test1.input[0])
+    expect(result).toEqual(test1.condensedString);
+  })
+
+  test('test2 condenseString', ()=>{
+    let result = condenseString(test2.input[0])
+    expect(result).toEqual(test2.condensedString);
+  })
+
+  test('test3 condenseString', ()=>{
+    let result = condenseString(test3.input[0])
+    expect(result).toEqual(test3.condensedString);
+  })
+
   test('test4 condenseString', ()=>{
     let result = condenseString(test4.input)
     expect(result).toEqual(test4.output);
@@ -94,18 +110,18 @@ describe('shortestString Test', () => {
   })
 
   // test('test1 removeSection', ()=>{
-  //   let result = condenseString(test1.input[0])
+  //   let result = removeSection(test1.input[0],test1.input[1])
   //   expect(result).toEqual(test1.modifiedString);
   // })
   //
   // test('test2 removeSection', ()=>{
-  //   let result = condenseString(test2.input[0])
-  //   expect(result).toEqual(test5.modifiedString);
+  //   let result = removeSection(test2.input[0],test2.input[1])
+  //   expect(result).toEqual(test2.modifiedString);
   // })
   //
   // test('test3 removeSection', ()=>{
-  //   let result = condenseString(test3.input[0])
-  //   expect(result).toEqual(test6.modifiedString);
+  //   let result = removeSection(test3.input[0],test3.input[1])
+  //   expect(result).toEqual(test3.modifiedString);
   // })
 
 })

@@ -1,3 +1,4 @@
+//remove by finding section of length k with
 function removeSection(S,K){
     let modifiedString = ''
     //want to remove most letters possible
@@ -24,11 +25,7 @@ function removeSection(S,K){
         }
     }
     // modifiedString = S.substring(beginningIndexOfBestSection,K)
-    console.log('S')
-    console.log(S)
     modifiedString = S.replace(S.substring(beginningIndexOfBestSection,K),'')
-    console.log('modifiedString')
-    console.log(modifiedString)
     return modifiedString
 }
 
@@ -56,14 +53,8 @@ function condenseString(string){
     return condensedString
 }
 
-//want to find shortest possible string after removing K elements
-//most bang for our buck in removing sequential strings os length K
-//want to remove subsection with most single elements
-
-//remove the section first and then condense
-//remove by finding section of length k with
+//remove the section first and then condense or the other way?
 function shortestString(S, K) {
-    // write your code in JavaScript (Node.js 8.9.4)
     let shortestPossibleLength
 
     const shortenedString = removeSection(S, K)
