@@ -33,26 +33,24 @@ function removeSection(S,K){
 }
 
 function condenseString(string){
-    let condensedString=''
-    let currentElement
-    let currentElementCount = 1
-    for(let i=0;i<string.length;i++){
-        //initialize current element(ie, character)
-        currentElement = string[i]
+    let condensedString = ''
+    let currentElement = ''
+    let currentElementCount = 0
 
-        //if next element is same as current element, condense and increment
-        if(currentElement===string[i+1]){
+    for(let i=0;i<string.length;i++){
+        if(currentElement===''){ /*initialize current element(eg, character) for first iteration*/
+            currentElement = string[i]
             currentElementCount+=1
         }
-        //else push it to string
-        else {
-            //ugly to have if here, but will do for now
-            if(currentElementCount===1){
-                condensedString+=currentElement
-            } else {
-                condensedString+=currentElementCount
-                condensedString+=currentElement
-            }
+
+        if(string[i+1]===currentElement){ /*if next element is same as current element, increment counter*/
+            currentElementCount+=1
+        } else { /*else push it counter and it's element to string */
+            let newElement = (currentElementCount === 1) ? currentElement :
+            currentElementCount+=currentElement
+            condensedString+=newElement
+            currentElementCount=0
+            currentElement=''
         }
     }
     return condensedString
@@ -74,4 +72,4 @@ function shortestString(S, K) {
     return condensedString.length
 }
 
-module.exports = shortestString
+module.exports = {removeSection, condenseString, shortestString}
