@@ -42,7 +42,7 @@ module.exports.generateDefaultSolution = function() {
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log('Spec.md saved!');
+      console.log(`${solutionName}Spec.md saved!`);
   });
 
   //make notes.md file -> //make ${solution}notes.md file
@@ -50,7 +50,7 @@ module.exports.generateDefaultSolution = function() {
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log('notes.md saved!');
+      console.log(`${solutionName}Notes.md saved!`);
   });
 
   //make solution.js file -> //make ${solution}solution.js file
