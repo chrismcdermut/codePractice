@@ -1,48 +1,53 @@
+/* eslint-disable */
+// TODO: enable linting
+
 function bTreeBranchSum(binaryTreeArray) {
   if (!binaryTreeArray) return;
   if (binaryTreeArray.length === 0) return;
-  let leftSum = 0
-  let rightSum = 0
-  let leftBranchIndicies = {
-    1: 1
+  let leftSum = 0;
+  let rightSum = 0;
+  const leftBranchIndicies = {
+    1: 1,
+  };
+  const rightBranchIndicies = {
+    2: 1,
+  };
+
+  // loop through, and add to left/right branches
+  for (let i = 0; i < binaryTreeArray.length; i += 1) {
+    // if first node don't add or add to both
+    if (i === 0) {
+      continue;
+    }
+
+    if (leftBranchIndicies[i]) {
+      leftSum += binaryTreeArray[i];
+      continue;
+    }
+    if (rightBranchIndicies[i]) {
+      rightSum += binaryTreeArray[i];
+      continue;
+    }
+
+    // check if is left branch -> add to left branch index list, add to left branch Sum
+    if (leftBranchIndicies[i / 2 - 1] || leftBranchIndicies[i / 2 - 2]) {
+      leftBranchIndicies[i] = 1;
+      leftSum += binaryTreeArray[i];
+    }
+
+    // check if is right branch -> add to right branch index list, add to left right Sum
+    if (rightBranchIndicies[i / 2 - 2] || rightBranchIndicies[i / 2 - 2]) {
+      rightBranchIndicies[i] = 1;
+      rightSum += binaryTreeArray[i];
+    }
   }
-  let rightBranchIndicies = {
-    2: 1
-  }
 
-  //loop through, and add to left/right branches
-  for(let i=0;i<binaryTreeArray.length;i++){
-    //if first node don't add or add to both
-    if(i===0){continue}
-
-    if(leftBranchIndicies[i]){
-      leftSum += binaryTreeArray[i]
-      continue
-    }
-    if(rightBranchIndicies[i]){
-      rightSum += binaryTreeArray[i]
-      continue
-    }
-
-    //check if is left branch -> add to left branch index list, add to left branch Sum
-    if(leftBranchIndicies[i/2-1] || leftBranchIndicies[i/2-2]){
-      leftBranchIndicies[i] = 1
-      leftSum += binaryTreeArray[i]
-    }
-
-    //check if is right branch -> add to right branch index list, add to left right Sum
-    if(rightBranchIndicies[i/2-2] || rightBranchIndicies[i/2-2]){
-      rightBranchIndicies[i] = 1
-      rightSum += binaryTreeArray[i]
-    }
-  }
-
-  return leftSum > rightSum ? leftSum : rightSum
+  return leftSum > rightSum ? leftSum : rightSum;
 }
 
-module.exports = bTreeBranchSum
+module.exports = bTreeBranchSum();
 
-///////////WORKING SOLUTION
+// /////////WORKING SOLUTION
 // function bTreeBranchSum(binaryTreeArray) {
 //   if (!binaryTreeArray) return;
 //   if (binaryTreeArray.length === 0) return;
