@@ -1,3 +1,7 @@
+/* eslint-disable */
+// TODO: enable linting
+// TODO: finish this damn problem
+
 // remove by finding section of length k with
 // section of K elements with X property
 // what is that property?

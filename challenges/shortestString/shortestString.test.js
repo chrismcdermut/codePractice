@@ -68,7 +68,7 @@ xdescribe('shortestString condenseString test', () => {
   });
 });
 
-describe('shortestString removeSection Test', () => {
+xdescribe('shortestString removeSection Test', () => {
   test('test1 removeSection', () => {
     const result = removeSection(test1.input[0], test1.input[1]);
     expect(result).toEqual(test1.modifiedString);
