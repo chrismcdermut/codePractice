@@ -110,3 +110,31 @@ function xremoveSection(S,K){
     modifiedString = S.replace(S.substring(beginningIndexOfBestSection,K),'')
     return modifiedString
 }
+
+function xxremoveSection(string,K){
+    let modifiedString = ''
+    let indexOfBestSection = 0
+    let mostUniqueCharacters = 0
+
+    //Go through string, 3 letters at a time, counts the unique letters
+    //track the section with most unique letters
+    //remove the section
+    for(let i=0;i<string.length;i++){
+      let uniqueCharCounter = 0
+      let uniqueCharCounterObj = {}
+      let inspectionSection = string.substring(i,(i+K))
+      inspectionSection.split('').forEach((character, j) => {
+        if(!uniqueCharCounterObj[character]){
+          uniqueCharCounterObj[character] = true
+          uniqueCharCounter +=1
+          if(uniqueCharCounter>mostUniqueCharacters){
+            mostUniqueCharacters=uniqueCharCounter
+            indexOfBestSection = i
+          }
+        }
+      })
+    }
+    console.log('bestSection')
+    console.log(string.substring(indexOfBestSection,(indexOfBestSection+K)))
+    return string.substring(indexOfBestSection,(indexOfBestSection+K))
+}

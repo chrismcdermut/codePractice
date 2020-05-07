@@ -2,7 +2,7 @@ const {removeSection, condenseString, shortestString} = require('./shortestStrin
 
 const test1 = {
   input: ['ABBBCCDDCCC', 3],
-  bestRemovedSection: 'CDD',
+  bestRemovedSection: 'DDC',
   condensedString: 'A3B2C2D3C',
   modifiedString: 'ABBBCCCC',
   condensedModifiedString: 'A3B4C',

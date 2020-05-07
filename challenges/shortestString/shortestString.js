@@ -2,6 +2,7 @@
 //section of K elements with X property
 //what is that property?
 //want to remove most letters possible
+// has least number of elements in repeated elements?
 function removeSection(string,K){
     let modifiedString = ''
     let indexOfBestSection = 0
