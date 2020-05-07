@@ -43,18 +43,21 @@ function condenseString(string){
 
         if(string[i+1]===currentElement){ /*if next element is same as current element, increment counter*/
             currentElementCount+=1
-        } else { /*else push it counter and it's element to string */
-            let newElement = (currentElementCount === 1) ? currentElement :
-            currentElementCount+=currentElement
-            condensedString+=newElement
-            currentElementCount=0
-            currentElement=''
+            continue
         }
+
+         /*else push it counter and it's element to string */
+        let newElement = (currentElementCount === 1) ? currentElement :
+        currentElementCount+=currentElement
+        condensedString+=newElement
+        currentElementCount=0
+        currentElement=''
     }
     return condensedString
 }
 
-//remove the section first and then condense or the other way?
+//remove the section first and then condense
+//or condense and then remove?
 function shortestString(S, K) {
     let shortestPossibleLength
 
