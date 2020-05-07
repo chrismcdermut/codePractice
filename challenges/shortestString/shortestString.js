@@ -1,32 +1,33 @@
 //remove by finding section of length k with
-function removeSection(S,K){
+//section of K elements with X property
+//what is that property?
+//want to remove most letters possible
+function removeSection(string,K){
     let modifiedString = ''
-    //want to remove most letters possible
-    let beginningIndexOfBestSection = 0
-    let numberOfLettersInBestSection = 1
-    // let bestLettersSection
-    // let currentLettersArray=[]
-    // this is O(n^2) so need to optimie this
-    for(let i=0;i<S.length-K;i++){
-        let currentLettersArray=[]
-        let beginningIndexOfCurrentSection = i
-        currentLettersArray.push(S[i])
+    let indexOfBestSection = 0
+    let mostUniqueCharacters = 0
 
-        for(let j=i+1;j<(i+K);j++){
-            if(currentLettersArray.includes(S[j])){
-               continue
-            } else {
-                currentLettersArray.push(S[j])
-                if(currentLettersArray.length>=numberOfLettersInBestSection){
-                    numberOfLettersInBestSection=currentLettersArray.length
-                    beginningIndexOfBestSection=i
-                }
-            }
+    //Go through string, 3 letters at a time, counts the unique letters
+    //track the section with most unique letters
+    //remove the section
+    for(let i=0;i<string.length;i++){
+      let uniqueCharCounter = 0
+      let uniqueCharCounterObj = {}
+      let inspectionSection = string.substring(i,(i+K))
+      inspectionSection.split('').forEach((character, j) => {
+        if(!uniqueCharCounterObj[character]){
+          uniqueCharCounterObj[character] = true
+          uniqueCharCounter +=1
+          if(uniqueCharCounter>mostUniqueCharacters){
+            mostUniqueCharacters=uniqueCharCounter
+            indexOfBestSection = i
+          }
         }
+      })
     }
-    // modifiedString = S.substring(beginningIndexOfBestSection,K)
-    modifiedString = S.replace(S.substring(beginningIndexOfBestSection,K),'')
-    return modifiedString
+    console.log('bestSection')
+    console.log(string.substring(indexOfBestSection,(indexOfBestSection+K)))
+    return string.substring(indexOfBestSection,(indexOfBestSection+K))
 }
 
 function condenseString(string){
