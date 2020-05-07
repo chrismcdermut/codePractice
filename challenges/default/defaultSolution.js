@@ -1,5 +1,5 @@
 function defaultSolution(input) {
-
+  return input;
 }
 
-module.exports = defaultSolution
+module.exports = defaultSolution;

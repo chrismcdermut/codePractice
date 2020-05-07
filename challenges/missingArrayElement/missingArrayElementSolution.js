@@ -1,11 +1,11 @@
-//Solution 1
+// Solution 1
 // function missingArrayElement(array, highestNumber) {
 //   let missingNumber
 //   let originalSum = 0
 //   let modifiedSum = 0
 //
 //   //find sum of original
-//   for(let i=1; i<=highestNumber;i++){
+//   for(let i=1; i<=highestNumber;i+=1){
 //     originalSum += i
 //   }
 //
@@ -16,15 +16,15 @@
 //   return (originalSum - modifiedSum)
 // }
 
-//Solution 2
+// Solution 2
 function missingArrayElement(array, highestNumber) {
-  let originalArray = []
-  for(let i=1;i<=highestNumber;i++){
-    originalArray.push(i)
+  const originalArray = [];
+  for (let i = 1; i <= highestNumber; i += 1) {
+    originalArray.push(i);
   }
 
-  const missingNumber = originalArray.filter(x=>!array.includes(x))
-  return missingNumber[0]
+  const missingNumber = originalArray.filter((x) => !array.includes(x));
+  return missingNumber[0];
 }
 
-module.exports = missingArrayElement
+module.exports = missingArrayElement;

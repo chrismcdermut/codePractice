@@ -4,6 +4,7 @@
   "description": "Data Structure and Algorithm practice",
   "main": "algorithm.js",
   "scripts": {
+    "pretest": "eslint --ignore-path .gitignore .",
     "test": "jest",
     "generateSolution": "node -e 'require(\"./helpers/generateSolution\").generateDefaultSolution()'",
     "reverseWords": "node -e 'require(\"./challenges/reverseWords/reverseWords\").reverseWords()'",
@@ -35,6 +36,12 @@
   },
   "homepage": "https://github.com/chrismcdermut/codePractice#readme",
   "devDependencies": {
-    "jest": "^25.4.0"
-  }
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.9.0",
+    "jest": "^25.4.0",
+    "prettier": "2.0.5"
+  },
+  "dependencies": {}
 }

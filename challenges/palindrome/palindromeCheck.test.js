@@ -10,36 +10,34 @@ const palindromeCheck = require('./palindromeCheck');
 // palindrome(“1 eye for of 1 eye.”) should return false
 // palindrome(“0_0 (: /-\ :) 0–0”) should return true
 
-const testOne =  {
-    input:"Anna",
-    output:true
-}
+const testOne = {
+  input: 'Anna',
+  output: true,
+};
 
-const testTwo =  {
-    input:"fee eef",
-    output:true
-}
+const testTwo = {
+  input: 'fee eef',
+  output: true,
+};
 
-const testThree =  {
-    input:"bicycle",
-    output:false
-}
+const testThree = {
+  input: 'bicycle',
+  output: false,
+};
 
-xdescribe('Palindrome Check test suite', function () {
+xdescribe('Palindrome Check test suite', () => {
+  test(`${testOne.input} palindrome test`, () => {
+    const result = palindromeCheck(testOne.input);
+    expect(result).toBe(testOne.output);
+  });
 
-    test(`${testOne.input} palindrome test`, () => {
-      let result = palindromeCheck(testOne.input)
-      expect(result).toBe(testOne.output);
-    });
+  test(`${testTwo.input} palindrome test`, () => {
+    const result = palindromeCheck(testTwo.input);
+    expect(result).toBe(testTwo.output);
+  });
 
-    test(`${testTwo.input} palindrome test`, () => {
-      let result = palindromeCheck(testTwo.input)
-      expect(result).toBe(testTwo.output);
-    });
-
-    test(`${testThree.input} palindrome test`, () => {
-      let result = palindromeCheck(testThree.input)
-      expect(result).toBe(testThree.output);
-    });
-
-})
+  test(`${testThree.input} palindrome test`, () => {
+    const result = palindromeCheck(testThree.input);
+    expect(result).toBe(testThree.output);
+  });
+});

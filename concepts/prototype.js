@@ -1,11 +1,14 @@
-let f = function () {
-        this.a = 1;
-        this.b = 7;
-}
-let o = new f();
-//{a: 1, b:2}
-f.prototype.b = 3;
-f.prototype.c = 4;
+/* eslint-disable */
+// TODO: enable linting
+
+const F = function () {
+  this.a = 1;
+  this.b = 7;
+};
+const o = new F();
+// {a: 1, b:2}
+F.prototype.b = 3;
+F.prototype.c = 4;
 
 //
 console.log(o.a);
@@ -17,37 +20,38 @@ console.log(o.c);
 
 console.log(o.d);
 
-const o = {
-        a: 2,
-        m: function() {
-                return this.a + 1;
-        }
+const q = {
+  a: 2,
+  m() {
+    return this.a + 1;
+  },
 };
 
-//expecting to print 3
-console.log(o.m());
+// expecting to print 3
+console.log(q.m());
 
 const p = Object.create(o);
 
-p.a=4;
-console.log(p.m())
+p.a = 4;
+console.log(p.m());
 
-//inheriting object this points to inheriting object and not prototype
+// inheriting object this points to inheriting object and not prototype
 
-const a = {a:3};
+const a = { a: 3 };
 
 const b = Object.create(a);
 
-//expecting to see 3
+// expecting to see 3
 console.log(b.a);
 
 function Person(first, last, age, eye) {
-    this.firstName = first;
-    this.lastName = last;
-    this.age = age;
-    this.eye = eye;
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eye = eye;
 }
 
-const myFather = new Person("John", "Doe", 50, "blue");
+const myFather = new Person('John', 'Doe', 50, 'blue');
+console.log(myFather);
 
-object.hasOwnProperty
+// object.hasOwnProperty;
