@@ -2,7 +2,7 @@
 const fs = require('fs');
 
 const directory = 'challenges'
-const solutionName = 'orderChecker'
+const solutionName = 'shortestString'
 
 let spec = `${solutionName} Spec go here!`;
 let notes = `${solutionName} Notes go here!`;
