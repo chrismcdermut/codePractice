@@ -4,7 +4,7 @@
 const fs = require('fs');
 
 const directory = 'challenges';
-const solutionName = 'shortestString';
+const solutionName = 'playlistRefactor';
 
 const spec = `${solutionName} Spec go here!`;
 const notes = `${solutionName} Notes go here!`;
