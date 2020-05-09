@@ -7,3 +7,12 @@
 
 
 //     }
+
+///////
+// function isPrereq(nextArticle, previousArticle, articlePrereqs) {
+//   let isPrequisite = false;
+//   if (articlePrereqs[previousArticle].includes(nextArticle)) {
+//     isPrequisite = true;
+//   }
+//   return isPrequisite;
+// }

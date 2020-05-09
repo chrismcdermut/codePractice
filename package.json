@@ -6,6 +6,8 @@
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
     "test": "jest",
+    "testWatch": "jest --watch",
+    "testWatchAll": "jest --watchAll",
     "generateSolution": "node -e 'require(\"./helpers/generateSolution\").generateDefaultSolution()'",
     "reverseWords": "node -e 'require(\"./challenges/reverseWords/reverseWords\").reverseWords()'",
     "bubbleSort": "node -e 'require(\"./bubbleSort-4-6-19\").bubbleSort()'",
