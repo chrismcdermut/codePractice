@@ -1,4 +1,4 @@
-const { contentOrder, isPrereqCheck } = require('./contentOrder');
+const { contentOrder, isPrereqCheck, noPreReqCheck } = require('./contentOrder');
 
 const testOne = {
   articleList: ['A', 'B', 'C', 'D'],
@@ -23,12 +23,29 @@ const testTwo = {
   output: true,
 };
 
+const testThree = {
+  inputNextArticle: 'B',
+  inputPreviousArticle: 'C',
+  articlePrereqs: {
+    A: ['B'],
+    B: ['C', 'D'],
+    C: [],
+    D: [],
+  },
+  output: true,
+};
+
+xdescribe('contentOrder Test', () => {
+  test('testOne', () => {
+    const result = contentOrder(testOne.articleList, testOne.articlePrereqs);
+    expect(testOne.potentialOrders.includes(result)).toBe(true);
+  });
+});
+
 describe('contentOrder Test', () => {
   test('testOne', () => {
     const result = contentOrder(testOne.articleList, testOne.articlePrereqs);
-    console.log('result');
-    console.log(result);
-    expect(testOne.potentialOrders.includes(result)).toBe(true);
+    expect(testOne.potentialOrders).toContainEqual(result);
   });
 });
 
@@ -39,7 +56,17 @@ describe('preReq Test', () => {
       testTwo.inputPreviousArticle,
       testTwo.articlePrereqs,
     );
-    expect(result).toBe(true);
+    expect(result).toBe(testTwo.output);
+  });
+});
+
+describe('noPreReq Test', () => {
+  test('testThree', () => {
+    const result = noPreReqCheck(
+      testThree.inputPreviousArticle,
+      testThree.articlePrereqs,
+    );
+    expect(result).toBe(testThree.output);
   });
 });
 
