@@ -27,7 +27,8 @@ function noPreReqCheck(previousArticle, articlePrereqs) {
 
 function contentOrder(articleListArg, articlePrerequisites) {
   const articleList = articleListArg;
-  const potentialOrder = [articleList.shift()]; /* initialize potentialOrder with first element */
+  const potentialOrder = [articleList.shift()]; /* initialize potentialOrder
+  with first element */
 
   while (articleList.length) {
     const nextArticle = articleList.splice(0, 1)[0];
@@ -43,6 +44,10 @@ function contentOrder(articleListArg, articlePrerequisites) {
 
   return potentialOrder;
 }
+
+// linked list?
+// bubble sort
+
 
 module.exports = {
   contentOrder, isPrereqCheck, noPreReqCheck, isPostReq,

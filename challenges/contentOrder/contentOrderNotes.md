@@ -17,6 +17,64 @@
 //   return isPrequisite;
 // }
 
+
+//////Iteration6/////////
+function contentOrder(articleListArg, articlePrerequisites) {
+  const articleList = articleListArg;
+  // const potentialOrder = [];
+  for (let i = (articleList.length - 1); i > -1; i--) {
+    const nextArticle = articleList.splice(i, 1)[0];
+    // console.log('nextArticle');
+    // console.log(nextArticle);
+    console.log('i outer loop');
+    console.log(i);
+    console.log('articleList outer loop');
+    console.log(articleList);
+    for (let j = i - 1; j > -1; j--) {
+      const currentArticle = articleList[j];
+      console.log('j inside loop');
+      console.log(j);
+      // console.log('currentArticle');
+      // console.log(currentArticle);
+      // if next article is preReq put it in front and start over
+      if (isPrereqCheck(nextArticle, currentArticle, articlePrerequisites)) {
+        articleList.splice(j, 0, nextArticle);
+        // potentialOrder.splice(j, 0, nextArticle);
+        console.log('articleList inside loop');
+        console.log(articleList);
+        // console.log('potentialOrder inside loop');
+        // console.log(potentialOrder);
+      }
+    }
+  }
+  // console.log('articleList before return');
+  // console.log(articleList);
+  // console.log('potentialOrder before return');
+  // console.log(potentialOrder);
+  return articleList;
+}
+
+
+///////////////Iteration5/////////////
+function contentOrder(articleListArg, articlePrerequisites) {
+  const articleList = articleListArg;
+  const potentialOrder = [articleList.shift()]; /* initialize potentialOrder with first element */
+
+  while (articleList.length) {
+    const nextArticle = articleList.splice(0, 1)[0];
+    const previousArticle = potentialOrder[0];
+
+    /* if the next article is a prereq or the previous article has no prereq
+     add the next article ot beginning of potentialOrder */
+    if (noPreReqCheck(previousArticle, articlePrerequisites)
+        || isPrereqCheck(nextArticle, previousArticle, articlePrerequisites)) {
+      potentialOrder.splice(0, 0, nextArticle);
+    }
+  }
+
+  return potentialOrder;
+}
+
 ///////////Iteration4/////////////////
 // function contentOrder(articleListArg, articlePrerequisites) {
 //   let articleList = articleListArg;
