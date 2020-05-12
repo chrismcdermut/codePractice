@@ -4,7 +4,7 @@
 const fs = require('fs');
 
 const directory = 'challenges';
-const solutionName = 'permutationPalindrome';
+const solutionName = 'highestScores';
 
 const spec = `${solutionName} Spec go here!`;
 const notes = `${solutionName} Notes go here!`;
