@@ -4,7 +4,7 @@
 const fs = require('fs');
 
 const directory = 'challenges';
-const solutionName = 'highestScores';
+const solutionName = 'stockProfit';
 
 const spec = `${solutionName} Spec go here!`;
 const notes = `${solutionName} Notes go here!`;
