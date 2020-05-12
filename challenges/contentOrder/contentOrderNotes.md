@@ -17,6 +17,26 @@
 //   return isPrequisite;
 // }
 
+/////Working in one case
+function contentOrder(articleListArg, articlePrerequisites) {
+  const articleList = articleListArg;
+  const potentialOrder = [articleList.shift()]; /* initialize potentialOrder
+  with first element */
+
+  while (articleList.length) {
+    const nextArticle = articleList.splice(0, 1)[0];
+    const previousArticle = potentialOrder[0];
+
+    /* if the next article is a prereq or the previous article has no prereq
+     add the next article ot beginning of potentialOrder */
+    if (noPreReqCheck(previousArticle, articlePrerequisites)
+        || isPrereqCheck(nextArticle, previousArticle, articlePrerequisites)) {
+      potentialOrder.splice(0, 0, nextArticle);
+    }
+  }
+
+  return potentialOrder;
+}
 
 //////Iteration6/////////
 function contentOrder(articleListArg, articlePrerequisites) {
@@ -178,3 +198,72 @@ function contentOrder(articleListArg, articlePrerequisites) {
 //   console.log(potentialOrder);
 //   return potentialOrder;
 // }
+
+//////////Rando Notes
+
+// nextArticle is article we're looking at next
+// previousArticle is already in potentialOrder
+function determinePreOrPostReqIndex(nextArticle, previousArticle, articlePrereqs) {
+  let indexShift = 0;
+  console.log('BEFORESWITCH');
+  console.log('BEFORESWITCH');
+  console.log('nextArticleArg');
+  console.log(nextArticle);
+  console.log('previousArticle');
+  console.log(previousArticle);
+  console.log('articlePrereqs[nextArticleArg].includes(previousArticle)');
+  console.log(articlePrereqs[nextArticle].includes(previousArticle));
+  console.log('articlePrereqs[previousArticle].includes(nextArticle)');
+  console.log(articlePrereqs[previousArticle].includes(nextArticle));
+  switch (nextArticle) {
+    // console.log('INSWITCH');
+    // nextArticle is preReq
+    case 'A':
+      console.log('NEXTARTICLE===A');
+      break;
+    case articlePrereqs[previousArticle].includes(nextArticle):
+      console.log('// nextArticle is preReq');
+      indexShift = -1;
+      break;
+    // nextArticle is postReq
+    case articlePrereqs[nextArticle].includes(previousArticle):
+      console.log('// nextArticle is postReq');
+      indexShift = 1;
+      break;
+    default:
+      console.log('default:');
+      indexShift = 0;
+  }
+  // }(nextArticleArg);
+  console.log(`AFTERSWITCH ${indexShift}`);
+  return indexShift;
+}
+
+function contentOrder(articleListArg, articlePrerequisites) {
+  const articleList = articleListArg;
+  /* initialize potentialOrder with first element */
+  const potentialOrder = [articleList.shift()];
+  // let doItAgain = true
+  for (let i = 0; i < potentialOrder.length; i++) {
+    for (let j = 0; j < articleList.length; j++) {
+      // check if
+      const preOrPostReqIndex = determinePreOrPostReqIndex(
+        potentialOrder[i],
+        articleList[j],
+        articlePrerequisites,
+      );
+      console.log('preOrPostReqIndex');
+      console.log(preOrPostReqIndex);
+      if (preOrPostReqIndex === 0 || preOrPostReqIndex === 1) {
+        console.log('IS PRE OR POST');
+        const removedArticle = articleList.splice(j, 1)[0];
+        console.log('potentialOrderBEFORE', potentialOrder);
+        potentialOrder.splice(i + preOrPostReqIndex, 0, removedArticle);
+        console.log('potentialOrderAFTER', potentialOrder);
+        // let doItAgain = true
+      }
+    }
+  }
+
+  return potentialOrder;
+}

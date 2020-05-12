@@ -1,4 +1,6 @@
-const { contentOrder, isPrereqCheck, noPreReqCheck } = require('./contentOrder');
+const {
+  contentOrder, isPrereqCheck, noPreReqCheck, isPostReqCheck, noPreReqBothCheck,
+} = require('./contentOrder');
 
 const testOne = {
   articleList: ['A', 'B', 'C', 'D'],
@@ -56,9 +58,33 @@ const testTwo = {
   output: true,
 };
 
+const testTwoA = {
+  inputNextArticle: 'A',
+  inputPreviousArticle: 'B',
+  articlePrereqs: {
+    A: ['B'],
+    B: ['C', 'D'],
+    C: [],
+    D: [],
+  },
+  output: true,
+};
+
 const testThree = {
   inputNextArticle: 'B',
   inputPreviousArticle: 'C',
+  articlePrereqs: {
+    A: ['B'],
+    B: ['C', 'D'],
+    C: [],
+    D: [],
+  },
+  output: true,
+};
+
+const testThreeA = {
+  inputNextArticle: 'C',
+  inputPreviousArticle: 'D',
   articlePrereqs: {
     A: ['B'],
     B: ['C', 'D'],
@@ -76,7 +102,7 @@ xdescribe('contentOrder Test', () => {
 });
 
 describe('contentOrder Test', () => {
-  test('testOne', () => {
+  xtest('testOne', () => {
     const result = contentOrder(testOne.articleList, testOne.articlePrereqs);
     expect(testOne.potentialOrders).toContainEqual(result);
   });
@@ -88,7 +114,7 @@ describe('contentOrder Test', () => {
     expect(testOneA.potentialOrders).toContainEqual(result);
   });
 
-  xtest('testOneB', () => {
+  test('testOneB', () => {
     const result = contentOrder(testOneB.articleList, testOneB.articlePrereqs);
     console.log('testOneB result');
     console.log(result);
@@ -103,7 +129,7 @@ describe('contentOrder Test', () => {
   });
 });
 
-xdescribe('preReq Test', () => {
+describe('preReq Test', () => {
   test('testTwo', () => {
     const result = isPrereqCheck(
       testTwo.inputNextArticle,
@@ -114,6 +140,17 @@ xdescribe('preReq Test', () => {
   });
 });
 
+describe('postReq Test', () => {
+  test('testTwoA', () => {
+    const result = isPostReqCheck(
+      testTwoA.inputNextArticle,
+      testTwoA.inputPreviousArticle,
+      testTwoA.articlePrereqs,
+    );
+    expect(result).toBe(testTwoA.output);
+  });
+});
+
 describe('noPreReq Test', () => {
   test('testThree', () => {
     const result = noPreReqCheck(
@@ -121,6 +158,17 @@ describe('noPreReq Test', () => {
       testThree.articlePrereqs,
     );
     expect(result).toBe(testThree.output);
+  });
+});
+
+describe('noPreReqBothCheck Test', () => {
+  test('testThreeA', () => {
+    const result = noPreReqBothCheck(
+      testThreeA.inputNextArticle,
+      testThreeA.inputPreviousArticle,
+      testThreeA.articlePrereqs,
+    );
+    expect(result).toBe(testThreeA.output);
   });
 });
 
