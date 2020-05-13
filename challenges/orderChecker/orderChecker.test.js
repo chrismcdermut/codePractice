@@ -1,4 +1,4 @@
-const { isFirstComeFirstServed, firstComeFirstServedCheck } = require('./orderChecker');
+const { isFirstComeFirstServed, firstComeFirstServedCheck, isFirstComeFirstServedBestCheck } = require('./orderChecker');
 
 const testOne = {
   takeOutOrders: [17, 8, 24],
@@ -121,6 +121,53 @@ describe('firstComeFirstServedCheck Test', () => {
 
   test('testTwo', () => {
     const result = firstComeFirstServedCheck(
+      testTwo.takeOutOrders,
+      testTwo.dineInOrders,
+      testTwo.servedOrders,
+    );
+    expect(result).toBe(testTwo.is1stCome1stServed);
+  });
+});
+
+describe('isFirstComeFirstServedBestCheck Test', () => {
+  test('testOne', () => {
+    const result = isFirstComeFirstServedBestCheck(
+      testOne.takeOutOrders,
+      testOne.dineInOrders,
+      testOne.servedOrders,
+    );
+    expect(result).toBe(testOne.is1stCome1stServed);
+  });
+
+  test('testOneA', () => {
+    const result = isFirstComeFirstServedBestCheck(
+      testOneA.takeOutOrders,
+      testOneA.dineInOrders,
+      testOneA.servedOrders,
+    );
+    expect(result).toBe(testOneA.is1stCome1stServed);
+  });
+
+  test('testOneB', () => {
+    const result = isFirstComeFirstServedBestCheck(
+      testOneB.takeOutOrders,
+      testOneB.dineInOrders,
+      testOneB.servedOrders,
+    );
+    expect(result).toBe(testOneB.is1stCome1stServed);
+  });
+
+  test('testOneC', () => {
+    const result = isFirstComeFirstServedBestCheck(
+      testOneC.takeOutOrders,
+      testOneC.dineInOrders,
+      testOneC.servedOrders,
+    );
+    expect(result).toBe(testOneC.is1stCome1stServed);
+  });
+
+  test('testTwo', () => {
+    const result = isFirstComeFirstServedBestCheck(
       testTwo.takeOutOrders,
       testTwo.dineInOrders,
       testTwo.servedOrders,
