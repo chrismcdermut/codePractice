@@ -1,18 +1,27 @@
-let exampleList = [4,56,1,14,11,67,23,3,7,89,16,2,91,34];
+/* eslint-disable */
+// TODO: enable linting
 
-module.exports.runQuickSort = function() {
-  console.log(quickSort(exampleList));
-}
+const exampleList = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34];
 
-const quickSort = (list) => {
+const quickSort = (listArg) => {
+  let list = listArg;
   if (list.length < 2) return list;
-  let leftList = [];
-  let rightList = [];
-  let pivot = list.length-1;
-  let pivotValue = list[pivot];
-  list = list.slice(0,pivot).concat(list.slice(pivot+1))
-  for(let item of list) {
-    item<pivotValue?leftList.push(item):rightList.push(item);
-  }
-  return quickSort(leftList).concat([pivotValue],quickSort(rightList))
-}
+  const leftList = [];
+  const rightList = [];
+  const pivot = list.length - 1;
+  const pivotValue = list[pivot];
+  list = list.slice(0, pivot).concat(list.slice(pivot + 1));
+  // for (const item of list) {
+  //   item < pivotValue ? leftList.push(item) : rightList.push(item);
+  // }
+  list.forEach((item) => {
+    item < pivotValue ? leftList.push(item) : rightList.push(item);
+  });
+
+  const sortedList = quickSort(leftList).concat([pivotValue], quickSort(rightList));
+  return sortedList;
+};
+
+module.exports.runQuickSort = function () {
+  console.log(quickSort(exampleList));
+};

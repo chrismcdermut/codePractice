@@ -1,15 +1,13 @@
-const defaultSolution = require('./defaultSolution')
+const defaultSolution = require('./defaultSolution');
 
 const testOne = {
   input: '',
-  output: ''
-}
+  output: '',
+};
 
 xdescribe('defaultSolution Test', () => {
-
-  xtest('testOne', ()=>{
-    let result = mergeMeetingTimes(testOne.input)
+  xtest('testOne', () => {
+    const result = defaultSolution(testOne.input);
     expect(result).toEqual(testOne.output);
-  })
-
-})
+  });
+});
