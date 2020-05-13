@@ -1,39 +1,3 @@
-function orderChecker(takeOutOrders, dineInOrders, servedOrders) {
-  let is1stCome1stServed = true;
-  // want to make sure no earlier value is after later values from array
-
-  // Order options
-  const orderOptions = [takeOutOrders, dineInOrders];
-
-  // console.log('orderOptions.length')
-  // console.log(orderOptions.length)
-
-  orderOptions.forEach((item, i) => {
-    console.log(i === 0 ? 'TAKEOUTORDERS' : 'DINEINORDERS');
-    // options
-    // compare each array with final Array
-    // split finalArray into arrays with values
-    for (let j = 0; j < item.length; j++) {
-      console.log('item[j] j');
-      console.log(`${item[j]} ${j}`);
-      console.log('servedOrders[2*j] 2*j');
-      console.log(`${servedOrders[2 * j]} + ${2 * j}`);
-      console.log('servedOrders[2*j+1] 2*j+1');
-      console.log(`${servedOrders[2 * j + 1]} ${2 * j + 1}`);
-      console.log('//////////////////////');
-      // if the orderItem is not equal to both of it's associatedFinal array spots,
-      // then the order is messed up
-      if (item[j] !== servedOrders[2 * j] && item[j] !== servedOrders[2 * j + 1]) {
-        console.log(`is1stCome1stServed=false for ${item[j]}`);
-        is1stCome1stServed = false;
-        break;
-      }
-    }
-  });
-
-  return is1stCome1stServed;
-}
-
 function isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders) {
   // base case
   if (servedOrders.length === 0) {
@@ -60,11 +24,40 @@ function isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders) {
   return false;
 }
 
-module.exports = { orderChecker, isFirstComeFirstServed };
+// My solution, I think indexOf is expensive..
+// if the index for take out or dineIn jumps more than 1, it is not frist comefirst served
+function firstComeFirstServedCheck(takeOutOrders, dineInOrders, servedOrders) {
+  let isFirstComeFirstServedBool = true;
 
-// for(let j=0;j<item.length;j++){
-//   if(dineInOrdersservedOrders[2*j]!==takeOutOrders[j]
-// || dineInOrdersservedOrders[2*j+1]!==takeOutOrders[j]){
-//     isFirstComeFirstServed =false
-//   }
-// }
+  let lastDineInIndex = -1;
+  let lastTakeOutIndex = -1;
+
+  for (let i = 0; i < servedOrders.length; i++) {
+    const currentOrder = servedOrders[i];
+    // check if its in dineInOrders
+    if (dineInOrders.includes(currentOrder)) {
+      const nextDineIndex = dineInOrders.indexOf(currentOrder);
+      if ((nextDineIndex - lastDineInIndex) > 1) {
+        isFirstComeFirstServedBool = false;
+        break;
+      }
+      lastDineInIndex = nextDineIndex;
+      continue;
+    }
+
+    // check if its in takeOutOrders
+    if (takeOutOrders.includes(currentOrder)) {
+      const nextTakeOutIndex = takeOutOrders.indexOf(currentOrder);
+      if ((nextTakeOutIndex - lastTakeOutIndex) > 1) {
+        isFirstComeFirstServedBool = false;
+        break;
+      }
+      lastTakeOutIndex = nextTakeOutIndex;
+      continue;
+    }
+  }
+
+  return isFirstComeFirstServedBool;
+}
+
+module.exports = { isFirstComeFirstServed, firstComeFirstServedCheck };
