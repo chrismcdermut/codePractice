@@ -1,4 +1,6 @@
-const productOfAllOthers = require('./productOfAll');
+const {
+  productOfAllOthers, productOfAllOthersBest, productOfAllCleanest,
+} = require('./productOfAll');
 
 const testOne = {
   input: [1, 2, 6, 5, 9],
@@ -18,6 +20,30 @@ describe('productOfAllOthers Test', () => {
 
   test('testTwo', () => {
     const result = productOfAllOthers(testTwo.input);
+    expect(result).toEqual(testTwo.output);
+  });
+});
+
+describe('productOfAllOthersBest Test', () => {
+  test('testOne', () => {
+    const result = productOfAllOthersBest(testOne.input);
+    expect(result).toEqual(testOne.output);
+  });
+
+  test('testTwo', () => {
+    const result = productOfAllOthersBest(testTwo.input);
+    expect(result).toEqual(testTwo.output);
+  });
+});
+
+describe('productOfAllCleanest Test', () => {
+  test('testOne', () => {
+    const result = productOfAllCleanest(testOne.input);
+    expect(result).toEqual(testOne.output);
+  });
+
+  test('testTwo', () => {
+    const result = productOfAllCleanest(testTwo.input);
     expect(result).toEqual(testTwo.output);
   });
 });

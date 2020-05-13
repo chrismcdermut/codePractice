@@ -21,4 +21,50 @@ function productOfAllOthers(input) {
   return productResults;
 }
 
-module.exports = productOfAllOthers;
+function productOfAllOthersBest(input) {
+  const allProductResults = [];
+  const arrayOfProductsBefore = [];
+  const arrayOfProductsAfter = [];
+  let productBefore = 1;
+  let productAfter = 1;
+
+  for (let i = 0; i < input.length; i++) {
+    const priorElement = input[i - 1] ? input[i - 1] : 1;
+    productBefore *= priorElement;
+    arrayOfProductsBefore.push(productBefore);
+  }
+
+  for (let i = input.length - 1; i > -1; i--) {
+    const priorElement = input[i + 1] ? input[i + 1] : 1;
+    productAfter *= priorElement;
+    arrayOfProductsAfter.unshift(productAfter);
+  }
+
+  for (let i = 0; i < arrayOfProductsBefore.length; i++) {
+    allProductResults.push(arrayOfProductsBefore[i] * arrayOfProductsAfter[i]);
+  }
+
+  return allProductResults;
+}
+
+function productOfAllCleanest(input) {
+  const allProducts = [];
+
+  let cumulativeProduct = 1;
+  for (let i = 0; i < input.length; i++) {
+    allProducts[i] = cumulativeProduct;
+    cumulativeProduct *= input[i];
+  }
+
+  cumulativeProduct = 1;
+  for (let j = input.length - 1; j > -1; j--) {
+    allProducts[j] *= cumulativeProduct;
+    cumulativeProduct *= input[j];
+  }
+
+  return allProducts;
+}
+
+module.exports = {
+  productOfAllOthers, productOfAllOthersBest, productOfAllCleanest,
+};
