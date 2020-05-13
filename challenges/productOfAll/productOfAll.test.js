@@ -1,4 +1,4 @@
-const productOfAll = require('./productOfAll');
+const productOfAllOthers = require('./productOfAll');
 
 const testOne = {
   input: [1, 2, 6, 5, 9],
@@ -10,14 +10,14 @@ const testTwo = {
   output: [84, 12, 28, 21],
 };
 
-describe('productOfAll Test', () => {
+describe('productOfAllOthers Test', () => {
   test('testOne', () => {
-    const result = productOfAll(testOne.input);
+    const result = productOfAllOthers(testOne.input);
     expect(result).toEqual(testOne.output);
   });
 
   test('testTwo', () => {
-    const result = productOfAll(testTwo.input);
+    const result = productOfAllOthers(testTwo.input);
     expect(result).toEqual(testTwo.output);
   });
 });
