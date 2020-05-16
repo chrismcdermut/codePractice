@@ -1,8 +1,6 @@
 function mergeMeetingTimesCheck(allMeetingsArg) {
   const allMeetings = allMeetingsArg;
   allMeetings.sort((a, b) => a.startTime - b.startTime);
-  // console.log('allMeetings');
-  // console.log(allMeetings);
   const condensedMeetings = [allMeetings[0]];
 
   for (let i = 1; i < allMeetings.length; i++) {
