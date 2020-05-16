@@ -6,7 +6,7 @@ const testOne = {
   output: [5, 1, 2, 3, 4],
 };
 
-xdescribe('arrayRotateLeft Test Suite', () => {
+describe('arrayRotateLeft Test Suite', () => {
   test(`${testOne.input} palindrome test`, () => {
     const result = arrayRotateLeft(testOne.input, testOne.shift);
     expect(result).toEqual(testOne.output);

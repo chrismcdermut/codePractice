@@ -4,7 +4,7 @@
 const fs = require('fs');
 
 const directory = 'challenges';
-const solutionName = 'playlistRefactor';
+const solutionName = '';
 
 const spec = `${solutionName} Spec go here!`;
 const notes = `${solutionName} Notes go here!`;
@@ -46,9 +46,8 @@ module.exports.generateDefaultSolution = function () {
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log('Spec.md saved!');
-    },
-  );
+      console.log(`${solutionName}Spec.md saved!`);
+  });
 
   // make notes.md file -> //make ${solution}notes.md file
   fs.writeFile(
@@ -58,9 +57,8 @@ module.exports.generateDefaultSolution = function () {
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log('notes.md saved!');
-    },
-  );
+      console.log(`${solutionName}Notes.md saved!`);
+  });
 
   // make solution.js file -> //make ${solution}solution.js file
   fs.writeFile(
