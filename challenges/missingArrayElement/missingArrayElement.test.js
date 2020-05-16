@@ -54,7 +54,7 @@ const testNine = {
   output: 4,
 };
 
-xdescribe('Missing array element test suite', () => {
+describe('Missing array element test suite', () => {
   test(`${testOne.input} test`, () => {
     const result = missingArrayElement(testOne.input, testOne.highestNumber);
     expect(result).toBe(testOne.output);

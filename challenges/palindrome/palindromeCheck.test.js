@@ -25,7 +25,7 @@ const testThree = {
   output: false,
 };
 
-xdescribe('Palindrome Check test suite', () => {
+describe('Palindrome Check test suite', () => {
   test(`${testOne.input} palindrome test`, () => {
     const result = palindromeCheck(testOne.input);
     expect(result).toBe(testOne.output);

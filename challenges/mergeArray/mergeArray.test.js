@@ -52,7 +52,7 @@ xdescribe('mergeArray Test', () => {
     expect(result).toEqual(testFour.output);
   });
 
-  xtest('testFive', () => {
+  test('testFive', () => {
     const result = mergeArray(testFive.input);
     expect(result).toEqual(testFive.output);
   });
