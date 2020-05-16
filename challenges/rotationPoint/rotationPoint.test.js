@@ -30,7 +30,7 @@ const testThree = {
   outputValue: 1,
 };
 
-describe('rotationPoint Test', () => {
+xdescribe('rotationPoint Test', () => {
   test('testOne', () => {
     const result = rotationPoint(testOne.input);
     expect(result).toEqual(testOne.outputIndex);
@@ -64,7 +64,7 @@ xdescribe('findRotationPoint Test', () => {
   });
 });
 
-describe('findRotationPointCheck Test', () => {
+xdescribe('findRotationPointCheck Test', () => {
   test('testOne', () => {
     const result = findRotationPointCheck(testOne.input);
     expect(result).toEqual(testOne.outputIndex);

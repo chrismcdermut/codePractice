@@ -9,20 +9,20 @@ const testOneA = {
   input: [10],
 };
 
-describe('stockProfit Test', () => {
+xdescribe('stockProfit Test', () => {
   test('testOne', () => {
     const result = stockProfit(testOne.input);
     expect(result).toEqual(testOne.output);
   });
 });
 
-describe('stockProfit1 Test', () => {
+xdescribe('stockProfit1 Test', () => {
   test('testOne', () => {
     const result = stockProfit1(testOne.input);
     expect(result).toEqual(testOne.output);
   });
 
-  xtest('testOneA', () => {
+  test('testOneA', () => {
     // const result = stockProfit1(testOneA.input);
     // expect(result).toThrow();
     expect(stockProfit1(testOneA.input)).toThrowError(new Error('Getting a profit requires at least 2 prices'));

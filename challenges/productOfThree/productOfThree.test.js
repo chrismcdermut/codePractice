@@ -14,7 +14,7 @@ const testOneB = {
   input: [-100, 2],
 };
 
-describe('productOfThree Test', () => {
+xdescribe('productOfThree Test', () => {
   test('testOne', () => {
     const result = productOfThree(testOne.input);
     expect(result).toEqual(testOne.output);
@@ -25,7 +25,7 @@ describe('productOfThree Test', () => {
     expect(result).toEqual(testOneA.output);
   });
 
-  xtest('testOneB', () => {
+  test('testOneB', () => {
     expect(productOfThree(testOneB.input)).toThrow();
   });
 });
