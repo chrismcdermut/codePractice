@@ -16,6 +16,7 @@
         "ecmaVersion": 2018
     },
     "rules": {
-      "no-plusplus": [2, { "allowForLoopAfterthoughts": true }]
+      "no-plusplus": 0,
+      "no-continue": 0
     }
 }

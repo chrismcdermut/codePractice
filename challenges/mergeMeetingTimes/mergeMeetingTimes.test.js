@@ -60,7 +60,7 @@ const testFive = {
   output: [{ startTime: 1, endTime: 3 }],
 };
 
-xdescribe('mergeMeetingTimes Short Test', () => {
+describe('mergeMeetingTimes Short Test', () => {
   // PASS
   test('testTwo', () => {
     const result = mergeMeetingTimes(testTwo.input);
@@ -85,7 +85,7 @@ xdescribe('mergeMeetingTimes Short Test', () => {
   });
 });
 
-xdescribe('mergeMeetingTimes Long Test', () => {
+describe('mergeMeetingTimes Long Test', () => {
   // FAIL
   test('testThree', () => {
     const result = mergeMeetingTimes(testThree.input);

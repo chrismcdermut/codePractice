@@ -55,7 +55,7 @@ const testEleven = {
   output: 8,
 };
 
-xdescribe('Missing int module', () => {
+describe('Missing int module', () => {
   test(`${testOne.input} test`, () => {
     const result = missingIntTest(testOne.input);
     expect(result).toBe(testOne.output);
