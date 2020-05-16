@@ -2,4 +2,4 @@ function topologicalSort(input) {
 
 }
 
-module.exports = topologicalSort
+module.exports = topologicalSort;

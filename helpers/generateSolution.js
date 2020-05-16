@@ -4,7 +4,7 @@
 const fs = require('fs');
 
 const directory = 'challenges';
-const solutionName = 'topologicalSort';
+const solutionName = '';
 
 const spec = `${solutionName} Spec go here!`;
 const notes = `${solutionName} Notes go here!`;
