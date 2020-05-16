@@ -15,7 +15,7 @@ const testThree = {
   output: ['b', 'b', 'a', 'a'],
 };
 
-xdescribe('reverseArrayInPlace Test', () => {
+describe('reverseArrayInPlace Test', () => {
   test('testOne', () => {
     const result = reverseArrayInPlace(testOne.input);
     expect(result).toEqual(testOne.output);

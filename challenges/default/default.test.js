@@ -5,8 +5,8 @@ const testOne = {
   output: '',
 };
 
-xdescribe('defaultSolution Test', () => {
-  xtest('testOne', () => {
+describe('defaultSolution Test', () => {
+  test('testOne', () => {
     const result = defaultSolution(testOne.input);
     expect(result).toEqual(testOne.output);
   });
