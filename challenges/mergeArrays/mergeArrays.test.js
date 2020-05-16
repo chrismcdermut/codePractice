@@ -54,7 +54,7 @@ xdescribe('mergeArrays Test', () => {
     expect(result).toEqual(testFour.output);
   });
 
-  xtest('testFive', () => {
+  test('testFive', () => {
     const result = mergeArrays(testFive.input);
     expect(result).toEqual(testFive.output);
   });
