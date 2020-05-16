@@ -2,4 +2,4 @@ function playlistRefactor(input) {
 
 }
 
-module.exports = playlistRefactor
+module.exports = playlistRefactor;
