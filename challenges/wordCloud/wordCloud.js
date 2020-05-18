@@ -1,4 +1,3 @@
-
 function normalizeWord(word) {
   const regexPunctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
 
@@ -22,8 +21,6 @@ function wordCloud(input) {
     wordCloudCounter.set(normalizedWord, newCount);
   });
 
-  console.log('wordCloudCounter');
-  console.log(wordCloudCounter);
   return wordCloudCounter;
 }
 

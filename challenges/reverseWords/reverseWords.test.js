@@ -1,4 +1,4 @@
-const reverseWords = require('./reverseWords');
+const { reverseWords, reversePhrase, reverseCharactersSolo } = require('./reverseWords');
 
 const testOne = {
   input: [
@@ -86,14 +86,64 @@ const testTwo = {
   ],
 };
 
-xdescribe('reverseWords Test', () => {
+const testThree = {
+  input: [
+    'h',
+    'e',
+    'a',
+    'r',
+    'i',
+    'n',
+    'g',
+  ],
+  output: [
+    'g',
+    'n',
+    'i',
+    'r',
+    'a',
+    'e',
+    'h',
+  ],
+};
+
+const testFour = {
+  input: 'hearing',
+  output: 'gniraeh',
+};
+
+describe('reverseWords Test', () => {
   test('testOne', () => {
     const result = reverseWords(testOne.input);
-    expect(result).toEqual(testOne.output);
+    expect(result).toStrictEqual(testOne.output);
   });
 
   test('testTwo', () => {
     const result = reverseWords(testTwo.input);
-    expect(result).toEqual(testTwo.output);
+    expect(result).toStrictEqual(testTwo.output);
+  });
+});
+
+describe('reversePhrase Test', () => {
+  test('testOne', () => {
+    const result = reversePhrase(testOne.input);
+    expect(result).toStrictEqual(testOne.output);
+  });
+
+  test('testTwo', () => {
+    const result = reversePhrase(testTwo.input);
+    expect(result).toStrictEqual(testTwo.output);
+  });
+});
+
+describe('reverseCharactersSolo Test', () => {
+  test('testThree', () => {
+    const result = reverseCharactersSolo(testThree.input);
+    expect(result).toStrictEqual(testThree.output);
+  });
+
+  xtest('testFour', () => {
+    const result = reverseCharactersSolo(testFour.input);
+    expect(result).toStrictEqual(testFour.output);
   });
 });
