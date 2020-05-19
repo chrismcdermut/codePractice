@@ -41,21 +41,4 @@ function mergeArrays(arrays) {
   return finalArray;
 }
 
-//////////////Cleanest///////////////
-
-function mergeArraysClean(firstArray, secondArray){
-  let finalArray = []
-
-  let currentIndexFirst = 0;
-  let currentIndexSecond = 0;
-  let currentIndexMerged = 0;
-
-  while(currentIndexMerged<(finalArray.length+secondArray.length)){
-    const firstArrayDone = currentIndexFirst >= firstArray.length
-    const secondArrayDone = currentIndexSecond >= secondArray.length
-
-
-  }
-}
-
-module.exports = mergeArrays;
+module.exports = { mergeArrays };

@@ -30,4 +30,33 @@ function mergeArray(input) {
   return combinedArray;
 }
 
-module.exports = mergeArray;
+// ////////////Cleanest///////////////
+
+function mergeArraysClean(firstArray, secondArray) {
+  const finalArray = [];
+
+  let currentIndexFirst = 0;
+  let currentIndexSecond = 0;
+  let currentIndexMerged = 0;
+
+  while (currentIndexMerged < (finalArray.length + secondArray.length)) {
+    const firstArrayDone = currentIndexFirst >= firstArray.length;
+    const secondArrayDone = currentIndexSecond >= secondArray.length;
+
+    // first array has values left and second array is done or
+    // first array element is less than second array element
+    if (!firstArrayDone && (secondArrayDone
+      || (firstArray[currentIndexFirst] < secondArray[currentIndexSecond])
+    )) {
+      finalArray[currentIndexMerged] = firstArray[currentIndexFirst];
+      currentIndexFirst++;
+    } else {
+      finalArray[currentIndexMerged] = secondArray[currentIndexSecond];
+      currentIndexSecond++;
+    }
+    currentIndexMerged++;
+  }
+  return finalArray;
+}
+
+module.exports = { mergeArray, mergeArraysClean };

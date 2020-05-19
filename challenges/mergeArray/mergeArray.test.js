@@ -1,4 +1,4 @@
-const mergeArray = require('./mergeArray');
+const { mergeArraysClean, mergeArray } = require('./mergeArray');
 
 const testOne = {
   input: [
@@ -31,7 +31,7 @@ const testFive = {
   output: [1, 1, 3, 4, 6, 10, 11, 15],
 };
 
-xdescribe('mergeArray Test', () => {
+describe('mergeArray Test', () => {
   test('testOne', () => {
     const result = mergeArray(testOne.input);
     expect(result).toEqual(testOne.output);
@@ -54,6 +54,35 @@ xdescribe('mergeArray Test', () => {
 
   test('testFive', () => {
     const result = mergeArray(testFive.input);
+    expect(result).toEqual(testFive.output);
+  });
+});
+
+xdescribe('mergeArraysClean Test', () => {
+  console.log('typeof mergeArraysClean');
+  console.log(typeof mergeArraysClean);
+  test('testOne', () => {
+    const result = mergeArraysClean(testOne.input);
+    expect(result).toEqual(testOne.output);
+  });
+
+  test('testTwo', () => {
+    const result = mergeArraysClean(testTwo.input);
+    expect(result).toEqual(testTwo.output);
+  });
+
+  test('testThree', () => {
+    const result = mergeArraysClean(testThree.input);
+    expect(result).toEqual(testThree.output);
+  });
+
+  test('testFour', () => {
+    const result = mergeArraysClean(testFour.input);
+    expect(result).toEqual(testFour.output);
+  });
+
+  test('testFive', () => {
+    const result = mergeArraysClean(testFive.input);
     expect(result).toEqual(testFive.output);
   });
 });
