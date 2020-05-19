@@ -32,14 +32,17 @@ function mergeArray(input) {
 
 // ////////////Cleanest///////////////
 
-function mergeArraysClean(firstArray, secondArray) {
+function mergeArraysClean(inputArrays) {
+  const firstArray = inputArrays[0];
+  const secondArray = inputArrays[1];
   const finalArray = [];
 
   let currentIndexFirst = 0;
   let currentIndexSecond = 0;
   let currentIndexMerged = 0;
 
-  while (currentIndexMerged < (finalArray.length + secondArray.length)) {
+
+  while (currentIndexMerged < (firstArray.length + secondArray.length)) {
     const firstArrayDone = currentIndexFirst >= firstArray.length;
     const secondArrayDone = currentIndexSecond >= secondArray.length;
 
