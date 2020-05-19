@@ -1,4 +1,4 @@
-const mergeArrays = require('./mergeArrays');
+const { mergeArrays } = require('./mergeArrays');
 
 const testOne = {
   input: [
