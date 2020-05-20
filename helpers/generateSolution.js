@@ -3,8 +3,8 @@
 
 const fs = require('fs');
 
-const directory = 'challenges';
-const solutionName = '';
+const directory = 'dataStructures';
+const solutionName = 'tree';
 
 const spec = `${solutionName} Spec go here!`;
 const notes = `${solutionName} Notes go here!`;
