@@ -23,7 +23,6 @@ function superBalancedTreeCheck(treeRoot) {
           || (depths.length === 2 && Math.abs(depths[0] - depths[1]) > 1)
         ) {
           treeIsSuperBalanced = false;
-          return treeIsSuperBalanced;
         }
       }
     } else { /* not a leaf and has either left, right or both left,right nodes */
