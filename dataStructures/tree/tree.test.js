@@ -2,23 +2,22 @@
 const Tree = require('./Tree');
 
 describe('Tree article test', () => {
-  const documentTree1 = new Tree();
+  const documentTree = new Tree();
 
-  documentTree1.addNode('document', 'root');
-  documentTree1.addNode('section1', 'document');
-  documentTree1.addNode('section2', 'document');
-  documentTree1.addNode('section3', 'document');
+  documentTree.addNode('document', 'root');
+  documentTree.addNode('section1', 'document');
+  documentTree.addNode('section2', 'document');
+  documentTree.addNode('section3', 'document');
 
-  documentTree1.addNode('article1-1', 'section1');
-  documentTree1.addNode('article1-2', 'section1');
-  documentTree1.addNode('article2-1', 'section2');
-  documentTree1.addNode('article3-1', 'section3');
+  documentTree.addNode('article1-1', 'section1');
+  documentTree.addNode('article1-2', 'section1');
+  documentTree.addNode('article2-1', 'section2');
+  documentTree.addNode('article3-1', 'section3');
 
-  xtest('article tree is made', () => {
-    const result = documentTree1;
-    console.log('result');
-    console.log(result);
-    // expect(result).toEqual(macbookProNode);
+  xtest('documentTree is made correctly', () => {
+    const result = documentTree;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
   });
 
   test('search for existing article', () => {
@@ -26,51 +25,50 @@ describe('Tree article test', () => {
       value: 'article1-1',
       children: [],
     };
-    const result = documentTree1.search('article1-1');
+    const result = documentTree.search('article1-1');
     expect(result).toEqual(article11Node);
   });
 
   test('search for non-existing article', () => {
     const missingNodeValue = 'Not Found';
-    const result = documentTree1.search('article77');
+    const result = documentTree.search('article77');
     expect(result).toBe(missingNodeValue);
   });
 
-  // keeping turned off to declutter console
+  /* keeping turned off to declutter console */
   xtest('traverse node', () => {
-    documentTree1.traverse((node) => {
+    documentTree.traverse((node) => {
       console.log(node);
     });
   });
 
-  // keep this test case last because it mututes tree
+  /* keep this test case last because it mututes tree */
   test('remove node', () => {
     const missingNodeValue = 'Not Found';
-    documentTree1.removeNode('section2');
-    const result = documentTree1.search('section2');
+    documentTree.removeNode('section2');
+    const result = documentTree.search('section2');
     expect(result).toBe(missingNodeValue);
   });
 });
 
 describe('Tree products test', () => {
-  const documentTree2 = new Tree();
+  const productTree = new Tree();
 
-  documentTree2.addNode('Computers & Electronics');
-  documentTree2.addNode('Notebooks', 'Computers & Electronics');
-  documentTree2.addNode('Routers', 'Computers & Electronics');
-  documentTree2.addNode('Desktop Computers', 'Computers & Electronics');
+  productTree.addNode('Computers & Electronics');
+  productTree.addNode('Notebooks', 'Computers & Electronics');
+  productTree.addNode('Routers', 'Computers & Electronics');
+  productTree.addNode('Desktop Computers', 'Computers & Electronics');
 
-  documentTree2.addNode('Macbooks', 'Notebooks');
-  documentTree2.addNode('Asus', 'Notebooks');
+  productTree.addNode('Macbooks', 'Notebooks');
+  productTree.addNode('Asus', 'Notebooks');
 
-  documentTree2.addNode('Macbook Pro', 'Macbooks');
-  documentTree2.addNode('Macbook Air', 'Macbooks');
+  productTree.addNode('Macbook Pro', 'Macbooks');
+  productTree.addNode('Macbook Air', 'Macbooks');
 
-  xtest('product tree is made', () => {
-    const result = documentTree2;
-    console.log('result');
-    console.log(result);
-    // expect(result).toEqual(macbookProNode);
+  xtest('productTree is made Correctly', () => {
+    const result = productTree;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
   });
 
   test('search for existing product', () => {
@@ -78,7 +76,7 @@ describe('Tree products test', () => {
       value: 'Macbook Pro',
       children: [],
     };
-    const result = documentTree2.search('Macbook Pro');
+    const result = productTree.search('Macbook Pro');
     expect(result).toEqual(macbookProNode);
   });
 
@@ -105,13 +103,13 @@ describe('Tree products test', () => {
       ],
       value: 'Notebooks',
     };
-    const result = documentTree2.search('Notebooks');
+    const result = productTree.search('Notebooks');
     expect(result).toEqual(macbookProNode);
   });
 
   test('search for non-existing product', () => {
     const missingNodeValue = 'Not Found';
-    const result = documentTree2.search('derailleur');
+    const result = productTree.search('derailleur');
     expect(result).toBe(missingNodeValue);
   });
 
@@ -121,22 +119,22 @@ describe('Tree products test', () => {
       { value: 'Macbook Air', children: [] },
       { value: 'Asus', children: [] },
     ];
-    const result = documentTree2.showLeafs('Notebooks');
+    const result = productTree.showLeafs('Notebooks');
     expect(result).toEqual(notebooksLeaves);
   });
 
-  // keeping turned off to declutter console
+  /* keeping turned off to declutter console */
   xtest('traverse node', () => {
-    documentTree2.traverse((node) => {
+    productTree.traverse((node) => {
       console.log(node);
     });
   });
 
-  // keep this test case last because it mututes tree
+  /* keep this test case last because it mututes tree */
   test('remove node', () => {
     const missingNodeValue = 'Not Found';
-    documentTree2.removeNode('Notebooks');
-    const result = documentTree2.search('Notebooks');
+    productTree.removeNode('Notebooks');
+    const result = productTree.search('Notebooks');
     expect(result).toBe(missingNodeValue);
   });
 });

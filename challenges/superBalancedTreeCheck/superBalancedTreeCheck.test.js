@@ -10,8 +10,6 @@ describe('non superBalanced binaryTree Test', () => {
 
   const binaryTree1Depth2Right = new BinaryTreeNode(6);
   binaryTree1Depth2Right.insertLeft(8);
-  console.log('binaryTree1Depth2Right');
-  console.log(binaryTree1Depth2Right);
 
   const binaryTree1Depth1Left = new BinaryTreeNode(2);
   binaryTree1Depth1Left.insertLeft(binaryTree1Depth2Left);
@@ -25,11 +23,10 @@ describe('non superBalanced binaryTree Test', () => {
   binaryTree1Depth0.insertLeft(binaryTree1Depth1Left);
   binaryTree1Depth0.insertRight(binaryTree1Depth1Right);
 
-  test('binary tree is made', () => {
+  xtest('binary tree is made Correctly', () => {
     const result = binaryTree1Depth0;
-    console.log('result');
-    console.log(result);
-    // expect(result).toEqual(macbookProNode);
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
   });
 
   test('binary tree is superBalanced test1', () => {
@@ -39,46 +36,42 @@ describe('non superBalanced binaryTree Test', () => {
   });
 });
 
-// xdescribe('non superBalanced binaryTree Test', () => {
-//   const binaryTree1 = new BinaryTreeNode(1);
-//
-//   const bottomNode = new BinaryTreeNode(9);
-//   bottomNode.insertRight(10);
-//
-//   const thirdLayerLeftNode = new BinaryTreeNode(4);
-//   thirdLayerLeftNode.insertLeft(bottomNode);
-//
-//   const secondLayerLeftNode = new BinaryTreeNode(2);
-//   secondLayerLeftNode.insertLeft(thirdLayerLeftNode);
-//   secondLayerLeftNode.insertRight(5);
-//
-//   const bottomNodeRight = new BinaryTreeNode(6);
-//   bottomNodeRight.insertLeft(8);
-//
-//   const secondLayerRightNode = new BinaryTreeNode(3);
-//   secondLayerRightNode.insertLeft(bottomNodeRight);
-//   secondLayerRightNode.insertRight(7);
-//
-//   binaryTree1.insertLeft(secondLayerLeftNode);
-//   binaryTree1.insertRight(secondLayerRightNode);
-//
-//
-//   test('binary tree is made', () => {
-//     const result = binaryTree1;
-//     console.log('result');
-//     console.log(result);
-//     // expect(result).toEqual(macbookProNode);
-//   });
-//
-//   test('binary tree is superBalanced test2', () => {
-//     const result = superBalancedTreeCheck(binaryTree1);
-//     const answer = false;
-//     expect(result).toEqual(answer);
-//   });
-// });
+describe('non superBalanced binaryTree Test', () => {
+  const bottomNode = new BinaryTreeNode(9);
+  bottomNode.insertRight(10);
 
-xdescribe('truly superBalanced binaryTree Test', () => {
-  // construct binary tree
+  const thirdLayerLeftNode = new BinaryTreeNode(4);
+  thirdLayerLeftNode.insertLeft(bottomNode);
+
+  const secondLayerLeftNode = new BinaryTreeNode(2);
+  secondLayerLeftNode.insertLeft(thirdLayerLeftNode);
+  secondLayerLeftNode.insertRight(5);
+
+  const bottomNodeRight = new BinaryTreeNode(6);
+  bottomNodeRight.insertLeft(8);
+
+  const secondLayerRightNode = new BinaryTreeNode(3);
+  secondLayerRightNode.insertLeft(bottomNodeRight);
+  secondLayerRightNode.insertRight(7);
+
+  const binaryTree1 = new BinaryTreeNode(1);
+  binaryTree1.insertLeft(secondLayerLeftNode);
+  binaryTree1.insertRight(secondLayerRightNode);
+
+  xtest('binary tree is made Correctly', () => {
+    const result = binaryTree1;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
+  });
+
+  test('binary tree is superBalanced test2', () => {
+    const result = superBalancedTreeCheck(binaryTree1);
+    const answer = false;
+    expect(result).toEqual(answer);
+  });
+});
+
+describe('truly superBalanced binaryTree Test', () => {
   const bottomLeftNode = new BinaryTreeNode(2);
   bottomLeftNode.insertLeft(4);
   bottomLeftNode.insertRight(5);
@@ -91,24 +84,20 @@ xdescribe('truly superBalanced binaryTree Test', () => {
   binaryTree2.insertLeft(bottomLeftNode);
   binaryTree2.insertRight(bottomRightNode);
 
-  xtest('binary tree is made', () => {
-    // const result = binaryTree2;
-    // console.log('result');
-    // console.log(result);
-    // expect(result).toEqual(macbookProNode);
+  xtest('binary tree is made Correctly', () => {
+    const result = binaryTree2;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
   });
 
   test('binary tree is superBalanced', () => {
     const result = superBalancedTreeCheck(binaryTree2);
-    // console.log('result');
-    // console.log(result);
     const answer = true;
     expect(result).toEqual(answer);
   });
 });
 
-xdescribe('truly superBalanced binaryTree Test', () => {
-  // construct binary tree
+describe('truly superBalanced binaryTree Test', () => {
   const bottomLeftNode = new BinaryTreeNode(2);
   bottomLeftNode.insertLeft(4);
   bottomLeftNode.insertRight(5);
@@ -117,17 +106,14 @@ xdescribe('truly superBalanced binaryTree Test', () => {
   binaryTree3.insertLeft(bottomLeftNode);
   binaryTree3.insertRight(3);
 
-  xtest('binary tree is made', () => {
-    // const result = binaryTree3;
-    // console.log('result');
-    // console.log(result);
-    // expect(result).toEqual(macbookProNode);
+  xtest('binary tree is made Correctly', () => {
+    const result = binaryTree3;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
   });
 
   test('binary tree is superBalanced', () => {
     const result = superBalancedTreeCheck(binaryTree3);
-    // console.log('result');
-    // console.log(result);
     const answer = true;
     expect(result).toEqual(answer);
   });
