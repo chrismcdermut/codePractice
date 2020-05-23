@@ -1,19 +1,26 @@
-/* eslint-disable */
-// TODO: enable linting
-
 const fs = require('fs');
 
-const directory = 'challenges';
-const solutionName = '';
+// ////SETUP HERE//////
+const solutionName = 'Graph';
+// TODO: look into setting up map or enum for this
+/* challenge || dataStructure */
+const codeChallengeType = 'dataStructure';
 
-const spec = `${solutionName} Spec go here!`;
+// ////UNIFORM SPEC/NOTES BOILERPLATE//////
+const spec = `${solutionName} Spec goes here!`;
 const notes = `${solutionName} Notes go here!`;
+
+// ////CHALLENGES BOILERPLATE//////
+const CHALLENGES_DIR = 'challenges';
+
+// TODO: rename these challenge variables
 const solutionJS = `function ${solutionName}(input) {
 
 }
 
-module.exports = ${solutionName}
+module.exports = ${solutionName};
 `;
+
 const solutionTestJS = `const ${solutionName} = require('./${solutionName}')
 
 const testOne = {
@@ -26,12 +33,59 @@ describe('${solutionName} Test', () => {
   test('testOne', ()=>{
     let result = ${solutionName}(testOne.input)
     expect(result).toEqual(testOne.output);
-  })
+  });
 
-})
+});
 `;
 
-module.exports.generateDefaultSolution = function () {
+// ////DATA STRUCTURES BOILERPLATE//////
+const DATA_STRUCTURES_DIR = 'dataStructures';
+
+const dataStructureClassBP = `class ${solutionName} {
+  constructor() {
+  }
+}
+
+module.exports = ${solutionName};
+`;
+
+const dataStructureTestBP = `const ${solutionName} = require('./${solutionName}')
+
+const testOne = {
+  input: '',
+  output: ''
+}
+
+describe('${solutionName} Test', () => {
+
+  test('testOne', ()=>{
+    let result = ${solutionName}(testOne.input)
+    expect(result).toEqual(testOne.output);
+  });
+
+});
+`;
+
+// ////EXECUTION CODE//////
+let directory = '';
+let boilerPlateCode = '';
+let boilerPlateTest = '';
+
+// TODO: look into using map for this, switch might be code smell?
+switch (codeChallengeType) {
+  case 'challenge':
+    directory = CHALLENGES_DIR;
+    boilerPlateCode = solutionJS;
+    boilerPlateTest = solutionTestJS;
+    break;
+  case 'dataStructure':
+  default:
+    directory = DATA_STRUCTURES_DIR;
+    boilerPlateCode = dataStructureClassBP;
+    boilerPlateTest = dataStructureTestBP;
+}
+
+module.exports.generateDefaultBoilerPlate = function () {
   // make folder with solution name
   // Creates /tmp/a/apple, regardless of whether `/tmp` and /tmp/a exist.
   fs.mkdir(`./${directory}/${solutionName}`, { recursive: true }, (err) => {
@@ -47,7 +101,8 @@ module.exports.generateDefaultSolution = function () {
       if (err) throw err;
       // success case, the file was saved
       console.log(`${solutionName}Spec.md saved!`);
-  });
+    },
+  );
 
   // make notes.md file -> //make ${solution}notes.md file
   fs.writeFile(
@@ -58,12 +113,13 @@ module.exports.generateDefaultSolution = function () {
       if (err) throw err;
       // success case, the file was saved
       console.log(`${solutionName}Notes.md saved!`);
-  });
+    },
+  );
 
   // make solution.js file -> //make ${solution}solution.js file
   fs.writeFile(
     `./${directory}/${solutionName}/${solutionName}.js`,
-    solutionJS,
+    boilerPlateCode,
     (err) => {
       // throws an error, you could also catch it here
       if (err) throw err;
@@ -75,7 +131,7 @@ module.exports.generateDefaultSolution = function () {
   // make solution.test.js file -> //make ${solution}solution.test.js file
   fs.writeFile(
     `./${directory}/${solutionName}/${solutionName}.test.js`,
-    solutionTestJS,
+    boilerPlateTest,
     (err) => {
       // throws an error, you could also catch it here
       if (err) throw err;
@@ -84,3 +140,20 @@ module.exports.generateDefaultSolution = function () {
     },
   );
 };
+
+// //////////NOTES////////////
+// TODO:: make dynamic BP
+// ////DYNAMIC BOILERPLATE ATTEMPT//////
+// const codeMap = {
+//   dataStructures: {
+//     name: 'dataStructures',
+//     directory: 'dataStructures',
+//     boilerPlate: `class ${solutionName} {
+//       constructor() {
+//       }
+//     }
+//
+//     module.exports = ${solutionName};
+//     `,
+//   },
+// };
