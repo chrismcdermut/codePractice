@@ -11,7 +11,7 @@
     "circleArea": "node -e 'require(\"./jsOOPConcepts\").circleArea()'",
     "curryMultiply": "node -e 'require(\"./jsOOPConcepts\").curryMultiply()'",
     "domLoaded": "node -e 'require(\"./jsOOPConcepts\").domLoaded()'",
-    "generateSolution": "node -e 'require(\"./helpers/generateSolution\").generateDefaultSolution()'",
+    "generateBoilerPlate": "node -e 'require(\"./helpers/generateBoilerPlate\").generateDefaultBoilerPlate()'",
     "heapSort": "node -e 'require(\"./heapSort2-4-9-19\").runHeapSort()'",
     "iife": "node -e 'require(\"./jsOOPConcepts\").iife()'",
     "iifeWindow": "node -e 'require(\"./jsOOPConcepts\").iifeWindow()'",

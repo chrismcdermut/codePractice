@@ -85,7 +85,7 @@ switch (codeChallengeType) {
     boilerPlateTest = dataStructureTestBP;
 }
 
-module.exports.generateDefaultSolution = function () {
+module.exports.generateDefaultBoilerPlate = function () {
   // make folder with solution name
   // Creates /tmp/a/apple, regardless of whether `/tmp` and /tmp/a exist.
   fs.mkdir(`./${directory}/${solutionName}`, { recursive: true }, (err) => {
