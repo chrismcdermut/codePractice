@@ -3,8 +3,8 @@
 
 const fs = require('fs');
 
-const directory = 'dataStructures';
-const solutionName = 'tree';
+const directory = 'challenges';
+const solutionName = 'sandBox';
 
 const spec = `${solutionName} Spec go here!`;
 const notes = `${solutionName} Notes go here!`;
@@ -12,7 +12,7 @@ const solutionJS = `function ${solutionName}(input) {
 
 }
 
-module.exports = ${solutionName}
+module.exports = ${solutionName};
 `;
 const solutionTestJS = `const ${solutionName} = require('./${solutionName}')
 
@@ -26,10 +26,24 @@ describe('${solutionName} Test', () => {
   test('testOne', ()=>{
     let result = ${solutionName}(testOne.input)
     expect(result).toEqual(testOne.output);
-  })
+  });
 
-})
+});
 `;
+
+const codeMap = {
+  dataStructures: {
+    name: 'dataStructures',
+    directory: 'dataStructures',
+    boilerPlate: `class ${solutionName} {
+      constructor() {
+      }
+    }
+
+    module.exports = ${solutionName};
+    `
+  }
+}
 
 module.exports.generateDefaultSolution = function () {
   // make folder with solution name

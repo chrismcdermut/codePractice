@@ -1,6 +1,4 @@
 
-// TODO: Should add/remove not have underScores because they are public methods?
-
 class Tree {
   constructor(root) {
     this.root = root || null;
@@ -9,12 +7,8 @@ class Tree {
   traverse(callback) {
     // const self = this;
     function walkThrough(node) {
-      // TODO: wtf is callback for?, where does the node come from?
+      // TODO: wtf is callback for?
       callback(node);
-      // node.children.forEach((childNode) => {
-      //   walkThrough(childNode);
-      // });
-      // does this work?
       node.children.forEach(walkThrough);
     }
     // TODO: wtf is dash
@@ -75,7 +69,7 @@ class Tree {
       leafsFound.push(this.showLeafs(child));
     });
 
-    // TODO: look into .flat()
+    // TODO: look into .flat(), built in to node 12 or 11
     return leafsFound.flat();
   }
 }
