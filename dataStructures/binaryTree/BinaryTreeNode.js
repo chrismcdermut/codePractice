@@ -6,14 +6,14 @@ class BinaryTreeNode {
   }
 
   insertLeft(valueL) {
-    // this.left = new BinaryTreeNode(valueL);
-    this.left = valueL;
+    this.left = new BinaryTreeNode(valueL);
+    // this.left = valueL;
     return this.left;
   }
 
   insertRight(valueR) {
-    // this.right = new BinaryTreeNode(valueR);
-    this.right = valueR;
+    this.right = new BinaryTreeNode(valueR);
+    // this.right = valueR;
     return this.right;
   }
 }
