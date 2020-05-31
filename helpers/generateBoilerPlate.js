@@ -1,10 +1,10 @@
 const fs = require('fs');
 
 // ////SETUP HERE//////
-const solutionName = 'Graph';
+const solutionName = 'validateBinaryTree';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure */
-const codeChallengeType = 'dataStructure';
+const codeChallengeType = 'challenge';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
@@ -140,20 +140,3 @@ module.exports.generateDefaultBoilerPlate = function () {
     },
   );
 };
-
-// //////////NOTES////////////
-// TODO:: make dynamic BP
-// ////DYNAMIC BOILERPLATE ATTEMPT//////
-// const codeMap = {
-//   dataStructures: {
-//     name: 'dataStructures',
-//     directory: 'dataStructures',
-//     boilerPlate: `class ${solutionName} {
-//       constructor() {
-//       }
-//     }
-//
-//     module.exports = ${solutionName};
-//     `,
-//   },
-// };
