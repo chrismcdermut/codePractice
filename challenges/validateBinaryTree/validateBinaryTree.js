@@ -1,6 +1,6 @@
 // BT must have two or less nodes
 
-function validNodeCheck(node) {
+function validNodeLengthCheck(node) {
   let isValidNode = false;
 
   if (node.nodesNumber <= 2) {
@@ -11,15 +11,15 @@ function validNodeCheck(node) {
 }
 
 function validateBinaryTree(input) {
-  let binaryTreeIsValid = false;
+  const binaryTreeIsValid = false;
   console.log(input);
   // go through nodes, put through
-  if (!validNodeCheck(node)) {
-    binaryTreeIsValid = false;
-    // break;
-  }
+  // if (!validNodeLengthCheck(node)) {
+  //   binaryTreeIsValid = false;
+  //   // break;
+  // }
 
   return binaryTreeIsValid;
 }
 
-module.exports = validateBinaryTree;
+module.exports = { validateBinaryTree, validNodeLengthCheck };

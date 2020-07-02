@@ -1,14 +1,29 @@
 const Tree = require('../../dataStructures/tree/Tree');
 const BinaryTreeNode = require('../../dataStructures/binaryTree/BinaryTreeNode');
-const validateBinaryTree = require('./validateBinaryTree');
+const { validateBinaryTree, validNodeLengthCheck } = require('./validateBinaryTree');
 
 const testOne = {
   input: '',
   output: '',
 };
 
+xdescribe('Binary Tree propertuy unit test', () => {
+  xtest('is fo sho good bTree', () => {
+    const node = {};
+    const result = validNodeLengthCheck(node);
+    const answer = true;
+    expect(result).toEqual(answer);
+  });
+  xtest('is fo sho bad bTree', () => {
+    const node = {};
+    const result = validNodeLengthCheck(node);
+    const answer = false;
+    expect(result).toEqual(answer);
+  });
+});
+
 // IS BT
-describe('non superBalanced binaryTree Test', () => {
+xdescribe('non superBalanced binaryTree Test', () => {
   const binaryTree1Depth3 = new BinaryTreeNode(9);
   binaryTree1Depth3.insertRight(10);
 
@@ -44,7 +59,7 @@ describe('non superBalanced binaryTree Test', () => {
 });
 
 // IS NOT BT
-describe('NOT BTree test', () => {
+xdescribe('NOT BTree test', () => {
   const documentTree = new Tree();
 
   documentTree.addNode('document', 'root');
