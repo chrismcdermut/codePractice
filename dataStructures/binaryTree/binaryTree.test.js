@@ -1,6 +1,6 @@
 const BinaryTreeNode = require('./BinaryTreeNode');
 
-describe('binaryTree Test', () => {
+xdescribe('binaryTree Test', () => {
   const binaryTree1 = new BinaryTreeNode(5);
   binaryTree1.insertLeft(5);
   binaryTree1.insertRight(8);
@@ -16,14 +16,14 @@ describe('binaryTree Test', () => {
   });
 
   // TODO: Flesh out stub
-  xtest('binary tree is made correctly', () => {
+  test('binary tree is made correctly', () => {
     const result = binaryTree1;
     const someMockAnswer = {};
     expect(result).toEqual(someMockAnswer);
   });
 });
 
-describe('binaryTree Test', () => {
+xdescribe('binaryTree Test', () => {
   const bottomNode = new BinaryTreeNode(9);
   bottomNode.insertRight(10);
 
@@ -56,8 +56,76 @@ describe('binaryTree Test', () => {
   });
 
   // TODO: Flesh out stub
-  xtest('binary tree is made correctly', () => {
+  test('binary tree is made correctly', () => {
     const result = binaryTree2;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
+  });
+});
+
+xdescribe('binaryTree is Correct Test NEW', () => {
+  const layer2right3Node = new BinaryTreeNode(6);
+  layer2right3Node.insertLeft(4);
+  layer2right3Node.insertRight(7);
+
+  const layer1left2Node = new BinaryTreeNode(3);
+  layer1left2Node.insertLeft(1);
+  layer1left2Node.insertRight(layer2right3Node);
+
+  const layer1right2Node = new BinaryTreeNode(10);
+  layer1right2Node.insertRight(14);
+
+  const rootNode = new BinaryTreeNode(8);
+  rootNode.insertLeft(layer1left2Node);
+  rootNode.insertRight(layer1right2Node);
+
+  test('binary tree has left Property', () => {
+    const result = rootNode;
+    expect(result).toHaveProperty('left');
+  });
+
+  test('binary tree has right Property', () => {
+    const result = rootNode;
+    expect(result).toHaveProperty('right');
+  });
+
+  // TODO: Flesh out stub
+  test('binary tree is made correctly', () => {
+    const result = rootNode;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
+  });
+});
+
+xdescribe('binaryTree is Correct Test NEW', () => {
+  const layer2right3Node = new BinaryTreeNode(6);
+  layer2right3Node.insertLeft(2);
+  layer2right3Node.insertRight(7);
+
+  const layer1left2Node = new BinaryTreeNode(3);
+  layer1left2Node.insertLeft(1);
+  layer1left2Node.insertRight(layer2right3Node);
+
+  const layer1right2Node = new BinaryTreeNode(10);
+  layer1right2Node.insertRight(14);
+
+  const rootNode = new BinaryTreeNode(8);
+  rootNode.insertLeft(layer1left2Node);
+  rootNode.insertRight(layer1right2Node);
+
+  test('binary tree has left Property', () => {
+    const result = rootNode;
+    expect(result).toHaveProperty('left');
+  });
+
+  test('binary tree has right Property', () => {
+    const result = rootNode;
+    expect(result).toHaveProperty('right');
+  });
+
+  // TODO: Flesh out stub
+  test('binary tree is made correctly', () => {
+    const result = rootNode;
     const someMockAnswer = {};
     expect(result).toEqual(someMockAnswer);
   });

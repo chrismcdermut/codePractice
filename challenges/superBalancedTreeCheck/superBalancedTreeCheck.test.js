@@ -1,7 +1,7 @@
 const BinaryTreeNode = require('../../dataStructures/binaryTree/BinaryTreeNode');
 const superBalancedTreeCheck = require('./superBalancedTreeCheck');
 
-describe('non superBalanced binaryTree Test', () => {
+xdescribe('non superBalanced binaryTree Test', () => {
   const binaryTree1Depth3 = new BinaryTreeNode(9);
   binaryTree1Depth3.insertRight(10);
 
@@ -36,7 +36,7 @@ describe('non superBalanced binaryTree Test', () => {
   });
 });
 
-describe('non superBalanced binaryTree Test', () => {
+xdescribe('non superBalanced binaryTree Test', () => {
   const bottomNode = new BinaryTreeNode(9);
   bottomNode.insertRight(10);
 
@@ -71,7 +71,7 @@ describe('non superBalanced binaryTree Test', () => {
   });
 });
 
-describe('truly superBalanced binaryTree Test', () => {
+xdescribe('truly superBalanced binaryTree Test', () => {
   const bottomLeftNode = new BinaryTreeNode(2);
   bottomLeftNode.insertLeft(4);
   bottomLeftNode.insertRight(5);
@@ -97,7 +97,7 @@ describe('truly superBalanced binaryTree Test', () => {
   });
 });
 
-describe('truly superBalanced binaryTree Test', () => {
+xdescribe('truly superBalanced binaryTree Test', () => {
   const bottomLeftNode = new BinaryTreeNode(2);
   bottomLeftNode.insertLeft(4);
   bottomLeftNode.insertRight(5);

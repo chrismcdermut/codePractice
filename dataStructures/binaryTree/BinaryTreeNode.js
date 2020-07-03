@@ -7,15 +7,15 @@ class BinaryTreeNode {
 
   /* declare binary node and set as value, breaks encapsulation, whatevs 4 now */
   insertLeft(valueL) {
-    // this.left = new BinaryTreeNode(valueL);
-    this.left = valueL;
+    this.left = new BinaryTreeNode(valueL);
+    // this.left = valueL;
     return this.left;
   }
 
   /* declare binary node and set as value, breaks encapsulation, whatevs 4 now */
   insertRight(valueR) {
-    // this.right = new BinaryTreeNode(valueR);
-    this.right = valueR;
+    this.right = new BinaryTreeNode(valueR);
+    // this.right = valueR;
     return this.right;
   }
 }
