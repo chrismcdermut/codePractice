@@ -31,6 +31,7 @@ describe('isValidBTreeCheck True Test', () => {
   const layer1left2Node = new BinaryTreeNode(3);
   layer1left2Node.insertLeft(1);
   layer1left2Node.insertRight(layer2right3Node);
+  layer1left2Node.right = layer2right3Node;
 
   const layer1right2Node = new BinaryTreeNode(10);
   layer1right2Node.insertRight(14);

@@ -1,6 +1,6 @@
 const BinaryTreeNode = require('./BinaryTreeNode');
 
-xdescribe('binaryTree Test', () => {
+describe('binaryTree Test', () => {
   const binaryTree1 = new BinaryTreeNode(5);
   binaryTree1.insertLeft(5);
   binaryTree1.insertRight(8);
@@ -16,14 +16,14 @@ xdescribe('binaryTree Test', () => {
   });
 
   // TODO: Flesh out stub
-  test('binary tree is made correctly', () => {
+  xtest('binary tree is made correctly', () => {
     const result = binaryTree1;
     const someMockAnswer = {};
     expect(result).toEqual(someMockAnswer);
   });
 });
 
-xdescribe('binaryTree Test', () => {
+describe('binaryTree Test', () => {
   const bottomNode = new BinaryTreeNode(9);
   bottomNode.insertRight(10);
 
@@ -56,14 +56,14 @@ xdescribe('binaryTree Test', () => {
   });
 
   // TODO: Flesh out stub
-  test('binary tree is made correctly', () => {
+  xtest('binary tree is made correctly', () => {
     const result = binaryTree2;
     const someMockAnswer = {};
     expect(result).toEqual(someMockAnswer);
   });
 });
 
-xdescribe('binaryTree is Correct Test NEW', () => {
+describe('binaryTree is Correct Test NEW', () => {
   const layer2right3Node = new BinaryTreeNode(6);
   layer2right3Node.insertLeft(4);
   layer2right3Node.insertRight(7);
@@ -90,14 +90,14 @@ xdescribe('binaryTree is Correct Test NEW', () => {
   });
 
   // TODO: Flesh out stub
-  test('binary tree is made correctly', () => {
+  xtest('binary tree is made correctly', () => {
     const result = rootNode;
     const someMockAnswer = {};
     expect(result).toEqual(someMockAnswer);
   });
 });
 
-xdescribe('binaryTree is Correct Test NEW', () => {
+describe('binaryTree is Correct Test NEW', () => {
   const layer2right3Node = new BinaryTreeNode(6);
   layer2right3Node.insertLeft(2);
   layer2right3Node.insertRight(7);
@@ -124,7 +124,7 @@ xdescribe('binaryTree is Correct Test NEW', () => {
   });
 
   // TODO: Flesh out stub
-  test('binary tree is made correctly', () => {
+  xtest('binary tree is made correctly', () => {
     const result = rootNode;
     const someMockAnswer = {};
     expect(result).toEqual(someMockAnswer);
