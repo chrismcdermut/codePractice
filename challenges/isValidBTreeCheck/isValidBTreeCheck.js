@@ -3,13 +3,11 @@ const BinaryTreeNode = require('../../dataStructures/binaryTree/BinaryTreeNode')
 // the value on left is less than current node
 // the value on right is greater than current node
 function hasValidImmediateNode(node) {
-  // let isValidNode = false;
+  let isValidNode = true; // TODO: Wanting to switch this logic to have default be false
   if (node.left.value > node.value || node.right.value < node.value) {
-    return false;
+    isValidNode = false;
   }
-  // isValidNode = true;
-  // return isValidNode;
-  return true;
+  return isValidNode;
 }
 
 // Should prolly do dfs
