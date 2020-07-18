@@ -62,3 +62,71 @@ describe('binaryTree Test', () => {
     expect(result).toEqual(someMockAnswer);
   });
 });
+
+describe('binaryTree is Correct Test NEW', () => {
+  const layer2right3Node = new BinaryTreeNode(6);
+  layer2right3Node.insertLeft(4);
+  layer2right3Node.insertRight(7);
+
+  const layer1left2Node = new BinaryTreeNode(3);
+  layer1left2Node.insertLeft(1);
+  layer1left2Node.insertRight(layer2right3Node);
+
+  const layer1right2Node = new BinaryTreeNode(10);
+  layer1right2Node.insertRight(14);
+
+  const rootNode = new BinaryTreeNode(8);
+  rootNode.insertLeft(layer1left2Node);
+  rootNode.insertRight(layer1right2Node);
+
+  test('binary tree has left Property', () => {
+    const result = rootNode;
+    expect(result).toHaveProperty('left');
+  });
+
+  test('binary tree has right Property', () => {
+    const result = rootNode;
+    expect(result).toHaveProperty('right');
+  });
+
+  // TODO: Flesh out stub
+  xtest('binary tree is made correctly', () => {
+    const result = rootNode;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
+  });
+});
+
+describe('binaryTree is Correct Test NEW', () => {
+  const layer2right3Node = new BinaryTreeNode(6);
+  layer2right3Node.insertLeft(2);
+  layer2right3Node.insertRight(7);
+
+  const layer1left2Node = new BinaryTreeNode(3);
+  layer1left2Node.insertLeft(1);
+  layer1left2Node.insertRight(layer2right3Node);
+
+  const layer1right2Node = new BinaryTreeNode(10);
+  layer1right2Node.insertRight(14);
+
+  const rootNode = new BinaryTreeNode(8);
+  rootNode.insertLeft(layer1left2Node);
+  rootNode.insertRight(layer1right2Node);
+
+  test('binary tree has left Property', () => {
+    const result = rootNode;
+    expect(result).toHaveProperty('left');
+  });
+
+  test('binary tree has right Property', () => {
+    const result = rootNode;
+    expect(result).toHaveProperty('right');
+  });
+
+  // TODO: Flesh out stub
+  xtest('binary tree is made correctly', () => {
+    const result = rootNode;
+    const someMockAnswer = {};
+    expect(result).toEqual(someMockAnswer);
+  });
+});

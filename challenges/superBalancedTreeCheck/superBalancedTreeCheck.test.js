@@ -23,12 +23,6 @@ describe('non superBalanced binaryTree Test', () => {
   binaryTree1Depth0.insertLeft(binaryTree1Depth1Left);
   binaryTree1Depth0.insertRight(binaryTree1Depth1Right);
 
-  xtest('binary tree is made Correctly', () => {
-    const result = binaryTree1Depth0;
-    const someMockAnswer = {};
-    expect(result).toEqual(someMockAnswer);
-  });
-
   test('binary tree is superBalanced test1', () => {
     const result = superBalancedTreeCheck(binaryTree1Depth0);
     const answer = false;
@@ -58,12 +52,6 @@ describe('non superBalanced binaryTree Test', () => {
   binaryTree1.insertLeft(secondLayerLeftNode);
   binaryTree1.insertRight(secondLayerRightNode);
 
-  xtest('binary tree is made Correctly', () => {
-    const result = binaryTree1;
-    const someMockAnswer = {};
-    expect(result).toEqual(someMockAnswer);
-  });
-
   test('binary tree is superBalanced test2', () => {
     const result = superBalancedTreeCheck(binaryTree1);
     const answer = false;
@@ -84,12 +72,6 @@ describe('truly superBalanced binaryTree Test', () => {
   binaryTree2.insertLeft(bottomLeftNode);
   binaryTree2.insertRight(bottomRightNode);
 
-  xtest('binary tree is made Correctly', () => {
-    const result = binaryTree2;
-    const someMockAnswer = {};
-    expect(result).toEqual(someMockAnswer);
-  });
-
   test('binary tree is superBalanced', () => {
     const result = superBalancedTreeCheck(binaryTree2);
     const answer = true;
@@ -105,12 +87,6 @@ describe('truly superBalanced binaryTree Test', () => {
   const binaryTree3 = new BinaryTreeNode(1);
   binaryTree3.insertLeft(bottomLeftNode);
   binaryTree3.insertRight(3);
-
-  xtest('binary tree is made Correctly', () => {
-    const result = binaryTree3;
-    const someMockAnswer = {};
-    expect(result).toEqual(someMockAnswer);
-  });
 
   test('binary tree is superBalanced', () => {
     const result = superBalancedTreeCheck(binaryTree3);

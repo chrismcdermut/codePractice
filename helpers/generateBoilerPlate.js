@@ -1,10 +1,10 @@
 const fs = require('fs');
 
 // ////SETUP HERE//////
-const solutionName = 'Graph';
+const solutionName = 'isValidBTreeCheck';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure */
-const codeChallengeType = 'dataStructure';
+const codeChallengeType = 'challenge';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
