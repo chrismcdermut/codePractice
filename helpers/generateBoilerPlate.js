@@ -1,10 +1,10 @@
 const fs = require('fs');
 
 // ////SETUP HERE//////
-const solutionName = 'isValidBTreeCheck';
+const solutionName = 'heapSort';
 // TODO: look into setting up map or enum for this
-/* challenge || dataStructure */
-const codeChallengeType = 'challenge';
+/* challenge || dataStructure || algorithm || designPattern || conept */
+const codeChallengeType = 'algorithm';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
@@ -66,6 +66,33 @@ describe('${solutionName} Test', () => {
 });
 `;
 
+// ////DATA STRUCTURES BOILERPLATE//////
+const ALGORITHMS_DIR = 'algorithms';
+
+const algorithmJS = `function ${solutionName}(input) {
+
+}
+
+module.exports = ${solutionName};
+`;
+
+const algorithmTestJS = `const ${solutionName} = require('./${solutionName}')
+
+const testOne = {
+  input: '',
+  output: ''
+}
+
+describe('${solutionName} Test', () => {
+
+  test('testOne', ()=>{
+    let result = ${solutionName}(testOne.input)
+    expect(result).toEqual(testOne.output);
+  });
+
+});
+`;
+
 // ////EXECUTION CODE//////
 let directory = '';
 let boilerPlateCode = '';
@@ -77,6 +104,11 @@ switch (codeChallengeType) {
     directory = CHALLENGES_DIR;
     boilerPlateCode = solutionJS;
     boilerPlateTest = solutionTestJS;
+    break;
+  case 'algorithm':
+    directory = ALGORITHMS_DIR;
+    boilerPlateCode = algorithmJS;
+    boilerPlateTest = algorithmTestJS;
     break;
   case 'dataStructure':
   default:
