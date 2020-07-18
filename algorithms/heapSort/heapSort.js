@@ -1,4 +1,3 @@
-/* eslint-disable */
 // TODO: enable linting
 
 let arrayLength;
@@ -31,7 +30,8 @@ const heapRoot = (input, i) => {
   }
 };
 
-const heapSort = (input) => {
+function heapSort(inputArg) {
+  const input = inputArg;
   arrayLength = input.length;
 
   for (let i = Math.floor(arrayLength / 2); i >= 0; i -= 1) {
@@ -44,16 +44,8 @@ const heapSort = (input) => {
 
     heapRoot(input, 0);
   }
-};
 
-const exampleList = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34];
+  return input;
+}
 
-module.exports.runHeapSort = function () {
-  // console.log(heapSort(exampleList));
-  heapSort(exampleList);
-  console.log(exampleList);
-};
-
-// var arr = [3, 0, 2, 5, -1, 4, 1];
-// heapSort(exampleList);
-// console.log(exampleList);
+module.exports = heapSort;

@@ -1,4 +1,3 @@
-/* eslint-disable */
 // TODO: enable linting
 
 const exampleList = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34];
@@ -11,30 +10,17 @@ const swap = (inputArg, indexA, indexB) => {
   input[indexB] = temp;
 };
 
-const heapify = (input, i) => {
-  console.log('heapify input');
-  console.log(input);
-  console.log('heapify current max');
-  console.log(i);
+const heapify = (inputArg, i) => {
+  const input = inputArg;
   const left = 2 * i + 1;
   const right = 2 * i + 2;
   let max = i;
 
   if (left < arrayLength && input[left] > input[max]) {
-    console.log(left);
-    console.log('input[left]');
-    console.log(input[left]);
-    console.log('input[max]');
-    console.log(input[max]);
     max = left;
   }
 
   if (right < arrayLength && input[right] > input[max]) {
-    console.log(right);
-    console.log('input[right]');
-    console.log(input[right]);
-    console.log('input[max]');
-    console.log(input[max]);
     max = right;
   }
 
@@ -44,18 +30,9 @@ const heapify = (input, i) => {
   }
 };
 
-const buildHeap = (input) => {
+const heapSort = (inputArg) => {
+  const input = inputArg;
   arrayLength = input.length;
-
-  for (let i = Math.floor(arrayLength / 2); i >= 0; i -= 1) {
-    heapify(input, i);
-  }
-};
-
-const heapSort = (input) => {
-  arrayLength = input.length;
-  console.log('arrayLength');
-  console.log(arrayLength);
 
   for (let i = Math.floor(arrayLength / 2); i >= 0; i -= 1) {
     heapify(input, i);
@@ -69,8 +46,14 @@ const heapSort = (input) => {
 };
 
 module.exports.runHeapSort = function () {
-  console.log('first log of list');
-  console.log(exampleList);
   heapSort(exampleList);
-  console.log(exampleList);
 };
+
+// ////NOTES////
+// // const buildHeap = (input) => {
+//   arrayLength = input.length;
+//
+//   for (let i = Math.floor(arrayLength / 2); i >= 0; i -= 1) {
+//     heapify(input, i);
+//   }
+// };
