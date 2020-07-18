@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // ////SETUP HERE//////
-const solutionName = 'heapSort';
+const solutionName = 'binarySearch';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || conept */
 const codeChallengeType = 'algorithm';

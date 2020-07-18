@@ -1,0 +1,1 @@
+binarySearch Spec goes here!
