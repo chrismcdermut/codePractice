@@ -5,7 +5,7 @@
   "main": "algorithm.js",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
-    "test": "jest",
+    "test": "jest --config jest.config.js",
     "binarySearch": "node -e 'require(\"./binarySearch-4-6-19\").runBinarySearch()'",
     "bubbleSort": "node -e 'require(\"./bubbleSort-4-6-19\").bubbleSort()'",
     "circleArea": "node -e 'require(\"./jsOOPConcepts\").circleArea()'",
@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/chrismcdermut/codePractice#readme",
   "devDependencies": {
+    "codecov": "^3.7.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
