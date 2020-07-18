@@ -1,6 +1,3 @@
-/* eslint-disable */
-// TODO: enable linting
-
 function insertionSort(itemsArg) {
   const items = itemsArg;
   for (let i = 0; i < items.length; i += 1) {
@@ -18,9 +15,8 @@ function insertionSort(itemsArg) {
   return items;
 }
 
-const list = [54, 26, 93, 17, 77, 31, 44, 55, 20];
-// console.log(insertionSort(list)) // [ 17, 20, 26, 31, 44, 54, 55, 77, 93 ]
-
 module.exports.runInsertionSort = function () {
+  const list = [54, 26, 93, 17, 77, 31, 44, 55, 20];
+  // answer = [ 17, 20, 26, 31, 44, 54, 55, 77, 93 ]
   console.log(insertionSort(list));
 };
