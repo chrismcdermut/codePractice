@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // TODO: make this take arguments
 // ////SETUP HERE//////
-const solutionName = 'quickSort';
+const solutionName = 'selectionSort';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || conept */
 const codeChallengeType = 'algorithm';

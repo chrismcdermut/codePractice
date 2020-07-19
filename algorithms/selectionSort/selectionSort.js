@@ -1,9 +1,4 @@
-/* eslint-disable */
-// TODO: enable linting
-
-const list1 = [23, 4, 42, 8, 16, 15];
-
-const selectionSort = (listArg) => {
+function selectionSort(listArg) {
   const list = listArg;
   for (let i = 0; i < list.length; i += 1) {
     let currentMinIndex = i;
@@ -19,6 +14,6 @@ const selectionSort = (listArg) => {
     }
   }
   return list;
-};
+}
 
-console.log(selectionSort(list1));
+module.exports = selectionSort;

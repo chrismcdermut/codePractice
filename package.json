@@ -21,7 +21,7 @@
     "printHello": "node -e 'require(\"./jsOOPConcepts\").printHello()'",
     "quickSort": "node -e 'require(\"./algorithms/quickSort/quickSort-4-6-19\").runQuickSort()'",
     "reverseWords": "node -e 'require(\"./challenges/reverseWords/reverseWords\").reverseWords()'",
-    "selectionSort": "node -e 'require(\"./selectionSort-4-6-19\").runSelectionSort()'",
+    "selectionSort": "node -e 'require(\"./algorithms/selectionSort/selectionSort-4-6-19\").runSelectionSort()'",
     "seniorAge": "node -e 'require(\"./jsOOPConcepts\").seniorAge()'",
     "yakovChain": "node -e 'require(\"./jsOOPConcepts\").runYakovChain()'"
   },
