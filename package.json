@@ -19,7 +19,7 @@
     "jumpToZero": "node -e 'require(\"./jumpToZero-4-9-19\").runJumpToZero()'",
     "mergeSort": "node -e 'require(\"./algorithms/mergeSort/mergeSort-4-6-19\").runMergeSort()'",
     "printHello": "node -e 'require(\"./jsOOPConcepts\").printHello()'",
-    "quickSort": "node -e 'require(\"./quickSort-4-6-19\").runQuickSort()'",
+    "quickSort": "node -e 'require(\"./algorithms/quickSort/quickSort-4-6-19\").runQuickSort()'",
     "reverseWords": "node -e 'require(\"./challenges/reverseWords/reverseWords\").reverseWords()'",
     "selectionSort": "node -e 'require(\"./selectionSort-4-6-19\").runSelectionSort()'",
     "seniorAge": "node -e 'require(\"./jsOOPConcepts\").seniorAge()'",
