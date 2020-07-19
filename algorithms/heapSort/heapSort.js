@@ -1,5 +1,3 @@
-// TODO: enable linting
-
 let arrayLength;
 
 const swap = (inputArg, originalMax, newMax) => {

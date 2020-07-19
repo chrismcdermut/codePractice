@@ -1,9 +1,4 @@
-/* eslint-disable */
-// TODO: enable linting
-
-const list1 = [4, 8, 15, 16, 23, 42];
-
-const binarySearch = (list, lookFor) => {
+function binarySearch(list, lookFor) {
   let min = 0;
   let max = list.length;
   let middle;
@@ -14,9 +9,10 @@ const binarySearch = (list, lookFor) => {
     if (list[middle] === lookFor) {
       return middle;
     }
+    // eslint-disable-next-line no-unused-expressions
     list[middle] < lookFor ? (min = middle) : (max = middle);
   }
   return -1;
-};
+}
 
-console.log(binarySearch(list1, 15));
+module.exports = binarySearch;

@@ -1,9 +1,4 @@
-/* eslint-disable */
-// TODO: enable linting
-
-const list1 = [23, 4, 42, 15, 16, 8, 3];
-
-const merge = (left, right) => {
+function merge(left, right) {
   const result = [];
 
   while (left.length || right.length) {
@@ -20,19 +15,18 @@ const merge = (left, right) => {
     }
   }
   return result;
-};
+}
 
-const mergeSort = (listArg) => {
+function mergeSort(listArg) {
   const list = listArg;
-  if (list.length <= 1) {
-    return list;
-  }
+
+  if (list.length <= 1) return list;
 
   const middle = list.length / 2;
   const left = list.slice(0, middle);
   const right = list.slice(middle, list.length);
 
   return merge(mergeSort(left), mergeSort(right));
-};
+}
 
-console.log(mergeSort(list1));
+module.exports = mergeSort;
