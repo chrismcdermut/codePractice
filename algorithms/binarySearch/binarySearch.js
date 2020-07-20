@@ -16,3 +16,8 @@ function binarySearch(list, lookFor) {
 }
 
 module.exports = binarySearch;
+
+module.exports.runBinarySearch = function () {
+  const exampleList = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];
+  console.log(binarySearch(exampleList, 67));
+};

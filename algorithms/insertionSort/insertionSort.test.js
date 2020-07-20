@@ -11,7 +11,7 @@ const testTwo = {
 };
 
 // TODO: Figure this one out
-xdescribe('insertionSort1 Test', () => {
+describe('insertionSort1 Test', () => {
   test('testOne', () => {
     const result = insertionSort1(testOne.input);
     expect(result).toEqual(testOne.output);

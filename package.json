@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
     "test": "jest --config jest.config.js",
-    "binarySearch": "node -e 'require(\"./algorithms/binarySearch/binarySearch-4-6-19\").runBinarySearch()'",
+    "binarySearch": "node -e 'require(\"./algorithms/binarySearch/binarySearch\").runBinarySearch()'",
     "bubbleSort": "node -e 'require(\"./algorithms/bubbleSort/bubbleSort-4-6-19\").bubbleSort()'",
     "circleArea": "node -e 'require(\"./jsOOPConcepts\").circleArea()'",
     "curryMultiply": "node -e 'require(\"./jsOOPConcepts\").curryMultiply()'",
@@ -15,7 +15,8 @@
     "heapSort": "node -e 'require(\"./algorithms/heapSort/heapSort1-4-9-19\").runHeapSort()'",
     "iife": "node -e 'require(\"./jsOOPConcepts\").iife()'",
     "iifeWindow": "node -e 'require(\"./jsOOPConcepts\").iifeWindow()'",
-    "insertionSort": "node -e 'require(\"./algorithms/insertionSort/insertionSort2-4-9-19\").runInsertionSort()'",
+    "insertionSort1": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort1()'",
+    "insertionSort2": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort2()'",
     "jumpToZero": "node -e 'require(\"./jumpToZero-4-9-19\").runJumpToZero()'",
     "mergeSort": "node -e 'require(\"./algorithms/mergeSort/mergeSort-4-6-19\").runMergeSort()'",
     "printHello": "node -e 'require(\"./jsOOPConcepts\").printHello()'",

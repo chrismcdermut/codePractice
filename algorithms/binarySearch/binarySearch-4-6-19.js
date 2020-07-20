@@ -1,9 +1,8 @@
-const exampleList = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];
-
 const binarySearch = (list, searchValue) => {
   let min = 0;
   let max = list.length;
   let middle;
+  
   while (min <= max) {
     middle = Math.floor((min + max) / 2);
     if (list[middle] === searchValue) {
@@ -16,5 +15,6 @@ const binarySearch = (list, searchValue) => {
 };
 
 module.exports.runBinarySearch = function () {
+  const exampleList = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];
   console.log(binarySearch(exampleList, 67));
 };
