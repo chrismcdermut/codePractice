@@ -40,5 +40,6 @@ module.exports.runInsertionSort1 = function () {
 
 module.exports.runInsertionSort2 = function () {
   const array1 = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+  // answer = [ 1,2,3,4,5,6,7,8,9,10 ]
   console.log(insertionSort2(array1));
 };
