@@ -12,7 +12,7 @@
     "curryMultiply": "node -e 'require(\"./jsOOPConcepts\").curryMultiply()'",
     "domLoaded": "node -e 'require(\"./jsOOPConcepts\").domLoaded()'",
     "generateBoilerPlate": "node -e 'require(\"./helpers/generateBoilerPlate\").generateDefaultBoilerPlate()'",
-    "heapSort": "node -e 'require(\"./algorithms/heapSort/heapSort1-4-9-19\").runHeapSort()'",
+    "heapSort": "node -e 'require(\"./algorithms/heapSort/heapSort\").runHeapSort()'",
     "iife": "node -e 'require(\"./jsOOPConcepts\").iife()'",
     "iifeWindow": "node -e 'require(\"./jsOOPConcepts\").iifeWindow()'",
     "insertionSort1": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort1()'",

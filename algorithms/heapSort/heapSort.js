@@ -3,7 +3,6 @@ let arrayLength;
 const swap = (inputArg, originalMax, newMax) => {
   const input = inputArg;
   const temp = input[originalMax];
-
   input[originalMax] = input[newMax];
   input[newMax] = temp;
 };
@@ -47,3 +46,8 @@ function heapSort(inputArg) {
 }
 
 module.exports = heapSort;
+
+module.exports.runHeapSort = function () {
+  const exampleList = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34];
+  heapSort(exampleList);
+};
