@@ -21,3 +21,8 @@ function bubbleSort(input) {
 }
 
 module.exports = bubbleSort;
+
+module.exports.runBubbleSort = function () {
+  const list = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 89];
+  console.log(bubbleSort(list));
+};
