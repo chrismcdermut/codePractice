@@ -18,7 +18,7 @@
     "insertionSort1": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort1()'",
     "insertionSort2": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort2()'",
     "jumpToZero": "node -e 'require(\"./jumpToZero-4-9-19\").runJumpToZero()'",
-    "mergeSort": "node -e 'require(\"./algorithms/mergeSort/mergeSort-4-6-19\").runMergeSort()'",
+    "mergeSort": "node -e 'require(\"./algorithms/mergeSort/mergeSort\").runMergeSort()'",
     "printHello": "node -e 'require(\"./jsOOPConcepts\").printHello()'",
     "quickSort": "node -e 'require(\"./algorithms/quickSort/quickSort\").runQuickSort()'",
     "reverseWords": "node -e 'require(\"./challenges/reverseWords/reverseWords\").reverseWords()'",
