@@ -19,3 +19,8 @@ function quickSort(listArg) {
 }
 
 module.exports = quickSort;
+
+module.exports.runQuickSort = function () {
+  const exampleList = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34];
+  console.log(quickSort(exampleList));
+};

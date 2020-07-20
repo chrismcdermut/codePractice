@@ -3,13 +3,14 @@ function insertionSort1(inputArg) {
   for (let i = 0; i < items.length; i += 1) {
     const value = items[i];
     // store the current item value so it can be placed right
-    for (let j = i - 1; j > -1 && items[j] > value; j -= 1) {
+    let j;
+    for (j = i - 1; j >= 0 && items[j] > value; j -= 1) {
       // loop through the items in the sorted array (the items from the current to the beginning)
       // copy each item to the next one
       items[j + 1] = items[j];
     }
     // the last item we've reached should now hold the value of the currently sorted item
-    items[i + 1] = value;
+    items[j + 1] = value;
   }
 
   return items;
@@ -30,3 +31,15 @@ function insertionSort2(arrayArg) {
 }
 
 module.exports = { insertionSort1, insertionSort2 };
+
+module.exports.runInsertionSort1 = function () {
+  const list = [54, 26, 93, 17, 77, 31, 44, 55, 20];
+  // answer = [ 17, 20, 26, 31, 44, 54, 55, 77, 93 ]
+  console.log(insertionSort1(list));
+};
+
+module.exports.runInsertionSort2 = function () {
+  const array1 = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+  // answer = [ 1,2,3,4,5,6,7,8,9,10 ]
+  console.log(insertionSort2(array1));
+};
