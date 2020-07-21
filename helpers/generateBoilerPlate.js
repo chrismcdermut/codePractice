@@ -2,10 +2,10 @@ const fs = require('fs');
 
 // TODO: make this take arguments
 // ////SETUP HERE//////
-const solutionName = 'findSecondLargestBTreeItem';
+const solutionName = 'graphNode';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || conept */
-const codeChallengeType = 'challenge';
+const codeChallengeType = 'dataStructure';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
