@@ -1,5 +1,12 @@
 findSecondLargestBTreeItem Notes go here!
+//Learnings
+-start off with a simpler version of the problem
 
+-Break things down into cases:
+The largest node has a left subtree.
+The largest node does not have a left subtree.
+
+/////////Old code
 // options, sort the tree
 // find largest two elements
 // do breadthfirstsearch
