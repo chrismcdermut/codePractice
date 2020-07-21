@@ -39,4 +39,45 @@ function findSecondLargest(rootNode) {
   return findSecondLargest(rootNode.right);
 }
 
-module.exports = findSecondLargest;
+// ///////////Better version////////////////
+
+// This finds largest right node in a BTree
+// eslint-disable-next-line consistent-return
+function findLargest2(rootNode) {
+  let current = rootNode;
+  while (current) {
+    if (!current.right) return current.value;
+    current = current.right;
+  }
+}
+
+// eslint-disable-next-line consistent-return
+function findSecondLargest2(rootNode) {
+  if (!rootNode || (!rootNode.left && !rootNode.right)) {
+    throw new Error('Tree must have at least 2 nodes');
+  }
+
+  let current = rootNode;
+
+  while (current) {
+    // Case: current is largest and has a left subtree
+    // 2nd largest is the largest in that subtree
+    if (current.left && !current.right) {
+      return findLargest2(current.left);
+    }
+
+    // Case: current is parent of largest, and largest has no children,
+    // so current is 2nd largest
+    if (
+      current.right
+      && !current.right.left
+      && !current.right.right
+    ) {
+      return current.value;
+    }
+
+    current = current.right;
+  }
+}
+
+module.exports = { findSecondLargest, findSecondLargest2 };
