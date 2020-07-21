@@ -45,6 +45,8 @@ function findSecondLargest(rootNode) {
 // eslint-disable-next-line consistent-return
 function findLargest2(rootNode) {
   let current = rootNode;
+  // while loop is better because it doesn't use recursion and thus space on the
+  // call stack
   while (current) {
     if (!current.right) return current.value;
     current = current.right;
