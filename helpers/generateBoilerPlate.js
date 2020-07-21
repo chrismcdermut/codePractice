@@ -2,10 +2,10 @@ const fs = require('fs');
 
 // TODO: make this take arguments
 // ////SETUP HERE//////
-const solutionName = 'selectionSort';
+const solutionName = 'findSecondLargestBTreeItem';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || conept */
-const codeChallengeType = 'algorithm';
+const codeChallengeType = 'challenge';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
