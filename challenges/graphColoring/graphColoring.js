@@ -25,6 +25,7 @@ function colorGraph(graph, colors) {
       }
     }
   });
+  return graph;
 }
 
 function checkHasIllegalColor(graph) {

@@ -44,7 +44,7 @@ describe('checkHasIllegalColor Test', () => {
   });
 });
 
-xdescribe('colorGraph Test', () => {
+describe('colorGraph Test', () => {
   // the test should make sure there are no illegal colors..
 
   test('testOne, no illegal color', () => {
