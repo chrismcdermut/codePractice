@@ -17,7 +17,7 @@
     "iifeWindow": "node -e 'require(\"./jsOOPConcepts\").iifeWindow()'",
     "insertionSort1": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort1()'",
     "insertionSort2": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort2()'",
-    "jumpToZero": "node -e 'require(\"./jumpToZero-4-9-19\").runJumpToZero()'",
+    "jumpToZero": "node -e 'require(\"./challenges/arrayJumping/arrayJumping\").runJumpToZero()'",
     "mergeSort": "node -e 'require(\"./algorithms/mergeSort/mergeSort\").runMergeSort()'",
     "printHello": "node -e 'require(\"./jsOOPConcepts\").printHello()'",
     "quickSort": "node -e 'require(\"./algorithms/quickSort/quickSort\").runQuickSort()'",
