@@ -1,6 +1,3 @@
-/* eslint-disable */
-// TODO: enable linting
-
 const z = {};
 module.exports = {
   runYakovChain() {
@@ -83,24 +80,26 @@ module.exports = {
     console.log(operation(10));
   },
   iifeWindow() {
-    (function (window) {
+    (function (windowArg) {
+      const window = windowArg;
       const obj = {};
       obj.dreamOn = function () {
         console.log('I am just fine. Let me out.');
       };
       window.doer = obj;
     }(window));
-    doer.dreamOn;
+    doer.dreamOn(); // eslint-disable-line no-undef
   },
   iife() {
-    (function (window) {
+    (function (windowArg) {
+      const window = windowArg;
       const obj = {};
       obj.dreamOn = function () {
         console.log('I am just fine. Let me out.');
       };
       window.doer = obj;
     }(z));
-    doer.dreamOn;
+    doer.dreamOn(); // eslint-disable-line no-undef
   },
   domLoaded() {
     document.addEventListener('DOMContentLoaded', (event) => {
