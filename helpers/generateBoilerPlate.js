@@ -2,10 +2,10 @@ const fs = require('fs');
 
 // TODO: make this take arguments
 // ////SETUP HERE//////
-const solutionName = 'Queue';
+const solutionName = 'arrayJumping';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || conept */
-const codeChallengeType = 'dataStructure';
+const codeChallengeType = 'challenge';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
