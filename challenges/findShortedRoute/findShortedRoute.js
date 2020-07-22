@@ -1,4 +1,5 @@
 // import Queue from '../../dataStructures/Queue/Queue';
+// TODO:: implement using queue
 
 function constructPath(nodesPath, startNode, endNode) {
   const shortestPath = [];
@@ -18,7 +19,7 @@ function constructPath(nodesPath, startNode, endNode) {
 // method 'hasOwnProperty' from target object
 // other option is direclty calling via prototype:
 // howWeReachedNodes.hasOwnProperty(neighbor)
-function findShortedRoute(graph, startNode, endNode) { // AKA BFS
+function findShortestRoute(graph, startNode, endNode) { // AKA BFS
   if (!Object.prototype.hasOwnProperty.call(graph, startNode)) {
     throw new Error('Start node not in graph!');
   }
@@ -27,8 +28,9 @@ function findShortedRoute(graph, startNode, endNode) { // AKA BFS
   }
 
   // TODO: Why use a Queue?
-  // let nodesToVisit = new Queue();
+  // const nodesToVisit = new Queue();
   // nodesToVisit.enqueue(startNode);
+
   const nodesToVisit = [];
   nodesToVisit.push(startNode);
 
@@ -37,7 +39,9 @@ function findShortedRoute(graph, startNode, endNode) { // AKA BFS
   const howWeReachedNodes = {};
   howWeReachedNodes[startNode] = null;
 
+  // while (nodesToVisit.getLength() > 0) {
   while (nodesToVisit.length > 0) {
+    // const currentNode = nodesToVisit.dequeue();
     const currentNode = nodesToVisit.shift();
 
     if (currentNode === endNode) { // check if we found endNode
@@ -47,6 +51,7 @@ function findShortedRoute(graph, startNode, endNode) { // AKA BFS
     graph[currentNode].forEach((neighbor) => {
       // if we haven't seen this node yet
       if (!Object.prototype.hasOwnProperty.call(howWeReachedNodes, neighbor)) {
+        // nodesToVisit.enqueue(neighbor);
         nodesToVisit.push(neighbor);
         howWeReachedNodes[neighbor] = currentNode; // logs node's 'from' path
       }
@@ -56,4 +61,4 @@ function findShortedRoute(graph, startNode, endNode) { // AKA BFS
   return null;
 }
 
-module.exports = findShortedRoute;
+module.exports = { constructPath, findShortestRoute };

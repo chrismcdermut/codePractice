@@ -1,6 +1,6 @@
-const findShortedRoute = require('./findShortedRoute');
+const { findShortestRoute } = require('./findShortedRoute');
 
-describe('findShortedRoute Test', () => {
+describe('findShortestRoute Test', () => {
   const network = {
     Min: ['William', 'Jayden', 'Omar'],
     William: ['Min', 'Noam'],
@@ -15,7 +15,7 @@ describe('findShortedRoute Test', () => {
 
   test('testOne', () => {
     const answer = ['Jayden', 'Amelia', 'Adam'];
-    const result = findShortedRoute(network, 'Jayden', 'Adam');
+    const result = findShortestRoute(network, 'Jayden', 'Adam');
     expect(result).toEqual(answer);
   });
 });
