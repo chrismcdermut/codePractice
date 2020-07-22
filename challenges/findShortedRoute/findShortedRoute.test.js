@@ -14,7 +14,6 @@ describe('findShortedRoute Test', () => {
   };
 
   test('testOne', () => {
-    // const input = ['Jayden', 'Adam'];
     const answer = ['Jayden', 'Amelia', 'Adam'];
     const result = findShortedRoute(network, 'Jayden', 'Adam');
     expect(result).toEqual(answer);

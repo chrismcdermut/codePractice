@@ -2,27 +2,27 @@
 
 function constructPath(nodesPath, startNode, endNode) {
   const shortestPath = [];
-
   let currentNode = endNode;
 
   // the node will eventually be null because the first node's from path
   // is null cause it's first
   while (currentNode !== null) {
-    // can do push and reverse before return or put in the front
-    // shortestPath.push(currentNode);
-    shortestPath.unshift(currentNode);
+    shortestPath.unshift(currentNode); // can push and reverse or this unshift
     // TODO: how does this not break, mind blown, not a big deal
     currentNode = nodesPath[currentNode];
   }
-
   return shortestPath;
 }
 
+// Doing below to avoid error: Do not access Object.prototype
+// method 'hasOwnProperty' from target object
+// other option is direclty calling via prototype:
+// howWeReachedNodes.hasOwnProperty(neighbor)
 function findShortedRoute(graph, startNode, endNode) { // AKA BFS
-  if (!graph.hasOwnProperty(startNode)) {
+  if (!Object.prototype.hasOwnProperty.call(graph, startNode)) {
     throw new Error('Start node not in graph!');
   }
-  if (!graph.hasOwnProperty(endNode)) {
+  if (!Object.prototype.hasOwnProperty.call(graph, endNode)) {
     throw new Error('End node not in graph!');
   }
 
@@ -32,9 +32,6 @@ function findShortedRoute(graph, startNode, endNode) { // AKA BFS
   const nodesToVisit = [];
   nodesToVisit.push(startNode);
 
-  // TODO: why is startNow in an array?
-  const nodesAlreadySeen = new Set([startNode]);
-
   // Keep track of how we got to each node
   // we'll use this to reconstruct the shortest path at the end
   const howWeReachedNodes = {};
@@ -43,23 +40,19 @@ function findShortedRoute(graph, startNode, endNode) { // AKA BFS
   while (nodesToVisit.length > 0) {
     const currentNode = nodesToVisit.shift();
 
-    // check if we found endNode
-    if (currentNode === endNode) {
-      // return route?
+    if (currentNode === endNode) { // check if we found endNode
       return constructPath(howWeReachedNodes, startNode, endNode);
     }
 
     graph[currentNode].forEach((neighbor) => {
       // if we haven't seen this node yet
-      if (!nodesAlreadySeen.has(neighbor)) {
-        nodesAlreadySeen.add(neighbor);
+      if (!Object.prototype.hasOwnProperty.call(howWeReachedNodes, neighbor)) {
         nodesToVisit.push(neighbor);
-
-        // logs the path to each node where the value is the 'from' path
-        howWeReachedNodes[neighbor] = currentNode;
+        howWeReachedNodes[neighbor] = currentNode; // logs node's 'from' path
       }
     });
   }
+
   return null;
 }
 
