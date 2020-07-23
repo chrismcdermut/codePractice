@@ -31,4 +31,12 @@ describe('Queue Test', () => {
     const answer = 1;
     expect(result).toEqual(answer);
   });
+
+  test('testOne peek', () => {
+    const emptyQueue = new Queue();
+    emptyQueue.enqueue(1);
+    const result = emptyQueue.peek();
+    const answer = 1;
+    expect(result).toEqual(answer);
+  });
 });
