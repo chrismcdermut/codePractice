@@ -15,7 +15,7 @@ function binarySearch(list, lookFor) {
   return -1;
 }
 
-module.exports = binarySearch;
+module.exports = { binarySearch };
 
 module.exports.runBinarySearch = function () {
   const exampleList = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];

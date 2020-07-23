@@ -1,4 +1,4 @@
-const binarySearch = require('./binarySearch');
+const { binarySearch, runBinarySearch } = require('./binarySearch');
 
 const testOne = {
   input: [4, 8, 15, 16, 23, 42],
@@ -21,5 +21,14 @@ describe('binarySearch Test', () => {
   test('testTwo', () => {
     const result = binarySearch(testTwo.input, testTwo.inputLookFor);
     expect(result).toEqual(testTwo.output);
+  });
+});
+
+describe('runBinarySearch Test', () => {
+  test('testOne', () => {
+    console.log = jest.fn();
+    runBinarySearch();
+    const answer = 11;
+    expect(console.log).toHaveBeenCalledWith(answer);
   });
 });
