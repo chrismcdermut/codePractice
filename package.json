@@ -22,7 +22,7 @@
     "printHello": "node -e 'require(\"./misc/jsOOPConcepts\").printHello()'",
     "quickSort": "node -e 'require(\"./algorithms/quickSort/quickSort\").runQuickSort()'",
     "reverseWords": "node -e 'require(\"./challenges/reverseWords/reverseWords\").reverseWords()'",
-    "selectionSort": "node -e 'require(\"./algorithms/selectionSort/selectionSort-4-6-19\").runSelectionSort()'",
+    "selectionSort": "node -e 'require(\"./algorithms/selectionSort/selectionSort\").runSelectionSort()'",
     "seniorAge": "node -e 'require(\"./misc/jsOOPConcepts\").seniorAge()'",
     "yakovChain": "node -e 'require(\"./misc/jsOOPConcepts\").runYakovChain()'"
   },

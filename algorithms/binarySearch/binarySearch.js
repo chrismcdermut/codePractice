@@ -12,12 +12,15 @@ function binarySearch(list, lookFor) {
     // eslint-disable-next-line no-unused-expressions
     list[middle] < lookFor ? (min = middle) : (max = middle);
   }
+  // TODO: make this case work
   return -1;
 }
 
-module.exports = binarySearch;
+module.exports = { binarySearch };
 
+// TODO: make this take arguments
 module.exports.runBinarySearch = function () {
   const exampleList = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];
+  // answer 11
   console.log(binarySearch(exampleList, 67));
 };

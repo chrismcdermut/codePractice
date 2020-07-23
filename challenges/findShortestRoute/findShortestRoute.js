@@ -27,6 +27,8 @@ function findShortestRoute(graph, startNode, endNode) { // AKA BFS
     throw new Error('End node not in graph!');
   }
 
+  let shortestPath = [];
+
   // TODO: Why use a Queue?
   // const nodesToVisit = new Queue();
   // nodesToVisit.enqueue(startNode);
@@ -45,7 +47,8 @@ function findShortestRoute(graph, startNode, endNode) { // AKA BFS
     const currentNode = nodesToVisit.shift();
 
     if (currentNode === endNode) { // check if we found endNode
-      return constructPath(howWeReachedNodes, startNode, endNode);
+      shortestPath = constructPath(howWeReachedNodes, startNode, endNode);
+      break;
     }
 
     graph[currentNode].forEach((neighbor) => {
@@ -57,8 +60,7 @@ function findShortestRoute(graph, startNode, endNode) { // AKA BFS
       }
     });
   }
-
-  return null;
+  return shortestPath;
 }
 
 module.exports = { constructPath, findShortestRoute };

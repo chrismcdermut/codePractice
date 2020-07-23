@@ -46,7 +46,6 @@ describe('checkHasIllegalColor Test', () => {
 
 describe('colorGraph Test', () => {
   // the test should make sure there are no illegal colors..
-
   test('testOne, no illegal color', () => {
     const a = new GraphNode('a');
     const b = new GraphNode('b');
@@ -65,5 +64,27 @@ describe('colorGraph Test', () => {
     const result = checkHasIllegalColor(coloredGraph);
     const answer = false;
     expect(result).toEqual(answer);
+  });
+});
+
+describe('colorGraph Test impossible with loop', () => {
+  // the test should make sure there are no illegal colors..
+  test('testOne, no illegal color', () => {
+    const a = new GraphNode('a');
+    const b = new GraphNode('b');
+    const c = new GraphNode('c');
+
+    a.neighbors.add(b);
+    b.neighbors.add(a);
+    b.neighbors.add(b);
+    c.neighbors.add(b);
+    b.neighbors.add(c);
+    // D is 2
+    const graph = [a, b, c];
+    const colors = ['red', 'blue', 'green', 'purple'];
+
+    expect(() => {
+      colorGraph(graph, colors);
+    }).toThrow('Legal coloring impossible for node with loop: b');
   });
 });

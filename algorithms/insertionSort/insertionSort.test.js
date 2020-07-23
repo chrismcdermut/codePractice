@@ -1,4 +1,6 @@
-const { insertionSort1, insertionSort2 } = require('./insertionSort');
+const {
+  insertionSort1, insertionSort2, runInsertionSort1, runInsertionSort2,
+} = require('./insertionSort');
 
 const testOne = {
   input: [54, 26, 93, 17, 77, 31, 44, 55, 20],
@@ -32,5 +34,25 @@ describe('insertionSort2 Test', () => {
   test('testTwo', () => {
     const result = insertionSort2(testTwo.input);
     expect(result).toEqual(testTwo.output);
+  });
+});
+
+describe('runInsertionSort1 Test', () => {
+  test('testOne', () => {
+    console.log = jest.fn();
+    // TODO: make this take arguments
+    runInsertionSort1();
+    const answer = [17, 20, 26, 31, 44, 54, 55, 77, 93];
+    expect(console.log).toHaveBeenCalledWith(answer);
+  });
+});
+
+describe('runInsertionSort2 Test', () => {
+  test('testOne', () => {
+    console.log = jest.fn();
+    // TODO: make this take arguments
+    runInsertionSort2();
+    const answer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    expect(console.log).toHaveBeenCalledWith(answer);
   });
 });

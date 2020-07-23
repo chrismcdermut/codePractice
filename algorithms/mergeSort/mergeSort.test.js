@@ -1,4 +1,4 @@
-const mergeSort = require('./mergeSort');
+const { mergeSort, runMergeSort } = require('./mergeSort');
 
 const testOne = {
   input: [23, 4, 42, 15, 16, 8, 3],
@@ -19,5 +19,15 @@ describe('mergeSort Test', () => {
   test('testTwo', () => {
     const result = mergeSort(testTwo.input);
     expect(result).toEqual(testTwo.output);
+  });
+});
+
+describe('runMergeSort Test', () => {
+  test('testOne', () => {
+    console.log = jest.fn();
+    // TODO: make this take arguments
+    runMergeSort();
+    const answer = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];
+    expect(console.log).toHaveBeenCalledWith(answer);
   });
 });

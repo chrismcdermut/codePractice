@@ -1,4 +1,4 @@
-const selectionSort = require('./selectionSort');
+const { selectionSort, runSelectionSort } = require('./selectionSort');
 
 const testOne = {
   input: [23, 4, 42, 8, 16, 15],
@@ -20,5 +20,15 @@ describe('selectionSort Test', () => {
   test('testTwo', () => {
     const result = selectionSort(testTwo.input);
     expect(result).toEqual(testTwo.output);
+  });
+});
+
+describe('runSelectionSort Test', () => {
+  test('testOne', () => {
+    console.log = jest.fn();
+    // TODO: make this take arguments
+    runSelectionSort();
+    const answer = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];
+    expect(console.log).toHaveBeenCalledWith(answer);
   });
 });
