@@ -1,4 +1,4 @@
-const { findShortestRoute } = require('./findShortedRoute');
+const { findShortestRoute } = require('./findShortestRoute');
 
 describe('findShortestRoute Test', () => {
   const network = {
@@ -17,5 +17,17 @@ describe('findShortestRoute Test', () => {
     const answer = ['Jayden', 'Amelia', 'Adam'];
     const result = findShortestRoute(network, 'Jayden', 'Adam');
     expect(result).toEqual(answer);
+  });
+
+  test('testTwo', () => {
+    expect(() => {
+      findShortestRoute(network, 'Sarah', 'Adam');
+    }).toThrow('Start node not in graph!');
+  });
+
+  test('testThree', () => {
+    expect(() => {
+      findShortestRoute(network, 'Ren', 'PeeWee');
+    }).toThrow('End node not in graph!');
   });
 });
