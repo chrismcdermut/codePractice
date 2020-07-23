@@ -1,4 +1,4 @@
-const heapSort = require('./heapSort');
+const { heapSort, runHeapSort } = require('./heapSort');
 
 const testOne = {
   input: [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34],
@@ -19,5 +19,15 @@ describe('heapSort Test', () => {
   test('testTwo', () => {
     const result = heapSort(testTwo.input);
     expect(result).toEqual(testTwo.output);
+  });
+});
+
+describe('runHeapSort Test', () => {
+  test('testOne', () => {
+    console.log = jest.fn();
+    // TODO: make this take arguments
+    runHeapSort();
+    const answer = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];
+    expect(console.log).toHaveBeenCalledWith(answer);
   });
 });
