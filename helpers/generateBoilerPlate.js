@@ -2,14 +2,42 @@ const fs = require('fs');
 
 // TODO: make this take arguments
 // ////SETUP HERE//////
-const solutionName = 'findDuplicateInLL';
+const solutionName = 'memoization';
 // TODO: look into setting up map or enum for this
-/* challenge || dataStructure || algorithm || designPattern || conept */
-const codeChallengeType = 'challenge';
+/* challenge || dataStructure || algorithm || designPattern || concept */
+const codeChallengeType = 'concepts';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
 const notes = `${solutionName} Notes go here!`;
+
+// ////CHALLENGES BOILERPLATE//////
+const CONCEPTS_DIR = 'concepts';
+
+// TODO: rename these challenge variables
+const conceptJS = `function ${solutionName}(input) {
+
+}
+
+module.exports = ${solutionName};
+`;
+
+const conceptTestJS = `const ${solutionName} = require('./${solutionName}')
+
+const testOne = {
+  input: '',
+  output: ''
+}
+
+describe('${solutionName} Test', () => {
+
+  test('testOne', ()=>{
+    let result = ${solutionName}(testOne.input)
+    expect(result).toEqual(testOne.output);
+  });
+
+});
+`;
 
 // ////CHALLENGES BOILERPLATE//////
 const CHALLENGES_DIR = 'challenges';
@@ -67,7 +95,7 @@ describe('${solutionName} Test', () => {
 });
 `;
 
-// ////DATA STRUCTURES BOILERPLATE//////
+// ////Algorithms BOILERPLATE//////
 const ALGORITHMS_DIR = 'algorithms';
 
 const algorithmJS = `function ${solutionName}(input) {
@@ -101,6 +129,11 @@ let boilerPlateTest = '';
 
 // TODO: look into using map for this, switch might be code smell?
 switch (codeChallengeType) {
+  case 'concepts':
+    directory = CONCEPTS_DIR;
+    boilerPlateCode = conceptJS;
+    boilerPlateTest = conceptTestJS;
+    break;
   case 'challenge':
     directory = CHALLENGES_DIR;
     boilerPlateCode = solutionJS;
