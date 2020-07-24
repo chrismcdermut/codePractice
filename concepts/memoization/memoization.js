@@ -28,4 +28,4 @@ class Memoization {
   }
 }
 
-module.exports = { Memoization };
+module.exports = Memoization;
