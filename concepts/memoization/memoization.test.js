@@ -1,4 +1,4 @@
-const Memoization = require('./Memoization');
+const { Memoization } = require('./Memoization');
 
 const testOne = {
   input: 5,
