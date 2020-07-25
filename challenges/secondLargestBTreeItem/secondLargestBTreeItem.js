@@ -44,6 +44,10 @@ function findSecondLargest(rootNode) {
 // This finds largest right node in a BTree
 // eslint-disable-next-line consistent-return
 function findLargest2(rootNode) {
+  // TODO: should i check for this?
+  // if (!rootNode) {
+  //   throw new Error('Tree must have at least 1 node');
+  // }
   let current = rootNode;
   // while loop is better because it doesn't use recursion and thus space on the
   // call stack
