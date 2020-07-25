@@ -82,4 +82,6 @@ function findSecondLargest2(rootNode) {
   }
 }
 
-module.exports = { findLargest, findSecondLargest, findSecondLargest2 };
+module.exports = {
+  findLargest, findSecondLargest, findLargest2, findSecondLargest2,
+};
