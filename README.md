@@ -41,111 +41,111 @@ npm run test
 ### Algorithms
 
 1. binarySearch - Binary Search Algorith
-[ ]
+- [ ]
 1. bubbleSort - Bubble Sort Algorithm
-[ ]
+- [ ]
 1. heapSort - Heap Sort Algorithm
-[ ]
+- [ ]
 1. insertionSort - Insertion Sort Algorithm
-[ ]
+- [ ]
 1. mergeSort - Merge Sort Algorithm
-[ ]
+- [ ]
 1. quickSort - Quick Sort Algorithm
-[ ]
+- [ ]
 1. selectionSort - Selection Sort Algorithm
-[ ]
+- [ ]
 
 ### Challenges
 
 1. arrayJumping
-[ ]
+- [ ]
 1. arrayRotateLeft
-[ ]
+- [ ]
 1. binaryTreeSum
-[ ]
+- [ ]
 1. default
-[ ]
+- [ ]
 1. findDuplicateInLL
-[ ]
+- [ ]
 1. findFibonacci
-[ ]
+- [ ]
 1. findLongestWord
-[ ]
+- [ ]
 1. findShortestRoute
-[ ]
+- [ ]
 1. graphColoring
-[ ]
+- [ ]
 1. highestScores
-[ ]
+- [ ]
 1. isValidBTreeCheck
-[ ]
+- [ ]
 1. makingChange
-[ ]
+- [ ]
 1. mergeArray
-[ ]
+- [ ]
 1. mergeArrays
-[ ]
+- [ ]
 1. mergeMeetingTimes
-[ ]
+- [ ]
 1. missingArrayElement
-[ ]
+- [ ]
 1. missingInteger
-[ ]
+- [ ]
 1. orderChecker
-[ ]
+- [ ]
 1. palindrome
-[ ]
+- [ ]
 1. permutationPalindrome
-[ ]
+- [ ]
 1. productOfAll
-[ ]
+- [ ]
 1. productOfThree
-[ ]
+- [ ]
 1. recursiveStrings
-[ ]
+- [ ]
 1. reverseArrayInPlace
-[ ]
+- [ ]
 1. reverseString
-[ ]
+- [ ]
 1. reverseWords
-[ ]
+- [ ]
 1. rotationPoint
-[ ]
+- [ ]
 1. sandBox
-[ ]
+- [ ]
 1. secondLargestBTreeItem
-[ ]
+- [ ]
 1. shortestString
-[ ]
+- [ ]
 1. shuffleArray
-[ ]
+- [ ]
 1. stockProfit
-[ ]
+- [ ]
 1. strings
-[ ]
+- [ ]
 1. superBalancedTreeCheck
-[ ]
+- [ ]
 1. switchObjectKey
-[ ]
+- [ ]
 1. wordCloud
-[ ]
+- [ ]
 
 ### Concepts
 
 1. memoization
-[ ]
+- [ ]
 
 ### Data structures
 1. GraphObject
-[ ]
+- [ ]
 1. Queue
-[ ]
+- [ ]
 1. binaryTree
-[ ]
+- [ ]
 1. graphNode
-[ ]
+- [ ]
 1. tree
-[ ]
+- [ ]
 
 ### Script for getting list of challenges/etc in each directory
 ```bash
