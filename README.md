@@ -96,9 +96,9 @@ npm run test
 //TODO: fix casing of classNames
 - [ ]GraphObject
 - [ ]Queue
-- [ ]binaryTree
-- [ ]graphNode
-- [ ]tree
+- [ ]BinaryTree
+- [ ]GraphNode
+- [ ]Tree
 
 
 ### Script for getting list of challenges/etc in each directory
