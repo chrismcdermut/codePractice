@@ -29,8 +29,8 @@ function removeSection(string, K) {
       }
     });
   }
-  console.log('bestSection');
-  console.log(string.substring(indexOfBestSection, indexOfBestSection + K));
+  // console.log('bestSection');
+  // console.log(string.substring(indexOfBestSection, indexOfBestSection + K));
   return string.substring(indexOfBestSection, indexOfBestSection + K);
 }
 

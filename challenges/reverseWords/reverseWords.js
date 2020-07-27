@@ -16,6 +16,9 @@ function reverseWords(message) {
     finalMessage.unshift(...tempWord);
     finalMessage.unshift(' ');
     tempWord = [];
+    // make a word until space
+    // put word in first place of array
+    // put space in
   }
   return finalMessage;
 }
@@ -67,44 +70,10 @@ module.exports = { reversePhrase, reverseWords, reverseCharactersSolo };
 
 // ///////////NODE SCRIPT/////////////
 
-module.exports.reverseWords2 = function reverseWords2() {
+module.exports.runReverseWords = function () {
   const message = [
-    'c',
-    'a',
-    'k',
-    'e',
-    ' ',
-    'p',
-    'o',
-    'u',
-    'n',
-    'd',
-    ' ',
-    's',
-    't',
-    'e',
-    'a',
-    'l',
+    's', 't', 'e', 'a', 'l', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 'c', 'a', 'k', 'e',
   ];
-  const finalMessage = [];
-  let tempWord = [];
-  // make the new word until space than switch area in the array
-  for (let i = 0; i < message.length; i += 1) {
-    if (i === message.length - 1) {
-      tempWord.push(message[i]);
-      finalMessage.unshift(...tempWord);
-      continue;
-    }
-    if (message[i] !== ' ') {
-      tempWord.push(message[i]);
-      continue;
-    }
-    finalMessage.unshift(...tempWord);
-    finalMessage.unshift(' ');
-    tempWord = [];
-    // make a word until space
-    // put word in first place of array
-    // put space in
-  }
-  return finalMessage;
+  // 'c','a','k','e',' ','p','o','u','n','d',' ','s','t','e','a','l',
+  console.log(reverseWords(message));
 };

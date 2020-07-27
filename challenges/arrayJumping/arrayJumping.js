@@ -7,7 +7,6 @@ function checkForZero(array) {
 
 // TODO: make this case work
 function jumpToZero(array, startingIndex) {
-  console.log('function running');
   // if(array[startingIndex] === 0 ){
   //   console.log('true');
   //   return true;
@@ -21,7 +20,6 @@ function jumpToZero(array, startingIndex) {
     || array[JumpRightTarget] === 0
     || array[JumpLeftTarget] === 0
   ) {
-    console.log(true);
     return true;
   }
 
@@ -35,7 +33,6 @@ function jumpToZero(array, startingIndex) {
 
     jumpToZero(array, JumpLeftTarget);
   } else {
-    console.log('false');
     return false;
   }
   return null; // TODO: fix this
