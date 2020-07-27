@@ -14,7 +14,7 @@ const testOneB = {
   input: [-100, 2],
 };
 
-xdescribe('productOfThree Test', () => {
+describe('productOfThree Test', () => {
   test('testOne', () => {
     const result = productOfThree(testOne.input);
     expect(result).toEqual(testOne.output);
@@ -26,6 +26,8 @@ xdescribe('productOfThree Test', () => {
   });
 
   test('testOneB', () => {
-    expect(productOfThree(testOneB.input)).toThrow();
+    expect(() => {
+      productOfThree(testOneB.input);
+    }).toThrow('Less than 3 items!');
   });
 });
