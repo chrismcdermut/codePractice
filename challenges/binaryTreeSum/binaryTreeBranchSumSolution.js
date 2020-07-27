@@ -12,7 +12,7 @@ function sum(arr, idx) {
 // /////////WORKING SOLUTION
 function bTreeBranchSum(binaryTreeArray) {
   if (!binaryTreeArray || binaryTreeArray.length === 0) {
-    return null;
+    throw new Error('binaryTreeArray is null or length is zero!');
   }
   let answer = null;
 

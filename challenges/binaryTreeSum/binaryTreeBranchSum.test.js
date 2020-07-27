@@ -40,6 +40,12 @@ describe('binaryTree branch sum test-suite', () => {
     const result = bTreeBranchSum(Tree3.tree);
     expect(result).toEqual(Tree3.biggerBranch);
   });
+
+  test('Tree4 test null', () => {
+    expect(() => {
+      bTreeBranchSum();
+    }).toThrow('binaryTreeArray is null or length is zero!');
+  });
 });
 
 describe('sum test-suite', () => {
