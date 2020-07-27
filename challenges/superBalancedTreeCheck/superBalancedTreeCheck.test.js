@@ -1,4 +1,4 @@
-const BinaryTreeNode = require('../../dataStructures/BinaryTree/BinaryTreeNode');
+const BinaryTreeNode = require('../../dataStructures/binaryTree/binaryTreeNode');
 const superBalancedTreeCheck = require('./superBalancedTreeCheck');
 
 describe('non superBalanced binaryTree Test', () => {

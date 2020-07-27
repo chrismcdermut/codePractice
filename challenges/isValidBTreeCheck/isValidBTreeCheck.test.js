@@ -1,4 +1,4 @@
-const BinaryTreeNode = require('../../dataStructures/BinaryTree/BinaryTreeNode');
+const BinaryTreeNode = require('../../dataStructures/binaryTree/binaryTreeNode');
 const { isValidBTreeCheck, hasValidImmediateNode } = require('./isValidBTreeCheck');
 
 describe('isValidBTreeCheck Properties Test', () => {
