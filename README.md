@@ -40,65 +40,65 @@ npm run test
 
 ### Algorithms
 
-[ ] binarySearch - Binary Search Algorith
-[ ] bubbleSort - Bubble Sort Algorithm
-[ ] heapSort - Heap Sort Algorithm
-[ ] insertionSort - Insertion Sort Algorithm
-[ ] mergeSort - Merge Sort Algorithm
-[ ] quickSort - Quick Sort Algorithm
-[ ] selectionSort - Selection Sort Algorithm
+- 1. [x] binarySearch - Binary Search Algorith
+- 1. [x] bubbleSort - Bubble Sort Algorithm
+- 1. [x] heapSort - Heap Sort Algorithm
+- 1. [x] insertionSort - Insertion Sort Algorithm
+- 1. [x] mergeSort - Merge Sort Algorithm
+- 1. [x] quickSort - Quick Sort Algorithm
+- 1. [x] selectionSort - Selection Sort Algorithm
 
 ### Challenges
 
-[ ] arrayJumping
-[ ] arrayRotateLeft
-[ ] binaryTreeSum
-[ ] default
-[ ] findDuplicateInLL
-[ ] findFibonacci
-[ ] findLongestWord
-[ ] findShortestRoute
-[ ] graphColoring
-[ ] highestScores
-[ ] isValidBTreeCheck
-[ ] makingChange
-[ ] mergeArray
-[ ] mergeArrays
-[ ] mergeMeetingTimes
-[ ] missingArrayElement
-[ ] missingInteger
-[ ] orderChecker
-[ ] palindrome
-[ ] permutationPalindrome
-[ ] productOfAll
-[ ] productOfThree
-[ ] recursiveStrings
-[ ] reverseArrayInPlace
-[ ] reverseString
-[ ] reverseWords
-[ ] rotationPoint
-[ ] sandBox
-[ ] secondLargestBTreeItem
-[ ] shortestString
-[ ] shuffleArray
-[ ] stockProfit
-[ ] strings
-[ ] superBalancedTreeCheck
-[ ] switchObjectKey
-[ ] wordCloud
+- 1. [x] arrayJumping
+- 1. [x] arrayRotateLeft
+- 1. [x] binaryTreeSum
+- 1. [x] default
+- 1. [x] findDuplicateInLL
+- 1. [x] findFibonacci
+- 1. [x] findLongestWord
+- 1. [x] findShortestRoute
+- 1. [x] graphColoring
+- 1. [x] highestScores
+- 1. [x] isValidBTreeCheck
+- 1. [x] makingChange
+- 1. [x] mergeArray
+- 1. [x] mergeArrays
+- 1. [x] mergeMeetingTimes
+- 1. [x] missingArrayElement
+- 1. [x] missingInteger
+- 1. [x] orderChecker
+- 1. [x] palindrome
+- 1. [x] permutationPalindrome
+- 1. [x] productOfAll
+- 1. [x] productOfThree
+- 1. [x] recursiveStrings
+- 1. [x] reverseArrayInPlace
+- 1. [x] reverseString
+- 1. [x] reverseWords
+- 1. [x] rotationPoint
+- 1. [x] sandBox
+- 1. [x] secondLargestBTreeItem
+- 1. [x] shortestString
+- 1. [x] shuffleArray
+- 1. [x] stockProfit
+- 1. [x] strings
+- 1. [x] superBalancedTreeCheck
+- 1. [x] switchObjectKey
+- 1. [x] wordCloud
 
 ### Concepts
 
-[ ] memoization
+- 1. [x] memoization
 
 
 ### Data structures
 //TODO: fix casing of classNames
-[ ] GraphObject
-[ ] Queue
-[ ] BinaryTree
-[ ] GraphNode
-[ ] Tree
+- 1. [x] GraphObject
+- 1. [x] Queue
+- 1. [x] BinaryTree
+- 1. [x] GraphNode
+- 1. [x] Tree
 
 
 ### Script for getting list of challenges/etc in each directory
