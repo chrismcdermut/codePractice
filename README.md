@@ -40,65 +40,65 @@ npm run test
 
 ### Algorithms
 
-- [ ]binarySearch - Binary Search Algorith
-- [ ]bubbleSort - Bubble Sort Algorithm
-- [ ]heapSort - Heap Sort Algorithm
-- [ ]insertionSort - Insertion Sort Algorithm
-- [ ]mergeSort - Merge Sort Algorithm
-- [ ]quickSort - Quick Sort Algorithm
-- [ ]selectionSort - Selection Sort Algorithm
+[ ] binarySearch - Binary Search Algorith
+[ ] bubbleSort - Bubble Sort Algorithm
+[ ] heapSort - Heap Sort Algorithm
+[ ] insertionSort - Insertion Sort Algorithm
+[ ] mergeSort - Merge Sort Algorithm
+[ ] quickSort - Quick Sort Algorithm
+[ ] selectionSort - Selection Sort Algorithm
 
 ### Challenges
 
-- [ ]arrayJumping
-- [ ]arrayRotateLeft
-- [ ]binaryTreeSum
-- [ ]default
-- [ ]findDuplicateInLL
-- [ ]findFibonacci
-- [ ]findLongestWord
-- [ ]findShortestRoute
-- [ ]graphColoring
-- [ ]highestScores
-- [ ]isValidBTreeCheck
-- [ ]makingChange
-- [ ]mergeArray
-- [ ]mergeArrays
-- [ ]mergeMeetingTimes
-- [ ]missingArrayElement
-- [ ]missingInteger
-- [ ]orderChecker
-- [ ]palindrome
-- [ ]permutationPalindrome
-- [ ]productOfAll
-- [ ]productOfThree
-- [ ]recursiveStrings
-- [ ]reverseArrayInPlace
-- [ ]reverseString
-- [ ]reverseWords
-- [ ]rotationPoint
-- [ ]sandBox
-- [ ]secondLargestBTreeItem
-- [ ]shortestString
-- [ ]shuffleArray
-- [ ]stockProfit
-- [ ]strings
-- [ ]superBalancedTreeCheck
-- [ ]switchObjectKey
-- [ ]wordCloud
+[ ] arrayJumping
+[ ] arrayRotateLeft
+[ ] binaryTreeSum
+[ ] default
+[ ] findDuplicateInLL
+[ ] findFibonacci
+[ ] findLongestWord
+[ ] findShortestRoute
+[ ] graphColoring
+[ ] highestScores
+[ ] isValidBTreeCheck
+[ ] makingChange
+[ ] mergeArray
+[ ] mergeArrays
+[ ] mergeMeetingTimes
+[ ] missingArrayElement
+[ ] missingInteger
+[ ] orderChecker
+[ ] palindrome
+[ ] permutationPalindrome
+[ ] productOfAll
+[ ] productOfThree
+[ ] recursiveStrings
+[ ] reverseArrayInPlace
+[ ] reverseString
+[ ] reverseWords
+[ ] rotationPoint
+[ ] sandBox
+[ ] secondLargestBTreeItem
+[ ] shortestString
+[ ] shuffleArray
+[ ] stockProfit
+[ ] strings
+[ ] superBalancedTreeCheck
+[ ] switchObjectKey
+[ ] wordCloud
 
 ### Concepts
 
-- [ ]memoization
+[ ] memoization
 
 
 ### Data structures
 //TODO: fix casing of classNames
-- [ ]GraphObject
-- [ ]Queue
-- [ ]BinaryTree
-- [ ]GraphNode
-- [ ]Tree
+[ ] GraphObject
+[ ] Queue
+[ ] BinaryTree
+[ ] GraphNode
+[ ] Tree
 
 
 ### Script for getting list of challenges/etc in each directory
