@@ -1,4 +1,4 @@
-const BinaryTreeNode = require('../../dataStructures/binaryTree/binaryTreeNode');
+const BinaryTreeNode = require('../../dataStructures/binaryTree/BinaryTreeNode');
 const {
   findLargest, findSecondLargest, findLargest2, findSecondLargest2,
 } = require('./secondLargestBTreeItem');

@@ -1,4 +1,4 @@
-const BinaryTreeNode = require('../../dataStructures/binaryTree/binaryTreeNode');
+const BinaryTreeNode = require('../../dataStructures/binaryTree/BinaryTreeNode');
 // what makes valid node?
 // the value on left is less than current node
 // the value on right is greater than current node

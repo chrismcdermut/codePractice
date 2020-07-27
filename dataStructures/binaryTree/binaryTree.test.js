@@ -1,4 +1,4 @@
-const BinaryTreeNode = require('./binaryTreeNode');
+const BinaryTreeNode = require('./BinaryTreeNode');
 
 describe('binaryTree Test', () => {
   const binaryTree1 = new BinaryTreeNode(5);
