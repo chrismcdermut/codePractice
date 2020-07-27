@@ -40,65 +40,65 @@ npm run test
 
 ### Algorithms
 
-- 1. [ ] binarySearch - Binary Search Algorith
-- 2. [x] bubbleSort - Bubble Sort Algorithm
-- 3. [x] heapSort - Heap Sort Algorithm
-- 4. [x] insertionSort - Insertion Sort Algorithm
-- 5. [x] mergeSort - Merge Sort Algorithm
-- 6. [x] quickSort - Quick Sort Algorithm
-- 7. [x] selectionSort - Selection Sort Algorithm
+[ ] 1. binarySearch - Binary Search Algorith
+[x] 2. bubbleSort - Bubble Sort Algorithm
+[x] 3. heapSort - Heap Sort Algorithm
+[x] 4. insertionSort - Insertion Sort Algorithm
+[x] 5. mergeSort - Merge Sort Algorithm
+[x] 6. quickSort - Quick Sort Algorithm
+[x] 7. selectionSort - Selection Sort Algorithm
 
 ### Challenges
 
-- 1. [ ] arrayJumping
-- 2. [x] arrayRotateLeft
-- 3. [x] binaryTreeSum
-- 4. [x] default
-- 5. [x] findDuplicateInLL
-- 6. [x] findFibonacci
-- 7. [x] findLongestWord
-- 8. [x] findShortestRoute
-- 9. [x] graphColoring
-- 10. [x] highestScores
-- 11. [x] isValidBTreeCheck
-- 12. [x] makingChange
-- 13. [x] mergeArray
-- 14. [x] mergeArrays
-- 15. [x] mergeMeetingTimes
-- 16. [x] missingArrayElement
-- 17. [x] missingInteger
-- 18. [ ] orderChecker
-- 19. [x] palindrome
-- 20. [x] permutationPalindrome
-- 21. [x] productOfAll
-- 22. [x] productOfThree
-- 23. [x] recursiveStrings
-- 24. [x] reverseArrayInPlace
-- 25. [x] reverseString
-- 26. [x] reverseWords
-- 27. [ ] rotationPoint
-- 28. [x] sandBox
-- 29. [x] secondLargestBTreeItem
-- 30. [ ] shortestString
-- 31. [x] shuffleArray
-- 32. [x] stockProfit
-- 33. [x] strings
-- 34. [x] superBalancedTreeCheck
-- 35. [x] switchObjectKey
-- 36. [x] wordCloud
+[ ] 1. arrayJumping
+[x] 2. arrayRotateLeft
+[x] 3. binaryTreeSum
+[x] 4. default
+[x] 5. findDuplicateInLL
+[x] 6. findFibonacci
+[x] 7. findLongestWord
+[x] 8. findShortestRoute
+[x] 9. graphColoring
+[x] 10. highestScores
+[x] 11. isValidBTreeCheck
+[x] 12. makingChange
+[x] 13. mergeArray
+[x] 14. mergeArrays
+[x] 15. mergeMeetingTimes
+[x] 16. missingArrayElement
+[x] 17. missingInteger
+[ ] 18. orderChecker
+[x] 19. palindrome
+[x] 20. permutationPalindrome
+[x] 21. productOfAll
+[x] 22. productOfThree
+[x] 23. recursiveStrings
+[x] 24. reverseArrayInPlace
+[x] 25. reverseString
+[x] 26. reverseWords
+[ ] 27. rotationPoint
+[x] 28. sandBox
+[x] 29. secondLargestBTreeItem
+[ ] 30. shortestString
+[x] 31. shuffleArray
+[x] 32. stockProfit
+[x] 33. strings
+[x] 34. superBalancedTreeCheck
+[x] 35. switchObjectKey
+[x] 36. wordCloud
 
 ### Concepts
 
-- 1. [x] memoization
+[x] 1. memoization
 
 
 ### Data structures
 //TODO: fix casing of classNames
-- 1. [ ] GraphObject
-- 2. [x] Queue
-- 3. [x] BinaryTree
-- 4. [x] GraphNode
-- 5. [x] Tree
+[ ] 1. GraphObject
+[x] 2. Queue
+[x] 3. BinaryTree
+[x] 4. GraphNode
+[x] 5. Tree
 
 
 ### Script for getting list of challenges/etc in each directory
@@ -112,6 +112,7 @@ for d in ./*;do [[ -d "$d" ]] && echo "${d##./}" >> dir.txt; done
 - [ESLint](https://eslint.org/)
 - [Jest](https://jestjs.io/)
 - [codecov](https://codecov.io/)
+- [stackedit](https://stackedit.io/)
 
 ## Badges
 [![codecov](https://codecov.io/gh/chrismcdermut/codePractice/branch/master/graph/badge.svg)](https://codecov.io/gh/chrismcdermut/codePractice)
