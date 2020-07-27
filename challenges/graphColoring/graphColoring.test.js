@@ -1,4 +1,4 @@
-const GraphNode = require('../../dataStructures/graphNode/graphNode');
+const GraphNode = require('../../dataStructures/GraphNode/GraphNode');
 const { colorGraph, checkHasIllegalColor } = require('./graphColoring');
 
 describe('checkHasIllegalColor Test', () => {

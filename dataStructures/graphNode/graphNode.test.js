@@ -1,4 +1,4 @@
-const GraphNode = require('./graphNode');
+const GraphNode = require('./GraphNode');
 
 describe('graphNode Test', () => {
   const a = new GraphNode('a');
