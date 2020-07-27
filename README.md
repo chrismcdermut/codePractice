@@ -40,7 +40,7 @@ npm run test
 
 ### Algorithms
 
-- 1. [x] binarySearch - Binary Search Algorith
+- 1. [ ] binarySearch - Binary Search Algorith
 - 1. [x] bubbleSort - Bubble Sort Algorithm
 - 1. [x] heapSort - Heap Sort Algorithm
 - 1. [x] insertionSort - Insertion Sort Algorithm
@@ -50,7 +50,7 @@ npm run test
 
 ### Challenges
 
-- 1. [x] arrayJumping
+- 1. [ ] arrayJumping
 - 1. [x] arrayRotateLeft
 - 1. [x] binaryTreeSum
 - 1. [x] default
@@ -67,7 +67,7 @@ npm run test
 - 1. [x] mergeMeetingTimes
 - 1. [x] missingArrayElement
 - 1. [x] missingInteger
-- 1. [x] orderChecker
+- 1. [ ] orderChecker
 - 1. [x] palindrome
 - 1. [x] permutationPalindrome
 - 1. [x] productOfAll
@@ -76,10 +76,10 @@ npm run test
 - 1. [x] reverseArrayInPlace
 - 1. [x] reverseString
 - 1. [x] reverseWords
-- 1. [x] rotationPoint
+- 1. [ ] rotationPoint
 - 1. [x] sandBox
 - 1. [x] secondLargestBTreeItem
-- 1. [x] shortestString
+- 1. [ ] shortestString
 - 1. [x] shuffleArray
 - 1. [x] stockProfit
 - 1. [x] strings
@@ -94,7 +94,7 @@ npm run test
 
 ### Data structures
 //TODO: fix casing of classNames
-- 1. [x] GraphObject
+- 1. [ ] GraphObject
 - 1. [x] Queue
 - 1. [x] BinaryTree
 - 1. [x] GraphNode
