@@ -1,109 +1,31 @@
-const { reverseWords, reversePhrase, reverseCharactersSolo } = require('./reverseWords');
+const {
+  runReverseWords, reverseWords, reversePhrase, reverseCharactersSolo,
+} = require('./reverseWords');
 
 const testOne = {
   input: [
-    'c',
-    'a',
-    'k',
-    'e',
-    ' ',
-    'p',
-    'o',
-    'u',
-    'n',
-    'd',
-    ' ',
-    's',
-    't',
-    'e',
-    'a',
-    'l',
+    'c', 'a', 'k', 'e', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 's', 't', 'e', 'a', 'l',
   ],
   output: [
-    's',
-    't',
-    'e',
-    'a',
-    'l',
-    ' ',
-    'p',
-    'o',
-    'u',
-    'n',
-    'd',
-    ' ',
-    'c',
-    'a',
-    'k',
-    'e',
+    's', 't', 'e', 'a', 'l', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 'c', 'a', 'k', 'e',
   ],
 };
 
 const testTwo = {
   input: [
-    'l',
-    'a',
-    'n',
-    'd',
-    'e',
-    'd',
-    ' ',
-    'h',
-    'a',
-    's',
-    ' ',
-    'e',
-    'a',
-    'g',
-    'l',
-    'e',
-    ' ',
-    't',
-    'h',
-    'e',
+    'l', 'a', 'n', 'd', 'e', 'd', ' ', 'h', 'a', 's', ' ', 'e', 'a', 'g', 'l', 'e', ' ', 't', 'h', 'e',
   ],
   output: [
-    't',
-    'h',
-    'e',
-    ' ',
-    'e',
-    'a',
-    'g',
-    'l',
-    'e',
-    ' ',
-    'h',
-    'a',
-    's',
-    ' ',
-    'l',
-    'a',
-    'n',
-    'd',
-    'e',
-    'd',
+    't', 'h', 'e', ' ', 'e', 'a', 'g', 'l', 'e', ' ', 'h', 'a', 's', ' ', 'l', 'a', 'n', 'd', 'e', 'd',
   ],
 };
 
 const testThree = {
   input: [
-    'h',
-    'e',
-    'a',
-    'r',
-    'i',
-    'n',
-    'g',
+    'h', 'e', 'a', 'r', 'i', 'n', 'g',
   ],
   output: [
-    'g',
-    'n',
-    'i',
-    'r',
-    'a',
-    'e',
-    'h',
+    'g', 'n', 'i', 'r', 'a', 'e', 'h',
   ],
 };
 
@@ -145,5 +67,17 @@ describe('reverseCharactersSolo Test', () => {
   xtest('testFour', () => {
     const result = reverseCharactersSolo(testFour.input);
     expect(result).toStrictEqual(testFour.output);
+  });
+});
+
+describe('runReverseWords Test', () => {
+  test('testThree', () => {
+    console.log = jest.fn();
+    // TODO: make this take arguments
+    runReverseWords();
+    const answer = [
+      'c', 'a', 'k', 'e', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 's', 't', 'e', 'a', 'l',
+    ];
+    expect(console.log).toHaveBeenCalledWith(answer);
   });
 });
