@@ -41,51 +41,51 @@ npm run test
 ### Algorithms
 
 - 1. [ ] binarySearch - Binary Search Algorith
-- 1. [x] bubbleSort - Bubble Sort Algorithm
-- 1. [x] heapSort - Heap Sort Algorithm
-- 1. [x] insertionSort - Insertion Sort Algorithm
-- 1. [x] mergeSort - Merge Sort Algorithm
-- 1. [x] quickSort - Quick Sort Algorithm
-- 1. [x] selectionSort - Selection Sort Algorithm
+- 2. [x] bubbleSort - Bubble Sort Algorithm
+- 3. [x] heapSort - Heap Sort Algorithm
+- 4. [x] insertionSort - Insertion Sort Algorithm
+- 5. [x] mergeSort - Merge Sort Algorithm
+- 6. [x] quickSort - Quick Sort Algorithm
+- 7. [x] selectionSort - Selection Sort Algorithm
 
 ### Challenges
 
 - 1. [ ] arrayJumping
-- 1. [x] arrayRotateLeft
-- 1. [x] binaryTreeSum
-- 1. [x] default
-- 1. [x] findDuplicateInLL
-- 1. [x] findFibonacci
-- 1. [x] findLongestWord
-- 1. [x] findShortestRoute
-- 1. [x] graphColoring
-- 1. [x] highestScores
-- 1. [x] isValidBTreeCheck
-- 1. [x] makingChange
-- 1. [x] mergeArray
-- 1. [x] mergeArrays
-- 1. [x] mergeMeetingTimes
-- 1. [x] missingArrayElement
-- 1. [x] missingInteger
-- 1. [ ] orderChecker
-- 1. [x] palindrome
-- 1. [x] permutationPalindrome
-- 1. [x] productOfAll
-- 1. [x] productOfThree
-- 1. [x] recursiveStrings
-- 1. [x] reverseArrayInPlace
-- 1. [x] reverseString
-- 1. [x] reverseWords
-- 1. [ ] rotationPoint
-- 1. [x] sandBox
-- 1. [x] secondLargestBTreeItem
-- 1. [ ] shortestString
-- 1. [x] shuffleArray
-- 1. [x] stockProfit
-- 1. [x] strings
-- 1. [x] superBalancedTreeCheck
-- 1. [x] switchObjectKey
-- 1. [x] wordCloud
+- 2. [x] arrayRotateLeft
+- 3. [x] binaryTreeSum
+- 4. [x] default
+- 5. [x] findDuplicateInLL
+- 6. [x] findFibonacci
+- 7. [x] findLongestWord
+- 8. [x] findShortestRoute
+- 9. [x] graphColoring
+- 10. [x] highestScores
+- 11. [x] isValidBTreeCheck
+- 12. [x] makingChange
+- 13. [x] mergeArray
+- 14. [x] mergeArrays
+- 15. [x] mergeMeetingTimes
+- 16. [x] missingArrayElement
+- 17. [x] missingInteger
+- 18. [ ] orderChecker
+- 19. [x] palindrome
+- 20. [x] permutationPalindrome
+- 21. [x] productOfAll
+- 22. [x] productOfThree
+- 23. [x] recursiveStrings
+- 24. [x] reverseArrayInPlace
+- 25. [x] reverseString
+- 26. [x] reverseWords
+- 27. [ ] rotationPoint
+- 28. [x] sandBox
+- 29. [x] secondLargestBTreeItem
+- 30. [ ] shortestString
+- 31. [x] shuffleArray
+- 32. [x] stockProfit
+- 33. [x] strings
+- 34. [x] superBalancedTreeCheck
+- 35. [x] switchObjectKey
+- 36. [x] wordCloud
 
 ### Concepts
 
@@ -95,10 +95,10 @@ npm run test
 ### Data structures
 //TODO: fix casing of classNames
 - 1. [ ] GraphObject
-- 1. [x] Queue
-- 1. [x] BinaryTree
-- 1. [x] GraphNode
-- 1. [x] Tree
+- 2. [x] Queue
+- 3. [x] BinaryTree
+- 4. [x] GraphNode
+- 5. [x] Tree
 
 
 ### Script for getting list of challenges/etc in each directory
