@@ -1,7 +1,7 @@
 // //////////////FOR LOOP IMPLEMENTATION
 
 // function palindrome(str) {
-//  // Step - [ ]The first part is the same as earlier
+//  // Step 1. The first part is the same as earlier
 //  var re = /[^A-Za-z0-9]/g; // or var re = /[\W_]/g;
 //  str = str.toLowerCase().replace(re, '');
 //
