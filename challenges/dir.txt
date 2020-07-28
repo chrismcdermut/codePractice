@@ -1,6 +1,7 @@
 arrayJumping
 arrayRotateLeft
 binaryTreeSum
+cakeThief
 default
 findDuplicateInLL
 findFibonacci
