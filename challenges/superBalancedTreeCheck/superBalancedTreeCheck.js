@@ -1,7 +1,7 @@
 function superBalancedTreeCheck(treeRoot) {
-  // if (!treeRoot) {
-  //   return true;
-  // }
+  if (!treeRoot) {
+    return true;
+  }
 
   let treeIsSuperBalanced = true;
   const depths = []; /* container of unique depths */

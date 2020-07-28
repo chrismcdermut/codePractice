@@ -80,16 +80,22 @@ describe('truly superBalanced binaryTree Test1', () => {
 });
 
 describe('truly superBalanced binaryTree Test2', () => {
-  const bottomLeftNode = new BinaryTreeNode(2);
-  bottomLeftNode.insertLeft(4);
-  bottomLeftNode.insertRight(5);
+  test('binary tree is superBalanced', () => {
+    const bottomLeftNode = new BinaryTreeNode(2);
+    bottomLeftNode.insertLeft(4);
+    bottomLeftNode.insertRight(5);
 
-  const binaryTree3 = new BinaryTreeNode(1);
-  binaryTree3.insertLeft(bottomLeftNode);
-  binaryTree3.insertRight(3);
+    const binaryTree3 = new BinaryTreeNode(1);
+    binaryTree3.insertLeft(bottomLeftNode);
+    binaryTree3.insertRight(3);
+
+    const result = superBalancedTreeCheck(binaryTree3);
+    const answer = true;
+    expect(result).toEqual(answer);
+  });
 
   test('binary tree is superBalanced', () => {
-    const result = superBalancedTreeCheck(binaryTree3);
+    const result = superBalancedTreeCheck();
     const answer = true;
     expect(result).toEqual(answer);
   });
