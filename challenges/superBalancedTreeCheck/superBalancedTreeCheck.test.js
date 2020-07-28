@@ -59,7 +59,7 @@ describe('non superBalanced binaryTree Test', () => {
   });
 });
 
-describe('truly superBalanced binaryTree Test', () => {
+describe('truly superBalanced binaryTree Test1', () => {
   const bottomLeftNode = new BinaryTreeNode(2);
   bottomLeftNode.insertLeft(4);
   bottomLeftNode.insertRight(5);
@@ -79,7 +79,7 @@ describe('truly superBalanced binaryTree Test', () => {
   });
 });
 
-describe('truly superBalanced binaryTree Test', () => {
+describe('truly superBalanced binaryTree Test2', () => {
   const bottomLeftNode = new BinaryTreeNode(2);
   bottomLeftNode.insertLeft(4);
   bottomLeftNode.insertRight(5);
