@@ -1,9 +1,10 @@
 function superBalancedTreeCheck(treeRoot) {
-  // if (!treeRoot) {
-  //   return true;
-  // }
+  if (!treeRoot) {
+    return true;
+  }
 
-  let treeIsSuperBalanced = true;
+  let treeIsSuperBalanced = true; // TODO: would it work to have
+  // this default to false?
   const depths = []; /* container of unique depths */
 
   const nodes = []; /* Nodes will store pairs of a node and the node's depth */
