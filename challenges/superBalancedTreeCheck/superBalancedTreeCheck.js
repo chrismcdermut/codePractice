@@ -1,9 +1,10 @@
 function superBalancedTreeCheck(treeRoot) {
-  // if (!treeRoot) {
-  //   return true;
-  // }
+  let treeIsSuperBalanced = false;
+  if (!treeRoot) {
+    treeIsSuperBalanced = true;
+    return treeIsSuperBalanced;
+  }
 
-  let treeIsSuperBalanced = true;
   const depths = []; /* container of unique depths */
 
   const nodes = []; /* Nodes will store pairs of a node and the node's depth */
@@ -22,7 +23,10 @@ function superBalancedTreeCheck(treeRoot) {
           (depths.length > 2)
           || (depths.length === 2 && Math.abs(depths[0] - depths[1]) > 1)
         ) {
+          // TODO: this seems a lil kooky, it's already set to false,
+          // maybe do a break?
           treeIsSuperBalanced = false;
+          break;
         }
       }
     } else { /* not a leaf and has either left, right or both left,right nodes */
