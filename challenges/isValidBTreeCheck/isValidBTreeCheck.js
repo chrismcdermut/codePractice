@@ -12,7 +12,7 @@ function hasValidImmediateNode(node) {
 
 // Should prolly do dfs
 function isValidBTreeCheck(bTreeRoot) {
-  const nodeAndBoundsStack = [];
+  const nodeAndBoundsStack = []; // Use stack for DFS
   nodeAndBoundsStack.push({
     node: bTreeRoot,
     lowerBound: Number.NEGATIVE_INFINITY,
@@ -24,8 +24,9 @@ function isValidBTreeCheck(bTreeRoot) {
     // tak the node off the top
     const { node, lowerBound, upperBound } = nodeAndBoundsStack.pop();
 
-    // check if the bounds are broken
+    // TODO: This is kind of kooky, should clean up BinaryTreeNode class
     const nodeValue = (node.value instanceof BinaryTreeNode) ? node.value.value : node.value;
+    // check if the bounds are broken
     if (nodeValue <= lowerBound || nodeValue >= upperBound) {
       return false;
     }
@@ -49,4 +50,18 @@ function isValidBTreeCheck(bTreeRoot) {
   return true;
 }
 
-module.exports = { isValidBTreeCheck, hasValidImmediateNode };
+function isBinarySearchTree(treeRoot, lowerBoundArg, upperBoundArg) {
+  const lowerBound = (typeof lowerBoundArg !== 'undefined') ? lowerBoundArg : Number.NEGATIVE_INFINITY;
+  const upperBound = (typeof upperBoundArg !== 'undefined') ? upperBoundArg : Number.POSITIVE_INFINITY;
+
+  if (!treeRoot) return true;
+
+  if (treeRoot.value >= upperBound || treeRoot.value <= lowerBound) {
+    return false;
+  }
+
+  return isBinarySearchTree(treeRoot.left, lowerBound, treeRoot.value)
+  && isBinarySearchTree(treeRoot.right, treeRoot.value, upperBound);
+}
+
+module.exports = { isValidBTreeCheck, hasValidImmediateNode, isBinarySearchTree };
