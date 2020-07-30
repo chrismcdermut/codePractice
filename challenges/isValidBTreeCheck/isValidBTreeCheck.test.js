@@ -1,7 +1,7 @@
 const BinaryTreeNode = require('../../dataStructures/binaryTree/BinaryTreeNode');
 const { isValidBTreeCheck, hasValidImmediateNode, isBinarySearchTree } = require('./isValidBTreeCheck');
 
-describe('isValidBTreeCheck Properties Test', () => {
+describe('hasValidImmediateNode Properties Test', () => {
   const bottomLeftRightNode = new BinaryTreeNode(6);
   bottomLeftRightNode.insertLeft(4);
   bottomLeftRightNode.insertRight(7);

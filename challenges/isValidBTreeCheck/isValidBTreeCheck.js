@@ -10,7 +10,7 @@ function hasValidImmediateNode(node) {
   return isValidNode;
 }
 
-// Should prolly do dfs
+// do DFS to short circuit if finding things ain't right
 function isValidBTreeCheck(bTreeRoot) {
   const nodeAndBoundsStack = []; // Use stack for DFS
   nodeAndBoundsStack.push({
