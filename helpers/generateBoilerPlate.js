@@ -166,7 +166,7 @@ module.exports.generateDefaultBoilerPlate = function generateDefaultBoilerPlate(
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log(`${solutionName}Spec.md saved!`); // eslint-disable-line no-console
+      console.log(`${solutionName}Spec.md saved!`); /* eslint-disable-line no-console */
     },
   );
 
@@ -178,7 +178,7 @@ module.exports.generateDefaultBoilerPlate = function generateDefaultBoilerPlate(
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log(`${solutionName}Notes.md saved!`); // eslint-disable-line no-console
+      console.log(`${solutionName}Notes.md saved!`); /* eslint-disable-line no-console */
     },
   );
 
@@ -190,7 +190,7 @@ module.exports.generateDefaultBoilerPlate = function generateDefaultBoilerPlate(
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log(`${solutionName}.js saved!`); // eslint-disable-line no-console
+      console.log(`${solutionName}.js saved!`); /* eslint-disable-line no-console */
     },
   );
 
@@ -202,7 +202,7 @@ module.exports.generateDefaultBoilerPlate = function generateDefaultBoilerPlate(
       // throws an error, you could also catch it here
       if (err) throw err;
       // success case, the file was saved
-      console.log(`${solutionName}.test.js saved!`); // eslint-disable-line no-console
+      console.log(`${solutionName}.test.js saved!`); /* eslint-disable-line no-console */
     },
   );
 };

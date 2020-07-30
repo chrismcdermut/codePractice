@@ -26,5 +26,5 @@ module.exports = { bubbleSort };
 module.exports.runBubbleSort = function runBubbleSort() {
   const list = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 89];
   // answer [1,2,3,4,7,11,14,16,23,56,67,89,89];
-  console.log(bubbleSort(list)); // eslint-disable-line no-console
+  console.log(bubbleSort(list)); /* eslint-disable-line no-console */
 };

@@ -36,12 +36,12 @@ module.exports = { insertionSort1, insertionSort2 };
 module.exports.runInsertionSort1 = function runInsertionSort1() {
   const list = [54, 26, 93, 17, 77, 31, 44, 55, 20];
   // answer = [ 17, 20, 26, 31, 44, 54, 55, 77, 93 ]
-  console.log(insertionSort1(list)); // eslint-disable-line no-console
+  console.log(insertionSort1(list)); /* eslint-disable-line no-console */
 };
 
 // TODO: make this take arguments
 module.exports.runInsertionSort2 = function runInsertionSort2() {
   const array1 = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
   // answer = [ 1,2,3,4,5,6,7,8,9,10 ]
-  console.log(insertionSort2(array1)); // eslint-disable-line no-console
+  console.log(insertionSort2(array1)); /* eslint-disable-line no-console */
 };

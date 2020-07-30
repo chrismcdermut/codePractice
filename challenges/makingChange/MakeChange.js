@@ -15,7 +15,8 @@ class MakeChange {
 
     // Toggle this on and off
     // eslint-disable-next-line no-console
-    console.log(`checking ways to make ${amountLeft} with [${denominations.slice(currentIndex).join(', ')}]`);
+    // console.log(`checking ways to make
+    // ${amountLeft} with [${denominations.slice(currentIndex).join(', ')}]`);
 
     // Choose a current coin
     const currentCoin = denominations[currentIndex];
@@ -36,7 +37,8 @@ class MakeChange {
     // Check our memo and short-circuit if we've already solved this one
     const memoKey = [amountLeft, currentIndex].join(', ');
     if (Object.prototype.hasOwnProperty.call(this.memo, memoKey)) {
-      console.log(`grabbing memo [${memoKey}]`); // eslint-disable-line no-console
+      // console.log(`grabbing
+      // memo [${memoKey}]`); /* eslint-disable-line no-console */
       return this.memo[memoKey];
     }
 
@@ -50,7 +52,8 @@ class MakeChange {
     // We're out of denominations
     if (currentIndex === denominations.length) return 0;
     // eslint-disable-next-line no-console
-    console.log(`checking ways to make ${amountLeft} with [${denominations.slice(currentIndex).join(', ')}]`);
+    // console.log(`checking ways to make ${amountLeft}
+    // with [${denominations.slice(currentIndex).join(', ')}]`);
 
     // Choose a current coin
     const currentCoin = denominations[currentIndex];

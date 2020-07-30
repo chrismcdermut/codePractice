@@ -39,20 +39,20 @@ describe('insertionSort2 Test', () => {
 
 describe('runInsertionSort1 Test', () => {
   test('testOne', () => {
-    console.log = jest.fn(); // eslint-disable-line no-console
+    console.log = jest.fn(); /* eslint-disable-line no-console */
     // TODO: make this take arguments
     runInsertionSort1();
     const answer = [17, 20, 26, 31, 44, 54, 55, 77, 93];
-    expect(console.log).toHaveBeenCalledWith(answer); // eslint-disable-line no-console
+    expect(console.log).toHaveBeenCalledWith(answer); /* eslint-disable-line no-console */
   });
 });
 
 describe('runInsertionSort2 Test', () => {
   test('testOne', () => {
-    console.log = jest.fn(); // eslint-disable-line no-console
+    console.log = jest.fn(); /* eslint-disable-line no-console */
     // TODO: make this take arguments
     runInsertionSort2();
     const answer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    expect(console.log).toHaveBeenCalledWith(answer); // eslint-disable-line no-console
+    expect(console.log).toHaveBeenCalledWith(answer); /* eslint-disable-line no-console */
   });
 });

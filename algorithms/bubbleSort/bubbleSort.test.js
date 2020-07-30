@@ -24,10 +24,10 @@ describe('bubbleSort Test', () => {
 
 describe('runBubbleSort Test', () => {
   test('testOne', () => {
-    console.log = jest.fn(); // eslint-disable-line no-console
+    console.log = jest.fn(); /* eslint-disable-line no-console */
     // TODO: make this take arguments
     runBubbleSort();
     const answer = [1, 2, 3, 4, 7, 11, 14, 16, 23, 56, 67, 89, 89];
-    expect(console.log).toHaveBeenCalledWith(answer); // eslint-disable-line no-console
+    expect(console.log).toHaveBeenCalledWith(answer); /* eslint-disable-line no-console */
   });
 });

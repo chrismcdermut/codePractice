@@ -35,5 +35,5 @@ module.exports = { mergeSort };
 module.exports.runMergeSort = function runMergeSort() {
   const exampleList = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34];
   // answer [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91]
-  console.log(mergeSort(exampleList)); // eslint-disable-line no-console
+  console.log(mergeSort(exampleList)); /* eslint-disable-line no-console */
 };

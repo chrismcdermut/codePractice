@@ -72,12 +72,12 @@ describe('reverseCharactersSolo Test', () => {
 
 describe('runReverseWords Test', () => {
   test('testThree', () => {
-    console.log = jest.fn(); // eslint-disable-line no-console
+    console.log = jest.fn(); /* eslint-disable-line no-console */
     // TODO: make this take arguments
     runReverseWords();
     const answer = [
       'c', 'a', 'k', 'e', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 's', 't', 'e', 'a', 'l',
     ];
-    expect(console.log).toHaveBeenCalledWith(answer); // eslint-disable-line no-console
+    expect(console.log).toHaveBeenCalledWith(answer); /* eslint-disable-line no-console */
   });
 });
