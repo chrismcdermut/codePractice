@@ -38,9 +38,9 @@ describe('binarySearch Test', () => {
 
 describe('runBinarySearch Test', () => {
   test('testOne', () => {
-    console.log = jest.fn();
+    console.log = jest.fn(); /* eslint-disable-line no-console */
     runBinarySearch();
     const answer = 11;
-    expect(console.log).toHaveBeenCalledWith(answer);
+    expect(console.log).toHaveBeenCalledWith(answer); /* eslint-disable-line no-console */
   });
 });

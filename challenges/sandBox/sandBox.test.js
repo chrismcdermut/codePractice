@@ -7,9 +7,9 @@ const testOne = {
 
 describe('sandBox Test', () => {
   test('testOne', () => {
-    console.log = jest.fn();
+    console.log = jest.fn(); /* eslint-disable-line no-console */
     sandBox(testOne.input);
-    expect(console.log).toHaveBeenCalledWith(testOne.output);
+    expect(console.log).toHaveBeenCalledWith(testOne.output); /* eslint-disable-line no-console */
   });
 
   test('testTwo', () => {

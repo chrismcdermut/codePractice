@@ -1,3 +1,5 @@
+/* eslint no-console: 0 */
+
 const z = {};
 module.exports = {
   runYakovChain() {
@@ -70,7 +72,7 @@ module.exports = {
   },
   curryMultiply() {
     function makeMultiplier(multiplier) {
-      const myFunFunc = function (y) {
+      const myFunFunc = function myFunFunc(y) {
         return multiplier * y;
       };
       return myFunFunc;
@@ -80,10 +82,10 @@ module.exports = {
     console.log(operation(10));
   },
   iifeWindow() {
-    (function (windowArg) {
+    (function iifeWindow(windowArg) {
       const window = windowArg;
       const obj = {};
-      obj.dreamOn = function () {
+      obj.dreamOn = function dreamOn() {
         console.log('I am just fine. Let me out.');
       };
       window.doer = obj;
@@ -91,10 +93,10 @@ module.exports = {
     doer.dreamOn(); // eslint-disable-line no-undef
   },
   iife() {
-    (function (windowArg) {
+    (function iife(windowArg) {
       const window = windowArg;
       const obj = {};
-      obj.dreamOn = function () {
+      obj.dreamOn = function dreamOn1() {
         console.log('I am just fine. Let me out.');
       };
       window.doer = obj;
@@ -109,9 +111,9 @@ module.exports = {
   },
   circleArea() {
     // https://javascript.info/constructor-new
-    const Circle = function (radius) {
+    const Circle = function Circle(radius) {
       this.radius = radius;
-      this.getArea = function () {
+      this.getArea = function getArea() {
         return Math.PI * this.radius ** 2;
       };
     };

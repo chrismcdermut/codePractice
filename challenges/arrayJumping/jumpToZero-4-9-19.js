@@ -82,6 +82,6 @@ const jumpToZero = (array, currentIndex) => {
 
 // jumpToZero(testCase,testCasecurrentIndex);
 
-module.exports.runJumpToZero = function () {
+module.exports.runJumpToZero = function runJumpToZero() {
   jumpToZero(testCase, testCasecurrentIndex);
 };

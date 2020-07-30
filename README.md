@@ -86,6 +86,7 @@ npm run test
 - [x] 34. superBalancedTreeCheck
 - [x] 35. switchObjectKey
 - [x] 36. wordCloud
+- [x] 37. cakeThief
 
 ### Concepts
 

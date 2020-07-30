@@ -70,10 +70,10 @@ module.exports = { reversePhrase, reverseWords, reverseCharactersSolo };
 
 // ///////////NODE SCRIPT/////////////
 
-module.exports.runReverseWords = function () {
+module.exports.runReverseWords = function runReverseWords() {
   const message = [
     's', 't', 'e', 'a', 'l', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 'c', 'a', 'k', 'e',
   ];
   // 'c','a','k','e',' ','p','o','u','n','d',' ','s','t','e','a','l',
-  console.log(reverseWords(message));
+  console.log(reverseWords(message)); /* eslint-disable-line no-console */
 };

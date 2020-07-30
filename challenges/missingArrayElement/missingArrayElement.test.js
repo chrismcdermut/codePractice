@@ -1,4 +1,4 @@
-const missingArrayElement = require('./missingArrayElementSolution');
+const { missingArrayElement1, missingArrayElement } = require('./missingArrayElementSolution');
 
 const testOne = {
   highestNumber: 10,
@@ -106,6 +106,62 @@ describe('Missing array element test suite', () => {
 
   test(`${testNine.input} test`, () => {
     const result = missingArrayElement(testNine.input, testNine.highestNumber);
+    expect(result).toBe(testNine.output);
+  });
+});
+
+describe('Missing array element test suite', () => {
+  test(`${testOne.input} test`, () => {
+    const result = missingArrayElement1(testOne.input, testOne.highestNumber);
+    expect(result).toBe(testOne.output);
+  });
+
+  test(`${testTwo.input} test`, () => {
+    const result = missingArrayElement1(testTwo.input, testTwo.highestNumber);
+    expect(result).toBe(testTwo.output);
+  });
+
+  test(`${testThree.input} test`, () => {
+    const result = missingArrayElement1(
+      testThree.input,
+      testThree.highestNumber,
+    );
+    expect(result).toBe(testThree.output);
+  });
+
+  test(`${testFour.input} test`, () => {
+    const result = missingArrayElement1(testFour.input, testFour.highestNumber);
+    expect(result).toBe(testFour.output);
+  });
+
+  test(`${testFive.input} test`, () => {
+    const result = missingArrayElement1(testFive.input, testFive.highestNumber);
+    expect(result).toBe(testFive.output);
+  });
+
+  test(`${testSix.input} test`, () => {
+    const result = missingArrayElement1(testSix.input, testSix.highestNumber);
+    expect(result).toBe(testSix.output);
+  });
+
+  test(`${testSeven.input} test`, () => {
+    const result = missingArrayElement1(
+      testSeven.input,
+      testSeven.highestNumber,
+    );
+    expect(result).toBe(testSeven.output);
+  });
+
+  test(`${testEight.input} test`, () => {
+    const result = missingArrayElement1(
+      testEight.input,
+      testEight.highestNumber,
+    );
+    expect(result).toBe(testEight.output);
+  });
+
+  test(`${testNine.input} test`, () => {
+    const result = missingArrayElement1(testNine.input, testNine.highestNumber);
     expect(result).toBe(testNine.output);
   });
 });

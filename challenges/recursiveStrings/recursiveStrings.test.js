@@ -8,10 +8,6 @@ const testOne = {
 describe('recursiveStrings Test', () => {
   test('testOne', () => {
     const result = recursiveStrings(testOne.input);
-    console.log('testOne.output');
-    console.log(testOne.output);
-    console.log('result');
-    console.log(result);
     expect(result).toEqual(testOne.output);
   });
 });
