@@ -38,7 +38,7 @@ describe('Tree article test', () => {
   /* keeping turned off to declutter console */
   xtest('traverse node', () => {
     documentTree.traverse((node) => {
-      console.log(node);
+      console.log(node); // eslint-disable-line no-console
     });
   });
 
@@ -126,7 +126,7 @@ describe('Tree products test', () => {
   /* keeping turned off to declutter console */
   xtest('traverse node', () => {
     productTree.traverse((node) => {
-      console.log(node);
+      console.log(node); // eslint-disable-line no-console
     });
   });
 

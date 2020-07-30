@@ -1,6 +1,6 @@
 function checkForZero(array) {
   for (let i = 0; i < array.length; i += 1) {
-    console.log(i);
+    console.log(i); // eslint-disable-line no-console
   }
   return array;
 }
