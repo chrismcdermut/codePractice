@@ -70,7 +70,7 @@ module.exports = { reversePhrase, reverseWords, reverseCharactersSolo };
 
 // ///////////NODE SCRIPT/////////////
 
-module.exports.runReverseWords = function () {
+module.exports.runReverseWords = function runReverseWords() {
   const message = [
     's', 't', 'e', 'a', 'l', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 'c', 'a', 'k', 'e',
   ];

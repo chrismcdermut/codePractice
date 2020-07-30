@@ -19,7 +19,7 @@ function binarySearch(list, lookFor) {
 module.exports = { binarySearch };
 
 // TODO: make this take arguments
-module.exports.runBinarySearch = function () {
+module.exports.runBinarySearch = function runBinarySearch() {
   const exampleList = [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91];
   // answer 11
   console.log(binarySearch(exampleList, 67));

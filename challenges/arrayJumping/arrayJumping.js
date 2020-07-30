@@ -39,7 +39,7 @@ function jumpToZero(array, startingIndex) {
 }
 
 module.exports = { checkForZero, jumpToZero };
-module.exports.runJumpToZero = function () {
+module.exports.runJumpToZero = function runJumpToZero() {
   const testCase = [2, 4, 1, 0, 5, 4, 3, 1, 5, 1, 3];
   const testCaseStartingIndex = 5;
   jumpToZero(testCase, testCaseStartingIndex);
