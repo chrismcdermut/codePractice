@@ -8,6 +8,12 @@ describe('Stack Test', () => {
     expect(result).toEqual(answer);
   });
 
+  test('testOne.5', () => {
+    const result = stack1.pop();
+    const answer = null;
+    expect(result).toEqual(answer);
+  });
+
 
   test('testTwo', () => {
     stack1.push(1);
