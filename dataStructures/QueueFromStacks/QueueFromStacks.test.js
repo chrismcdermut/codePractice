@@ -8,7 +8,7 @@ describe('QueueFromStacks Test', () => {
     stack1.enqueue(3);
     stack1.enqueue(4);
     const result = stack1.dequeue();
-    const answer = 4;
+    const answer = 1;
     expect(result).toEqual(answer);
   });
 });

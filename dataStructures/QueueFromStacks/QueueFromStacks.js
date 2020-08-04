@@ -11,22 +11,17 @@ class QueueFromStacks {
   }
 
   dequeue() {
-    if (this.enqueueStack.items.lenth && this.dequeueStack.items.lenth) {
-      throw new Error('No items in the Queue');
-    }
-    // if dequeue stack is empthy, fill it up
-    if (this.dequeueStack.items.length === 0) {
-      this.enqueueStack.items.forEach((item) => {
-        this.dequeueStack.push(item);
-      });
+    if (this.dequeueStack.items.length === 0) { // fill dequeue stack if empthy
+      while (this.enqueueStack.items.length > 0) {
+        const movedItem = this.enqueueStack.items.pop();
+        this.dequeueStack.push(movedItem);
+      }
 
-
-      this.enqueueStack = new Stack();
+      if (this.dequeueStack.items.lenth === 0) {
+        throw new Error('No items in the Queue');
+      }
     }
-    if (this.dequeueStack.items.length > 0) {
-      return this.dequeueStack.pop();
-    }
-    return null;
+    return this.dequeueStack.pop();
   }
 }
 

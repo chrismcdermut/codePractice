@@ -1,5 +1,5 @@
-// Notes go here!
-
+// // Notes go here!
+//
 // QueueFromStac  class QueueTwoStacks {
 //   constructor() {
 //     this.inStack = [];
@@ -27,20 +27,20 @@
 //     return this.outStack.pop();
 //   }
 // }
-
-
-// const enqueueStackLength = this.enqueueStack.items.length;
-// for (let i = 0; i < this.enqueueStack.items.length; i++) {
-//   console.log('dequeue this.dequeueStack BEFORE');
-//   console.log(this.dequeueStack);
-//   console.log('dequeue this.enqueueStack BEFORE');
-//   console.log(this.enqueueStack);
-//   this.dequeueStack.push(this.enqueueStack.pop());
-//   console.log('dequeue this.dequeueStack AFTER');
-//   console.log(this.dequeueStack);
-//   console.log('dequeue this.enqueueStack AFTER');
-//   console.log(this.enqueueStack);
-// }
-// console.log('dequeue this.dequeueStack');
-// console.log(this.dequeueStack);
-// return this.dequeueStack.pop();
+//
+//
+// // const enqueueStackLength = this.enqueueStack.items.length;
+// // for (let i = 0; i < this.enqueueStack.items.length; i++) {
+// //   console.log('dequeue this.dequeueStack BEFORE');
+// //   console.log(this.dequeueStack);
+// //   console.log('dequeue this.enqueueStack BEFORE');
+// //   console.log(this.enqueueStack);
+// //   this.dequeueStack.push(this.enqueueStack.pop());
+// //   console.log('dequeue this.dequeueStack AFTER');
+// //   console.log(this.dequeueStack);
+// //   console.log('dequeue this.enqueueStack AFTER');
+// //   console.log(this.enqueueStack);
+// // }
+// // console.log('dequeue this.dequeueStack');
+// // console.log(this.dequeueStack);
+// // return this.dequeueStack.pop();
