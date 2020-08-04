@@ -37,7 +37,7 @@ npm run test
 ```
 
 ## Content
-
+//TODO: _make this list dynamically generated with numbers and check marks_
 ### Algorithms
 
 - [ ] 1. binarySearch - Binary Search Algorith
@@ -87,6 +87,9 @@ npm run test
 - [x] 35. switchObjectKey
 - [x] 36. wordCloud
 - [x] 37. cakeThief
+- [x] 38. MaxStack
+- [x] 39. closerValidator
+- [x] 40. openParentheses
 
 ### Concepts
 
@@ -94,12 +97,13 @@ npm run test
 
 
 ### Data structures
-//TODO: fix casing of classNames
+//TODO: _fix casing of classNames_
 - [ ] 1. GraphObject
 - [x] 2. Queue
 - [x] 3. BinaryTree
 - [x] 4. GraphNode
 - [x] 5. Tree
+- [x] 6. QueueFromStacks
 
 
 ### Script for getting list of challenges/etc in each directory
