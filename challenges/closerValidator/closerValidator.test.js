@@ -27,4 +27,13 @@ describe('closerValidator Test', () => {
     const result = closerValidator(testThree.input);
     expect(result).toEqual(testThree.output);
   });
+
+  test('testFour', () => {
+    const testFour = {
+      input: '} [ }',
+      output: false,
+    };
+    const result = closerValidator(testFour.input);
+    expect(result).toEqual(testFour.output);
+  });
 });
