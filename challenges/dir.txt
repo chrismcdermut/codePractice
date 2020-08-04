@@ -1,7 +1,9 @@
+MaxStack
 arrayJumping
 arrayRotateLeft
 binaryTreeSum
 cakeThief
+closerValidator
 default
 findDuplicateInLL
 findFibonacci
@@ -16,6 +18,7 @@ mergeArrays
 mergeMeetingTimes
 missingArrayElement
 missingInteger
+openParentheses
 orderChecker
 palindrome
 permutationPalindrome
