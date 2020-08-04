@@ -17,7 +17,7 @@ class QueueFromStacks {
         this.dequeueStack.push(movedItem);
       }
 
-      if (this.dequeueStack.items.lenth === 0) {
+      if (this.dequeueStack.items.length === 0) {
         throw new Error('No items in the Queue');
       }
     }

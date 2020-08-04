@@ -12,3 +12,13 @@ describe('QueueFromStacks Test', () => {
     expect(result).toEqual(answer);
   });
 });
+
+describe('QueueFromStacks Empty Test', () => {
+  test('testOne', () => {
+    const stack1 = new QueueFromStacks();
+    const answer = 'No items in the Queue';
+    expect(() => {
+      stack1.dequeue();
+    }).toThrow(answer);
+  });
+});
