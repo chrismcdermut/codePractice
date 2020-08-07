@@ -91,7 +91,7 @@ npm run test
 - [x] 39. closerValidator
 - [x] 40. openParentheses
 - [ ] 41. deBounce
-- [ ] 41. deleteNode
+- [x] 41. deleteNode
 
 ### Concepts
 
