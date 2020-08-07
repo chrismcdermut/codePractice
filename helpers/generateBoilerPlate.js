@@ -2,10 +2,10 @@ const fs = require('fs');
 
 // TODO: make this take arguments
 // ////SETUP HERE//////
-const solutionName = 'LinkedListNodeDouble';
+const solutionName = 'debounce';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || concept */
-const codeChallengeType = 'dataStructure';
+const codeChallengeType = 'challenge';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;

@@ -10,6 +10,7 @@
     "bubbleSort": "node -e 'require(\"./algorithms/bubbleSort/bubbleSort\").runBubbleSort()'",
     "circleArea": "node -e 'require(\"./misc/jsOOPConcepts\").circleArea()'",
     "curryMultiply": "node -e 'require(\"./misc/jsOOPConcepts\").curryMultiply()'",
+    "debounce": "node -e 'require(\"./challenges/debounce/debounce\").runDebounce()'",
     "domLoaded": "node -e 'require(\"./misc/jsOOPConcepts\").domLoaded()'",
     "generateBoilerPlate": "node -e 'require(\"./helpers/generateBoilerPlate\").generateDefaultBoilerPlate()'",
     "heapSort": "node -e 'require(\"./algorithms/heapSort/heapSort\").runHeapSort()'",

@@ -90,6 +90,7 @@ npm run test
 - [x] 38. MaxStack
 - [x] 39. closerValidator
 - [x] 40. openParentheses
+- [ ] 41. deBounce
 
 ### Concepts
 
@@ -104,6 +105,8 @@ npm run test
 - [x] 4. GraphNode
 - [x] 5. Tree
 - [x] 6. QueueFromStacks
+- [x] 7. LinkedListNodeSingle
+- [x] 8. LinkedListNodeDouble
 
 
 ### Script for getting list of challenges/etc in each directory
