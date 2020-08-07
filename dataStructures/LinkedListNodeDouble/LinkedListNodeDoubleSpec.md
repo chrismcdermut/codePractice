@@ -1,0 +1,1 @@
+LinkedListNodeDouble Spec goes here!
