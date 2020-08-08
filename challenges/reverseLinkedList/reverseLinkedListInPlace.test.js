@@ -1,7 +1,7 @@
-const reverseLinkedList = require('./reverseLinkedList');
+const reverseLinkedListInPlace = require('./reverseLinkedListInPlace');
 const LinkedListNodeSingle = require('../../dataStructures/LinkedListNodeSingle/LinkedListNodeSingle');
 
-describe('reverseLinkedList Test', () => {
+describe('reverseLinkedListInPlace Test', () => {
   test('testOne', () => {
     const a = new LinkedListNodeSingle('A');
     const b = new LinkedListNodeSingle('B');
@@ -15,7 +15,7 @@ describe('reverseLinkedList Test', () => {
     c.next = d;
     d.next = e;
     e.next = f;
-    const result = reverseLinkedList(a);
+    const result = reverseLinkedListInPlace(a);
     const answer = f;
     expect(result).toEqual(answer);
   });

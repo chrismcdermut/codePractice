@@ -1,4 +1,4 @@
-function reverseLinkedList(startNode) {
+function reverseLinkedListInPlace(startNode) {
   let currentNode = startNode;
   let previousNode = null;
   let nextNode = null;
@@ -12,4 +12,4 @@ function reverseLinkedList(startNode) {
   return previousNode;
 }
 
-module.exports = reverseLinkedList;
+module.exports = reverseLinkedListInPlace;
