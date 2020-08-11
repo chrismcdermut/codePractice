@@ -1,5 +1,7 @@
 findKthPriorElement Notes go here!
 
+-one pass doesn't necessarily mean faster
+
 // function findKthPriorElement(startNode, kthPriorElement) {
 //   if (!startNode) {
 //     throw new Error('You need a startNode, at least!');

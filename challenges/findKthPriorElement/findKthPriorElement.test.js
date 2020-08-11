@@ -110,6 +110,30 @@ describe('findKthToLastDoublePass Test', () => {
     const answer = d.value;
     expect(result).toEqual(answer);
   });
+
+  test('testFive', () => {
+    const a = new LinkedListNodeSingle('Angel Food');
+    const b = new LinkedListNodeSingle('Bundt');
+
+    a.next = b;
+    const k = -1;
+    const answer = `Impossible to find less than first to last node: ${k}`;
+    expect(() => {
+      findKthToLastDoublePass(a, k);
+    }).toThrow(answer);
+  });
+
+  test('testSix', () => {
+    const a = new LinkedListNodeSingle('Angel Food');
+    const b = new LinkedListNodeSingle('Bundt');
+
+    a.next = b;
+    const k = 4;
+    const answer = `k is larger than the length of the linked list: ${k}`;
+    expect(() => {
+      findKthToLastDoublePass(a, k);
+    }).toThrow(answer);
+  });
 });
 
 describe('findKthToLastStick Test', () => {
@@ -161,5 +185,29 @@ describe('findKthToLastStick Test', () => {
     const result = findKthToLastStick(a, 2);
     const answer = d.value;
     expect(result).toEqual(answer);
+  });
+
+  test('testFive', () => {
+    const a = new LinkedListNodeSingle('Angel Food');
+    const b = new LinkedListNodeSingle('Bundt');
+
+    a.next = b;
+    const k = -1;
+    const answer = `Impossible to find less than first to last node: ${k}`;
+    expect(() => {
+      findKthToLastStick(a, k);
+    }).toThrow(answer);
+  });
+
+  test('testSix', () => {
+    const a = new LinkedListNodeSingle('Angel Food');
+    const b = new LinkedListNodeSingle('Bundt');
+
+    a.next = b;
+    const k = 4;
+    const answer = `k is larger than the length of the linked list: ${k}`;
+    expect(() => {
+      findKthToLastStick(a, k);
+    }).toThrow(answer);
   });
 });
