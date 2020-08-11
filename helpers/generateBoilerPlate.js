@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // TODO: make this take arguments
 // ////SETUP HERE//////
-const solutionName = 'findKthPriorElement';
+const solutionName = 'findDuplicateIn1Space';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || concept */
 const codeChallengeType = 'challenge';
