@@ -1,5 +1,6 @@
 // const Queue = require('../../dataStructures/Queue/Queue');
 
+// TODO:: Implement this with a queue and clean it up
 function findKthPriorElement(startNode, kthPriorElement) {
   if (!startNode) {
     throw new Error('You need a startNode, at least!');
