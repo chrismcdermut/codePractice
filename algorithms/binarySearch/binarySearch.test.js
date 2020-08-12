@@ -30,7 +30,7 @@ describe('binarySearch Test', () => {
   });
 
   // TODO: make this case work
-  xtest('testThree', () => {
+  test('testThree', () => {
     const result = binarySearch(testThree.input, testThree.inputLookFor);
     expect(result).toEqual(testThree.output);
   });
