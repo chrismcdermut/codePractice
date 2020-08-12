@@ -127,6 +127,36 @@ describe('firstComeFirstServedCheck Test', () => {
     );
     expect(result).toBe(testTwo.is1stCome1stServed);
   });
+
+  test('testThree', () => {
+    const testThree = {
+      takeOutOrders: [17, 8, 24],
+      dineInOrders: [12, 19, 2],
+      servedOrders: [17, 8, 12, 19, 24, 2],
+      is1stCome1stServed: true,
+    };
+    const result = firstComeFirstServedCheck(
+      testThree.takeOutOrders,
+      testThree.dineInOrders,
+      testThree.servedOrders,
+    );
+    expect(result).toBe(testThree.is1stCome1stServed);
+  });
+
+  test('testFour', () => {
+    const testFour = {
+      takeOutOrders: [1, 3, 5],
+      dineInOrders: [2, 4, 6],
+      servedOrders: [1, 2, 4, 6, 5, 3],
+      is1stCome1stServed: false,
+    };
+    const result = firstComeFirstServedCheck(
+      testFour.takeOutOrders,
+      testFour.dineInOrders,
+      testFour.servedOrders,
+    );
+    expect(result).toBe(testFour.is1stCome1stServed);
+  });
 });
 
 describe('isFirstComeFirstServedBestCheck Test', () => {
