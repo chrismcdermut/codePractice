@@ -12,6 +12,7 @@ class URLShortener {
     this.currentRandomSlugId = startId;
     this.slugList = new Set([]);
     this.base62Alphabet = new Map([]);
+    this.base = 62;
     this.constructBase62Map();
   }
 
@@ -34,29 +35,44 @@ class URLShortener {
         this.base62Alphabet.set(i, (i - 26).toString(36).toUpperCase());
       }
     }
-    console.log('n');
-    console.log(this.base62Alphabet);
     return this.base62Alphabet;
   }
 
-  baseConversion(newId, base62Map) {
-    // convert each digit to ID
-    console.log('this.currentRandomSlugId');
-    console.log(this.currentRandomSlugId);
-    console.log('newId');
-    console.log(newId);
-    console.log('base62Map');
-    console.log(base62Map);
+  baseConversion(newId) {
+    const convertedNumberStack = [];
+    const { base } = this;
+    let highestPlace = 0;
+
+    while ((newId / base ** highestPlace) > 1) {
+      if ((newId / base ** (highestPlace + 1)) < 1) {
+        break;
+      }
+      highestPlace++;
+    }
+
+    let remainder = newId;
+    for (let i = highestPlace; i > -1; i--) {
+      const highestDenominator = Math.floor(remainder / (base ** i));
+      convertedNumberStack.push(highestDenominator);
+      remainder %= (base ** i);
+    }
+    return convertedNumberStack;
+  }
+
+  convertIDToSlug(ID) {
+    let slugID = [];
+    slugID = ID.map((item) => this.base62Alphabet.get(item));
+    return slugID;
   }
 
   checkSlugExists(slug) {
     return this.slugList.has(slug);
   }
 
-  generateRandomSlug() {
+  generateRandomSlug(chosenId) {
     let slug = '';
     while (true) {
-      const newId = this.currentRandomSlugId++;
+      const newId = chosenId || this.currentRandomSlugId++;
       slug = this.baseConversion(newId, this.base62Alphabet);
 
       // Make sure the slug isn't already used

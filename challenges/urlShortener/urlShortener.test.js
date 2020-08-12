@@ -85,3 +85,67 @@ describe('URLShortener.constructBase62Map Test', () => {
     expect(result).toEqual(testOne.output);
   });
 });
+
+describe('URLShortener.baseConversion Test', () => {
+  test('testOne', () => {
+    const testOne = {
+      input: 125,
+      output: [2, 1],
+    };
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.baseConversion(testOne.input);
+    expect(result).toEqual(testOne.output);
+  });
+
+  test('testTwo', () => {
+    const testTwo = {
+      input: 7912,
+      output: [2, 3, 38],
+    };
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.baseConversion(testTwo.input);
+    expect(result).toEqual(testTwo.output);
+  });
+
+  xtest('testThree', () => {
+    const testThree = {
+      input: '',
+      output: '',
+    };
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.baseConversion(testThree.input);
+    expect(result).toEqual(testThree.output);
+  });
+});
+
+describe('URLShortener.convertIDToSlug Test', () => {
+  test('testOne', () => {
+    const testOne = {
+      input: [2, 1],
+      output: [2, 1],
+    };
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.convertIDToSlug(testOne.input);
+    expect(result).toEqual(testOne.output);
+  });
+
+  test('testTwo', () => {
+    const testTwo = {
+      input: [2, 3, 38],
+      output: [2, 3, 'C'],
+    };
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.convertIDToSlug(testTwo.input);
+    expect(result).toEqual(testTwo.output);
+  });
+
+  xtest('testThree', () => {
+    const testThree = {
+      input: '',
+      output: '',
+    };
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.baseConversion(testThree.input);
+    expect(result).toEqual(testThree.output);
+  });
+});
