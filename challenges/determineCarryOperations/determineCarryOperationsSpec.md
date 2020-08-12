@@ -1,0 +1,1 @@
+determineCarryOperations Spec goes here!
