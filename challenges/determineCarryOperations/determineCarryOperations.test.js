@@ -1,4 +1,4 @@
-const determineCarryOperations = require('./determineCarryOperations');
+const { determineCarryOperations } = require('./determineCarryOperations');
 
 describe('determineCarryOperations Test', () => {
   test('testOne', () => {
@@ -39,10 +39,20 @@ describe('determineCarryOperations Test', () => {
 
   test('testFive', () => {
     const testFive = {
-      input: [2, 4],
-      output: 0,
+      input: [7, 14],
+      output: 1,
     };
     const result = determineCarryOperations(testFive.input[0], testFive.input[1]);
     expect(result).toEqual(testFive.output);
+  });
+
+  // TODO::Is this correct?
+  test('testSix', () => {
+    const testSix = {
+      input: [66666, 77777],
+      output: 5,
+    };
+    const result = determineCarryOperations(testSix.input[0], testSix.input[1]);
+    expect(result).toEqual(testSix.output);
   });
 });

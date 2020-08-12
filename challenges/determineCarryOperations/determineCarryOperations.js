@@ -1,34 +1,30 @@
+function findOrderOfMagnitude(n) {
+  return (Math.floor(Math.log(n) / Math.LN10
+                       + 0.000000001)); // because float math sucks like that
+}
+
+function convert(n) {
+  const order = Math.floor(Math.log(n) / Math.LN10
+                       + 0.000000001); // because float math sucks like that
+  return 10 ** order;
+}
+
 function determineCarryOperations(firstNumber, secondNumber) {
   let numberOfCarries = 0;
-  // const tensPlaceToCheck = 10;
-  if (firstNumber + secondNumber < 10) {
-    return numberOfCarries;
-  }
+  const orderOfMagnitude = findOrderOfMagnitude(firstNumber + secondNumber);
+  let firstNumberRemainder;
+  let secondNumberRemainder;
 
-  // check if opertion has a carry,
-  // operation has carry if sum of numbers is 10 or greater, start with singles digits
-  // how to find single digit of a number?
-  //
-  //
-  // loop through each tens place and see if there is a carry
-  for (let i = 10; i < 1000; i *= 10) {
-    const firstNumberRemainder = firstNumber % i;
-    console.log('firstNumberRemainder');
-    console.log(firstNumberRemainder);
-
-    const secondNumberRemainder = secondNumber % i;
-    console.log('secondNumberRemainder');
-    console.log(secondNumberRemainder);
-
+  for (let i = 0; i < orderOfMagnitude; i++) {
+    const order = 10 ** i;
+    firstNumberRemainder = Math.floor((firstNumber / order) % 10);
+    secondNumberRemainder = Math.floor((secondNumber / order) % 10);
     if (firstNumberRemainder + secondNumberRemainder > 10) {
       numberOfCarries += 1;
     }
   }
 
-  // fors first tensPlace
-  // for second tensPlace
-
   return numberOfCarries;
 }
 
-module.exports = determineCarryOperations;
+module.exports = { findOrderOfMagnitude, convert, determineCarryOperations };
