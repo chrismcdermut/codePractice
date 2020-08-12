@@ -7,9 +7,9 @@ function getRandom(floor, ceiling) {
 //   return response(302, destination);
 // }
 
-class urlShortener {
-  constructor() {
-    this.currentRandomSlugId = 0;
+class URLShortener {
+  constructor(startId) {
+    this.currentRandomSlugId = startId;
     this.slugList = new Set([]);
     this.base62Alphabet = new Map([]);
     this.constructBase62Map();
@@ -25,17 +25,18 @@ class urlShortener {
   constructBase62Map() {
     for (let i = 0; i < 62; i++) {
       if (i < 10) {
-        this.base62Map.set(i, i);
+        this.base62Alphabet.set(i, i);
       }
       if (i >= 10 && i <= 36) {
-        this.base62Map.set(i, (i + 10).toString(36));
+        this.base62Alphabet.set(i, (i).toString(36));
       }
       if (i >= 36 && i < 62) {
-        this.base62Map.set(i, (i + 10).toString(36).toUpperCase());
+        this.base62Alphabet.set(i, (i - 26).toString(36).toUpperCase());
       }
     }
     console.log('n');
-    console.log(this.base62Map);
+    console.log(this.base62Alphabet);
+    return this.base62Alphabet;
   }
 
   baseConversion(newId, base62Map) {
@@ -68,4 +69,4 @@ class urlShortener {
   }
 }
 
-module.exports = { getRandom, urlShortener };
+module.exports = { getRandom, URLShortener };
