@@ -13,8 +13,11 @@ function binarySearch(list, lookFor) {
     list[middle] < lookFor ? (min = middle) : (max = middle);
   }
   // TODO: make this case work
+  console.log('NOTHING FOUND CASE WTF');
   return -1;
 }
+
+// TESTING
 
 module.exports = { binarySearch };
 
