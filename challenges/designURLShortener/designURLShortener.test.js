@@ -5,8 +5,8 @@ const testOne = {
   output: '',
 };
 
-xdescribe('designURLShortener Test', () => {
-  xtest('testOne', () => {
+describe('designURLShortener Test', () => {
+  test('testOne', () => {
     const result = designURLShortener(testOne.input);
     expect(result).toEqual(testOne.output);
   });
