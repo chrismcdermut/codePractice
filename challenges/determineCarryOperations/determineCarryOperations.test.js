@@ -18,4 +18,31 @@ describe('determineCarryOperations Test', () => {
     const result = determineCarryOperations(testTwo.input[0], testTwo.input[1]);
     expect(result).toEqual(testTwo.output);
   });
+
+  test('testThree', () => {
+    const testThree = {
+      input: [69, 59],
+      output: 2,
+    };
+    const result = determineCarryOperations(testThree.input[0], testThree.input[1]);
+    expect(result).toEqual(testThree.output);
+  });
+
+  test('testFour', () => {
+    const testFour = {
+      input: [2, 4],
+      output: 0,
+    };
+    const result = determineCarryOperations(testFour.input[0], testFour.input[1]);
+    expect(result).toEqual(testFour.output);
+  });
+
+  test('testFive', () => {
+    const testFive = {
+      input: [2, 4],
+      output: 0,
+    };
+    const result = determineCarryOperations(testFive.input[0], testFive.input[1]);
+    expect(result).toEqual(testFive.output);
+  });
 });
