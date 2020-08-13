@@ -1,0 +1,1 @@
+stringCasing Spec goes here!
