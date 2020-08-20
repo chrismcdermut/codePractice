@@ -12,7 +12,10 @@ class URLShortener {
     this.currentRandomSlugId = startId;
     this.slugList = new Set([]);
     this.base62Alphabet = new Map([]);
+    this.alphabetSet = new Set();
     this.base = 62;
+    this.alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    this.numChars = 7;
     this.constructBase62Map();
   }
 
@@ -26,7 +29,7 @@ class URLShortener {
   constructBase62Map() {
     for (let i = 0; i < 62; i++) {
       if (i < 10) {
-        this.base62Alphabet.set(i, i);
+        this.base62Alphabet.set(i, i.toString());
       }
       if (i >= 10 && i <= 36) {
         this.base62Alphabet.set(i, (i).toString(36));
@@ -36,6 +39,16 @@ class URLShortener {
       }
     }
     return this.base62Alphabet;
+  }
+
+  constructAlphabetSet() {
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    [...alphabet].forEach((item) => {
+      this.alphabetSet.add(item);
+    });
+
+    return this.alphabetSet;
   }
 
   baseConversion(newId) {
@@ -69,19 +82,37 @@ class URLShortener {
     return this.slugList.has(slug);
   }
 
-  generateRandomSlug(chosenId) {
+  generateRandomSlugByID() {
     let slug = '';
     while (true) {
-      const newId = chosenId || this.currentRandomSlugId++;
+      const newId = this.currentRandomSlugId++;
       slug = this.baseConversion(newId, this.base62Alphabet);
 
-      // Make sure the slug isn't already used
-      // if slug Exists, break
-      if (this.checkSlugExists(slug)) {
+      //     // Make sure the slug isn't already used
+      //     // if slug Exists, break
+      // if (!DB.checkSlugExists(slug)) {
+      //   break;
+      // }
+
+      if (!this.slugList.has(slug)) {
         break;
       }
     }
+
     return slug;
+  }
+
+  generateRandomSlug() {
+    const { alphabet } = this;
+    const { numChars } = this;
+    let result = '';
+
+    for (let i = 0; i < numChars; i++) {
+      const nextCharacter = alphabet[getRandom(0, alphabet.length - 1)];
+      result += nextCharacter;
+    }
+
+    return result;
   }
 }
 

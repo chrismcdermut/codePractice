@@ -5,8 +5,8 @@ describe('getRandom Test', () => {
     const floor = 1;
     const ceiling = 10;
     const result = getRandom(floor, ceiling);
-    expect(result).toBeGreaterThan(floor);
-    expect(result).toBeLessThan(ceiling);
+    expect(result).toBeGreaterThanOrEqual(floor);
+    expect(result).toBeLessThanOrEqual(ceiling);
   });
 });
 
@@ -14,16 +14,16 @@ describe('URLShortener.constructBase62Map Test', () => {
   const testOne = {
     input: '',
     output: new Map([
-      [0, 0],
-      [1, 1],
-      [2, 2],
-      [3, 3],
-      [4, 4],
-      [5, 5],
-      [6, 6],
-      [7, 7],
-      [8, 8],
-      [9, 9],
+      [0, '0'],
+      [1, '1'],
+      [2, '2'],
+      [3, '3'],
+      [4, '4'],
+      [5, '5'],
+      [6, '6'],
+      [7, '7'],
+      [8, '8'],
+      [9, '9'],
       [10, 'a'],
       [11, 'b'],
       [12, 'c'],
@@ -86,6 +86,23 @@ describe('URLShortener.constructBase62Map Test', () => {
   });
 });
 
+describe('URLShortener.constructAlphabetSet Test', () => {
+  const testOne = {
+    input: '',
+    output: new Set(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+      'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a',
+      'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+      'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4',
+      '5', '6', '7', '8', '9']),
+  };
+
+  test('testOne', () => {
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.constructAlphabetSet();
+    expect(result).toEqual(testOne.output);
+  });
+});
+
 describe('URLShortener.baseConversion Test', () => {
   test('testOne', () => {
     const testOne = {
@@ -107,14 +124,14 @@ describe('URLShortener.baseConversion Test', () => {
     expect(result).toEqual(testTwo.output);
   });
 
-  xtest('testThree', () => {
-    const testThree = {
-      input: '',
-      output: '',
+  xtest('testTwo', () => {
+    const testTwo = {
+      input: 7912,
+      output: [2, 3, 38],
     };
     const URLShortenerInstance = new URLShortener(0);
-    const result = URLShortenerInstance.baseConversion(testThree.input);
-    expect(result).toEqual(testThree.output);
+    const result = URLShortenerInstance.baseConversion(testTwo.input);
+    expect(result).toEqual(testTwo.output);
   });
 });
 
@@ -122,7 +139,7 @@ describe('URLShortener.convertIDToSlug Test', () => {
   test('testOne', () => {
     const testOne = {
       input: [2, 1],
-      output: [2, 1],
+      output: ['2', '1'],
     };
     const URLShortenerInstance = new URLShortener(0);
     const result = URLShortenerInstance.convertIDToSlug(testOne.input);
@@ -132,20 +149,68 @@ describe('URLShortener.convertIDToSlug Test', () => {
   test('testTwo', () => {
     const testTwo = {
       input: [2, 3, 38],
-      output: [2, 3, 'C'],
+      output: ['2', '3', 'C'],
     };
     const URLShortenerInstance = new URLShortener(0);
     const result = URLShortenerInstance.convertIDToSlug(testTwo.input);
     expect(result).toEqual(testTwo.output);
   });
+});
 
-  xtest('testThree', () => {
-    const testThree = {
-      input: '',
-      output: '',
-    };
+describe('URLShortener.generateRandomSlug Test', () => {
+  test('testOne', () => {
     const URLShortenerInstance = new URLShortener(0);
-    const result = URLShortenerInstance.baseConversion(testThree.input);
-    expect(result).toEqual(testThree.output);
+    const result = URLShortenerInstance.generateRandomSlug();
+
+    expect(result.length).toEqual(7);
+  });
+
+  test('testTwo', () => {
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.generateRandomSlug();
+    const resultArray = result.split('');
+    const answerSet = new Set(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+      'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a',
+      'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+      'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4',
+      '5', '6', '7', '8', '9']);
+    let allFine = true;
+    resultArray.forEach((item) => {
+      if (!answerSet.has(item)) {
+        allFine = false;
+      }
+    });
+
+    const expectedAnswer = true;
+    expect(allFine).toEqual(expectedAnswer);
+  });
+});
+
+describe('URLShortener.generateRandomSlugByID Test', () => {
+  test('testOne', () => {
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.generateRandomSlugByID();
+    const answer = 7;
+
+    expect(result.length).toBeLessThanOrEqual(answer);
+  });
+
+  test('testTwo', () => {
+    const URLShortenerInstance = new URLShortener(0);
+    const result = URLShortenerInstance.generateRandomSlugByID();
+    const answerSet = new Set(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+      'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a',
+      'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+      'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4',
+      '5', '6', '7', '8', '9']);
+    let allFine = true;
+    result.forEach((item) => {
+      if (!answerSet.has(item.toString())) {
+        allFine = false;
+      }
+    });
+
+    const expectedAnswer = true;
+    expect(allFine).toEqual(expectedAnswer);
   });
 });
