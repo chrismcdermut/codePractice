@@ -88,7 +88,11 @@ class URLShortener {
       //   break;
       // }
 
-      if (!this.slugList.has(slug)) {
+      // if (!this.slugList.has(slug)) {
+      //   break;
+      // }
+
+      if (!this.checkSlugExists(slug)) {
         break;
       }
     }
