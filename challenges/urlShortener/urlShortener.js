@@ -2,6 +2,7 @@ function getRandom(floor, ceiling) {
   return Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
 }
 
+// TODO: implement and test this
 // function redirect(request) {
 //   const destination = DB.getLinkDestination(request.path);
 //   return response(302, destination);
@@ -18,13 +19,6 @@ class URLShortener {
     this.numChars = 7;
     this.constructBase62Map();
   }
-
-  // designURLShortener(input) {
-  //   console.log('input');
-  //   console.log(input);
-  // }
-  //
-  // function setUpBase62Conversion(){
 
   constructBase62Map() {
     for (let i = 0; i < 62; i++) {
