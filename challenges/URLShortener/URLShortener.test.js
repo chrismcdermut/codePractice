@@ -214,3 +214,23 @@ describe('URLShortener.generateRandomSlugByID Test', () => {
     expect(allFine).toEqual(expectedAnswer);
   });
 });
+
+describe('URLShortener.checkSlugExists Test', () => {
+  test('testOne', () => {
+    const URLShortenerInstance = new URLShortener(0);
+    URLShortenerInstance.addSlug('abcd');
+    const result = URLShortenerInstance.checkSlugExists('abcd');
+    const answer = true;
+
+    expect(result).toEqual(answer);
+  });
+
+  test('testTwo', () => {
+    const URLShortenerInstance = new URLShortener(0);
+    URLShortenerInstance.addSlug('abcd');
+    const result = URLShortenerInstance.checkSlugExists('abcdef');
+    const answer = false;
+
+    expect(result).toEqual(answer);
+  });
+});

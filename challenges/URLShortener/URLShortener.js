@@ -76,6 +76,10 @@ class URLShortener {
     return this.slugList.has(slug);
   }
 
+  addSlug(slug) {
+    this.slugList.add(slug);
+  }
+
   generateRandomSlugByID() {
     let slug = '';
     while (true) {
@@ -88,11 +92,7 @@ class URLShortener {
       //   break;
       // }
 
-      // if (!this.slugList.has(slug)) {
-      //   break;
-      // }
-
-      if (!this.checkSlugExists(slug)) {
+      if (!this.slugList.has(slug)) {
         break;
       }
     }
