@@ -215,6 +215,26 @@ describe('URLShortener.generateRandomSlugByID Test', () => {
   });
 });
 
+describe('URLShortener.addSlug Test', () => {
+  test('testOne', () => {
+    const URLShortenerInstance = new URLShortener(0);
+    URLShortenerInstance.addSlug('abcd');
+    const result = URLShortenerInstance.slugList.has('abcd');
+    const answer = true;
+
+    expect(result).toEqual(answer);
+  });
+
+  test('testTwo', () => {
+    const URLShortenerInstance = new URLShortener(0);
+    URLShortenerInstance.addSlug('abcd');
+    const result = URLShortenerInstance.slugList.has('abcdef');
+    const answer = false;
+
+    expect(result).toEqual(answer);
+  });
+});
+
 describe('URLShortener.checkSlugExists Test', () => {
   test('testOne', () => {
     const URLShortenerInstance = new URLShortener(0);
