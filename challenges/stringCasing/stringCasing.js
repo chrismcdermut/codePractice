@@ -52,12 +52,6 @@ function stringCasing(examineString) {
   return answer;
 }
 
-function assertEqual(a, b) {
-  if (a !== b) {
-    throw new Error(`expect ${b}; received ${a}`);
-  }
-}
-
 module.exports = {
-  checkForEndingWord, transformString, stringCasing, assertEqual,
+  checkForEndingWord, transformString, stringCasing,
 };
