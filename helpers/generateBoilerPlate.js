@@ -1,11 +1,14 @@
 const fs = require('fs');
 
 // TODO: make this take arguments
+// TODO: allow for classes in concepts/challenges
+// TODO: split up challenges
+// TODO: add appDesignSection?
 // ////SETUP HERE//////
 const solutionName = 'stringCasing';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || concept */
-const codeChallengeType = 'challenge';
+const codeChallengeType = 'dataStructure';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
