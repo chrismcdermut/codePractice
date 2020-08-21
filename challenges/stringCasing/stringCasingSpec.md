@@ -1,10 +1,10 @@
 stringCasing Spec goes here!
 
 /**
- *  Problem:  at Outschool, teachers choose the title for the course they
+ *  Problem: user choose the title for the course they
  *  want to offer.  We impose some rules on titles, to convey a professional
  *  appearance.  Each proposed course is reviewed by a trained approver but
- *  we want to guide teachers about what is and is not acceptable.
+ *  we want to guide user about what is and is not acceptable.
  *  Among other rules, titles are to be in "title case", which means
  *  * the initial word is always capitalized
  *  * "minor" words that are not the first are not capitalized
