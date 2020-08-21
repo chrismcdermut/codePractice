@@ -2,10 +2,30 @@ function getRandom(floor, ceiling) {
   return Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
 }
 
-// TODO: implement and test this adding commentg
+// TODO: implement and test this
 // function redirect(request) {
 //   const destination = DB.getLinkDestination(request.path);
 //   return response(302, destination);
+// }
+//
+// TODO: implement and test this
+//   function shortlink(request) {
+//   if (request.method !== 'POST') {
+//     return response(501); // HTTP 501 NOT IMPLEMENTED
+//   }
+//
+//   const destination = request.data.destination;
+//   let slug = request.data.slug;
+//
+//   // If they did not include a slug, make them one
+//   if (typeof slug === 'undefined') {
+//     slug = generateRandomSlug();
+//   }
+//
+//   DB.insertLink(slug, destination);
+//
+//   const responseBody = JSON.stringify({ slug });
+//   return response(200, responseBody);
 // }
 
 class URLShortener {
@@ -112,6 +132,11 @@ class URLShortener {
 
     return result;
   }
+
+// TODO: implement this
+  // convertSlugToNumber() {
+  //
+  // }
 }
 
 module.exports = { getRandom, URLShortener };
