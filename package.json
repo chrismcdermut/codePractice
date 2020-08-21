@@ -46,5 +46,7 @@
     "jest": "^25.4.0",
     "prettier": "2.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
 }
