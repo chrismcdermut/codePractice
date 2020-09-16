@@ -17,6 +17,7 @@ describe('Trie Test', () => {
       input: 'dog.com',
       output: false,
     };
+
     StringTrie.addWord(testTwo.input);
     const result = StringTrie.addWord(testTwo.input);
     expect(result).toEqual(testTwo.output);

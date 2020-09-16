@@ -33,7 +33,7 @@ class Trie {
     // any nodes.
     for (let i = 0; i < word.length; i++) {
       const char = word[i];
-      if (!Object.prototype.hasOwnProperty.call(currentNode, 'char')) {
+      if (!Object.prototype.hasOwnProperty.call(currentNode, char)) {
         isNewWord = true;
         currentNode[char] = {};
       }
