@@ -102,6 +102,8 @@ class URLShortener {
 
   generateRandomSlugByID() {
     let slug = '';
+    // TODO: Is there a way around the consant expression?
+    // eslint-disable-next-line no-constant-condition
     while (true) {
       const newId = this.currentRandomSlugId++;
       slug = this.baseConversion(newId, this.base62Alphabet);
