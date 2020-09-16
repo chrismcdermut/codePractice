@@ -3,27 +3,6 @@ class Trie {
     this.rootNode = {};
   }
 
-  checkWordsExistence(word) {
-    let currentNode = this.rootNode;
-    let isNewWord = false;
-
-    for (let i = 0; i < word.length; i++) {
-      const char = word[i];
-      if (!Object.prototype.hasOwnProperty.call(currentNode, 'char')) {
-        isNewWord = true;
-        currentNode[char] = {};
-      }
-      currentNode = currentNode[char];
-    }
-
-    if (!Object.prototype.hasOwnProperty.call(currentNode, 'End of Word')) {
-      isNewWord = true;
-      currentNode['End of Word'] = {};
-    }
-
-    return isNewWord;
-  }
-
   addWord(word) {
     let currentNode = this.rootNode;
     let isNewWord = false;
