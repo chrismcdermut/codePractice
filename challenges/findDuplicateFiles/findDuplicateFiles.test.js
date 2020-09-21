@@ -5,7 +5,9 @@ describe('slowFindDuplicateFiles Test', () => {
     const cwd = process.cwd();
     const analyzeDuplicateFileDirectory = `${cwd}/challenges/findDuplicateFiles/duplicateFiles`;
     const result = slowFindDuplicateFiles(analyzeDuplicateFileDirectory);
-    const answer = [[`${cwd}/challenges/findDuplicateFiles/duplicateFiles/file2.txt`,
+    const answer = [[`${cwd}/challenges/findDuplicateFiles/duplicateFiles/file5.txt`,
+      `${cwd}/challenges/findDuplicateFiles/duplicateFiles/file4.txt`],
+    [`${cwd}/challenges/findDuplicateFiles/duplicateFiles/file2.txt`,
       `${cwd}/challenges/findDuplicateFiles/duplicateFiles/file1.txt`]];
     expect(result).toEqual(answer);
   });
@@ -24,7 +26,9 @@ describe('optimizedFindDuplicateFiles Test', () => {
     const cwd = process.cwd();
     const analyzeDuplicateFileDirectory = `${cwd}/challenges/findDuplicateFiles/duplicateFiles`;
     const result = optimizedFindDuplicateFiles(analyzeDuplicateFileDirectory);
-    const answer = [[`${cwd}/challenges/findDuplicateFiles/duplicateFiles/file2.txt`,
+    const answer = [[`${cwd}/challenges/findDuplicateFiles/duplicateFiles/file5.txt`,
+      `${cwd}/challenges/findDuplicateFiles/duplicateFiles/file4.txt`],
+    [`${cwd}/challenges/findDuplicateFiles/duplicateFiles/file2.txt`,
       `${cwd}/challenges/findDuplicateFiles/duplicateFiles/file1.txt`]];
     expect(result).toEqual(answer);
   });
