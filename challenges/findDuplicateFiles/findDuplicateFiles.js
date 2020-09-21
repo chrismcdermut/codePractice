@@ -92,6 +92,9 @@ function slowFindDuplicateFiles(startingDirectory) {
 }
 
 function optimizedFindDuplicateFiles(startingDirectory) {
+  const cwd = process.cwd();
+  console.log('cwd');
+  console.log(cwd);
   const filesSeenAlready = {};
   const stack = [startingDirectory];
 
