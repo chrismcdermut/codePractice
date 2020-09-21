@@ -9,8 +9,8 @@ describe('slowFindDuplicateFiles Test', () => {
     // const analyzeDuplicateFileDirectory =
     // '/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles';
     const result = slowFindDuplicateFiles(analyzeDuplicateFileDirectory);
-    const answer = [['/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles/file2.txt',
-      '/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles/file1.txt']];
+    const answer = [[`${cwd}/challenges/findDuplicateFiles/duplicateFiles/file2.txt`,
+      `${cwd}/challenges/findDuplicateFiles/duplicateFiles/file1.txt`]];
     expect(result).toEqual(answer);
   });
 
@@ -36,8 +36,8 @@ describe('optimizedFindDuplicateFiles Test', () => {
     // '/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles';
     const analyzeDuplicateFileDirectory = `${cwd}/challenges/findDuplicateFiles/duplicateFiles`;
     const result = optimizedFindDuplicateFiles(analyzeDuplicateFileDirectory);
-    const answer = [['/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles/file2.txt',
-      '/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles/file1.txt']];
+    const answer = [[`${cwd}/challenges/findDuplicateFiles/duplicateFiles/file2.txt`,
+      `${cwd}/challenges/findDuplicateFiles/duplicateFiles/file1.txt`]];
     expect(result).toEqual(answer);
   });
 
