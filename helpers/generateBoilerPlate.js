@@ -5,10 +5,10 @@ const fs = require('fs');
 // TODO: split up challenges
 // TODO: add appDesignSection?
 // ////SETUP HERE//////
-const solutionName = 'Trie';
+const solutionName = 'findDuplicateFiles';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || concept */
-const codeChallengeType = 'dataStructure';
+const codeChallengeType = 'challenge';
 
 // ////UNIFORM SPEC/NOTES BOILERPLATE//////
 const spec = `${solutionName} Spec goes here!`;
