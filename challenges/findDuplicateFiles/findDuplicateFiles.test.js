@@ -1,11 +1,10 @@
 const { slowFindDuplicateFiles, optimizedFindDuplicateFiles } = require('./findDuplicateFiles');
 
 describe('slowFindDuplicateFiles Test', () => {
-  // const cwd = process.cwd();
-  // console.log('cwd');
-  // console.log(cwd);
-
   test('testOne duplicates', () => {
+    const cwd = process.cwd();
+    console.log('cwd');
+    console.log(cwd);
     const analyzeDuplicateFileDirectory = '/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles';
     const result = slowFindDuplicateFiles(analyzeDuplicateFileDirectory);
     const answer = [['/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles/file2.txt',
@@ -14,6 +13,9 @@ describe('slowFindDuplicateFiles Test', () => {
   });
 
   test('testTwo no duplicates', () => {
+    const cwd = process.cwd();
+    console.log('cwd');
+    console.log(cwd);
     const analyzeNoDuplicateFileDirectory = '/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/noDuplicateFiles';
     const result = slowFindDuplicateFiles(analyzeNoDuplicateFileDirectory);
     const answer = [];
@@ -22,10 +24,10 @@ describe('slowFindDuplicateFiles Test', () => {
 });
 
 describe('optimizedFindDuplicateFiles Test', () => {
-  const cwd = process.cwd();
-  console.log('cwd');
-  console.log(cwd);
   test('testOne duplicates', () => {
+    const cwd = process.cwd();
+    console.log('cwd');
+    console.log(cwd);
     const analyzeDuplicateFileDirectory = '/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles';
     const result = optimizedFindDuplicateFiles(analyzeDuplicateFileDirectory);
     const answer = [['/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/duplicateFiles/file2.txt',
@@ -34,6 +36,9 @@ describe('optimizedFindDuplicateFiles Test', () => {
   });
 
   test('testOne no duplicates', () => {
+    const cwd = process.cwd();
+    console.log('cwd');
+    console.log(cwd);
     const analyzeNoDuplicateFileDirectory = '/Users/chrismcdermut/Sites/codePractice/challenges/findDuplicateFiles/noDuplicateFiles';
     const result = optimizedFindDuplicateFiles(analyzeNoDuplicateFileDirectory);
     const answer = [];
