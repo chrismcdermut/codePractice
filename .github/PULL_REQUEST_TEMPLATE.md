@@ -2,6 +2,8 @@
 
 ## Learnings
 
+## Resources
+
 ## Set up
 
 ```node
