@@ -1,4 +1,4 @@
-/* eslint no-bitwise: ["error", { "allow": ["^="] }] */
+/* eslint no-bitwise: ["error", { "allow": ["^=","^"] }] */
 
 function deliveryIDTracker(deliveryIds) {
   const idsToOccurrences = new Map();
@@ -18,14 +18,7 @@ function deliveryIDTracker(deliveryIds) {
 
 function bitWiseDeliveryIDTracker(deliveryIds) {
   let uniqueDeliveryId = 0;
-
   deliveryIds.forEach((deliveryId) => {
-    console.log('deliveryIds');
-    console.log(deliveryIds);
-    console.log('deliveryId');
-    console.log(deliveryId);
-    console.log('uniqueDeliveryId');
-    console.log(uniqueDeliveryId);
     uniqueDeliveryId ^= deliveryId;
   });
 
