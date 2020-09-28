@@ -4,7 +4,7 @@ const {
   randomNumber1to5,
   sevenSidedDie,
   sevenSidedDieClean,
-} = require('./fiveSidedDie');
+} = require('./diceRepresentation');
 
 describe('randomNumber1to7 Test', () => {
   const sevenNumbers = [1, 2, 3, 4, 5, 6, 7];
