@@ -1,0 +1,1 @@
+fiveSidedDie Spec goes here!
