@@ -14,7 +14,7 @@ function fiveSidedDie() {
 
 function randomNumber1to5() {
   // generate percentage between 1/7,
-  return Math.round(Math.random() * 7);
+  return Math.round(Math.random() * 5);
 }
 
 function sevenSidedDie() {

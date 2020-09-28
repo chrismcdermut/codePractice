@@ -18,7 +18,7 @@ describe('randomNumber1to7 Test', () => {
   });
 });
 
-xdescribe('fiveSidedDie Test', () => {
+describe('fiveSidedDie Test', () => {
   const fiveNumbers = [1, 2, 3, 4, 5];
   const fiveSidedDieNumbers = new Set(fiveNumbers);
 
@@ -43,7 +43,7 @@ describe('randomNumber1to5 Test', () => {
 });
 
 // this test is wrong
-xdescribe('sevenSidedDie Test', () => {
+describe('sevenSidedDie Test', () => {
   const sevenNumbers = [1, 2, 3, 4, 5, 6, 7];
   const sevenSidedDieNumbers = new Set(sevenNumbers);
 
@@ -56,7 +56,7 @@ xdescribe('sevenSidedDie Test', () => {
 });
 
 // this test is wrong
-xdescribe('sevenSidedDieClean Test', () => {
+describe('sevenSidedDieClean Test', () => {
   const sevenNumbers = [1, 2, 3, 4, 5, 6, 7];
   const sevenSidedDieNumbers = new Set(sevenNumbers);
 
