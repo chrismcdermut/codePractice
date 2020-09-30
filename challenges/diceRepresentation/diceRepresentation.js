@@ -26,6 +26,7 @@ function sevenSidedDie() {
     [7, 0, 0, 0, 0],
   ];
 
+  /* eslint-disable-next-line no-constant-condition */
   while (true) {
   // Do our die rolls
     const row = randomNumber1to5() - 1;
@@ -44,6 +45,7 @@ function sevenSidedDie() {
 
 
 function sevenSidedDieClean() {
+  /* eslint-disable-next-line no-constant-condition */
   while (true) {
     // Do our die rolls
     const roll1 = randomNumber1to5();
