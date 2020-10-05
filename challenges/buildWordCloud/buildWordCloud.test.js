@@ -85,6 +85,35 @@ describe('buildWordCloud Test', () => {
     const wordCloud = new WordCloud(testOne.input);
     expect(wordCloud.wordsToCounts).toEqual(testOne.output);
   });
+
+  test('testFour', () => {
+    const testOne = {
+      input: 'We came... we saw... we ate funnel-cake',
+      output: new Map([
+        ['came', 1],
+        ['we', 3],
+        ['saw', 1],
+        ['ate', 1],
+        ['funnel-cake', 1],
+      ]),
+    };
+    const wordCloud = new WordCloud(testOne.input);
+    expect(wordCloud.wordsToCounts).toEqual(testOne.output);
+  });
+
+  test('testFour', () => {
+    const testOne = {
+      input: 'We came... we saw... we ate -',
+      output: new Map([
+        ['came', 1],
+        ['we', 3],
+        ['saw', 1],
+        ['ate', 1],
+      ]),
+    };
+    const wordCloud = new WordCloud(testOne.input);
+    expect(wordCloud.wordsToCounts).toEqual(testOne.output);
+  });
 });
 
 describe('capitalize Test', () => {
