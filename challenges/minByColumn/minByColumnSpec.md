@@ -1,0 +1,1 @@
+minByColumn Spec goes here!
