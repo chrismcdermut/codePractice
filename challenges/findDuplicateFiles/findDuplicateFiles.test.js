@@ -1,6 +1,6 @@
 const { slowFindDuplicateFiles, optimizedFindDuplicateFiles } = require('./findDuplicateFiles');
 
-describe('slowFindDuplicateFiles Test', () => {
+xdescribe('slowFindDuplicateFiles Test', () => {
   test('testOne duplicates', () => {
     const cwd = process.cwd();
     const analyzeDuplicateFileDirectory = `${cwd}/challenges/findDuplicateFiles/duplicateFiles`;
@@ -21,7 +21,7 @@ describe('slowFindDuplicateFiles Test', () => {
   });
 });
 
-describe('optimizedFindDuplicateFiles Test', () => {
+xdescribe('optimizedFindDuplicateFiles Test', () => {
   test('testOne duplicates', () => {
     const cwd = process.cwd();
     const analyzeDuplicateFileDirectory = `${cwd}/challenges/findDuplicateFiles/duplicateFiles`;
