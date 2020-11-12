@@ -47,6 +47,7 @@
     "prettier": "2.0.5"
   },
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "quadratic-solver": "^0.2.4"
   }
 }
