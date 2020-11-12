@@ -9,8 +9,6 @@ const testOne = {
 describe('smartSInt Test', () => {
   test('testOne', () => {
     const result = smartSInt(testOne.array1, testOne.array2);
-    console.log('result');
-    console.log(result);
     expect(result).toEqual(testOne.output);
   });
 });
