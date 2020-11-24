@@ -1,35 +1,34 @@
 function smartSInt(array1, array2) {
-  const firstArrayMap = {};
+  const firstArrayItemCounter = {};
   array1.forEach((item) => {
-    if (!firstArrayMap[item]) {
-      firstArrayMap[item] = 1;
-    } else if (firstArrayMap[item]) {
-      firstArrayMap[item] += 1;
+    if (!firstArrayItemCounter[item]) {
+      firstArrayItemCounter[item] = 1;
+    } else if (firstArrayItemCounter[item]) {
+      firstArrayItemCounter[item] += 1;
     }
   });
 
-  const secondArrayMap = {};
+  const secondArrayItemCounter = {};
   array2.forEach((item) => {
-    if (!secondArrayMap[item]) {
-      secondArrayMap[item] = 1;
-    } else if (secondArrayMap[item]) {
-      secondArrayMap[item] += 1;
+    if (!secondArrayItemCounter[item]) {
+      secondArrayItemCounter[item] = 1;
+    } else if (secondArrayItemCounter[item]) {
+      secondArrayItemCounter[item] += 1;
     }
   });
 
   const finalSharedElementsMap = {};
-  const firstArrayKeys = Object.keys(firstArrayMap);
+  const firstArrayKeys = Object.keys(firstArrayItemCounter);
   firstArrayKeys.forEach((item) => {
-    if (secondArrayMap[item]) {
-      finalSharedElementsMap[item] = firstArrayMap[item] > secondArrayMap[item]
-        ? secondArrayMap[item] : firstArrayMap[item];
+    if (secondArrayItemCounter[item]) {
+      finalSharedElementsMap[item] = firstArrayItemCounter[item] > secondArrayItemCounter[item]
+        ? secondArrayItemCounter[item] : firstArrayItemCounter[item];
     }
   });
 
 
   const finalSharedElementsMapArray = [];
   const finalSharedElementsMapKeys = Object.keys(finalSharedElementsMap);
-
   finalSharedElementsMapKeys.forEach((item) => {
     for (let i = 0; i < finalSharedElementsMap[item]; i++) {
       finalSharedElementsMapArray.push(parseInt(item, 10));
