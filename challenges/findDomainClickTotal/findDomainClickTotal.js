@@ -11,7 +11,6 @@ function findDomainClickTotal(countsInput) {
 
     splitClickedDomain.forEach((item, i) => {
       const currentDomain = splitClickedDomain.slice(i).join('.');
-
       if (!finalCountTally[currentDomain]) {
         finalCountTally[currentDomain] = clickCount;
       } else {
