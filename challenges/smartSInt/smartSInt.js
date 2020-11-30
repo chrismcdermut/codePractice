@@ -17,20 +17,20 @@ function smartSInt(array1, array2) {
     }
   });
 
-  const finalSharedElementsMap = {};
+  const finalSharedElementsCounter = {};
   const firstArrayKeys = Object.keys(firstArrayItemCounter);
   firstArrayKeys.forEach((item) => {
     if (secondArrayItemCounter[item]) {
-      finalSharedElementsMap[item] = firstArrayItemCounter[item] > secondArrayItemCounter[item]
+      finalSharedElementsCounter[item] = firstArrayItemCounter[item] > secondArrayItemCounter[item]
         ? secondArrayItemCounter[item] : firstArrayItemCounter[item];
     }
   });
 
 
   const finalSharedElementsMapArray = [];
-  const finalSharedElementsMapKeys = Object.keys(finalSharedElementsMap);
+  const finalSharedElementsMapKeys = Object.keys(finalSharedElementsCounter);
   finalSharedElementsMapKeys.forEach((item) => {
-    for (let i = 0; i < finalSharedElementsMap[item]; i++) {
+    for (let i = 0; i < finalSharedElementsCounter[item]; i++) {
       finalSharedElementsMapArray.push(parseInt(item, 10));
     }
   });
