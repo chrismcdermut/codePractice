@@ -72,7 +72,7 @@ const testOneExpectation = {
   ],
 };
 
-xdescribe('toyList testSuite', () => {
+describe('toyList testSuite', () => {
   test('toyList test', () => {
     const result = convertObjectKey(testOneInput);
     expect(result).toEqual(testOneExpectation);

@@ -1,0 +1,1 @@
+smartSInt Spec goes here!

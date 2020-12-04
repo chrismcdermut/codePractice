@@ -1,4 +1,4 @@
-const mergeArrays = require('./mergeArrays');
+const { mergeArrays } = require('./mergeArrays');
 
 const testOne = {
   input: [
@@ -30,10 +30,10 @@ const testFour = {
 
 const testFive = {
   input: [[1, 4, 6, 10, 11, 15], [1]],
-  output: [1, 1, 3, 4, 6, 10, 11, 15],
+  output: [1, 1, 4, 6, 10, 11, 15],
 };
 
-xdescribe('mergeArrays Test', () => {
+describe('mergeArrays Test', () => {
   test('testOne', () => {
     const result = mergeArrays(testOne.input);
     expect(result).toEqual(testOne.output);
@@ -54,7 +54,7 @@ xdescribe('mergeArrays Test', () => {
     expect(result).toEqual(testFour.output);
   });
 
-  xtest('testFive', () => {
+  test('testFive', () => {
     const result = mergeArrays(testFive.input);
     expect(result).toEqual(testFive.output);
   });

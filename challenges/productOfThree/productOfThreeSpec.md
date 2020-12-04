@@ -1,0 +1,1 @@
+productOfThree Spec go here!
