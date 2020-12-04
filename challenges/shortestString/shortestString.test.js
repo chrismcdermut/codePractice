@@ -41,6 +41,7 @@ const test5 = {
   output: '3A3B',
 };
 
+// TODO:: get this working!
 xdescribe('shortestString condenseString test', () => {
   test('test1 condenseString', () => {
     const result = condenseString(test1.input[0]);

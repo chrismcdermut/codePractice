@@ -9,7 +9,7 @@ function rotationPoint(input) {
   return input.indexOf(newArray[0]);
 }
 
-// infinite loop, noooo!
+// TODO: fix inifinite loop
 function findRotationPoint(elementArrayArg) {
   let rotationPointIndex;
   const elementArray = elementArrayArg;

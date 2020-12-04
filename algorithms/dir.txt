@@ -1,0 +1,7 @@
+binarySearch
+bubbleSort
+heapSort
+insertionSort
+mergeSort
+quickSort
+selectionSort

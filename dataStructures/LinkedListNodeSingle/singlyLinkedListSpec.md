@@ -1,0 +1,1 @@
+LinkedListNodeSingle Spec goes here!

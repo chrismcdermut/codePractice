@@ -1,9 +1,4 @@
-/* eslint-disable */
-// TODO: enable linting
-
-const list1 = [23, 4, 42, 8, 16, 15];
-
-const selectionSort = (listArg) => {
+function selectionSort(listArg) {
   const list = listArg;
   for (let i = 0; i < list.length; i += 1) {
     let currentMinIndex = i;
@@ -19,6 +14,12 @@ const selectionSort = (listArg) => {
     }
   }
   return list;
-};
+}
 
-console.log(selectionSort(list1));
+module.exports = { selectionSort };
+
+module.exports.runSelectionSort = function runSelectionSort() {
+  const exampleList = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34];
+  // answer [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91]
+  console.log(selectionSort(exampleList)); /* eslint-disable-line no-console */
+};
