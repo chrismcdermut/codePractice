@@ -5,25 +5,27 @@
   "main": "algorithm.js",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
-    "test": "jest",
-    "generateSolution": "node -e 'require(\"./helpers/generateSolution\").generateDefaultSolution()'",
+    "test": "jest --config jest.config.js",
+    "binarySearch": "node -e 'require(\"./algorithms/binarySearch/binarySearch\").runBinarySearch()'",
+    "bubbleSort": "node -e 'require(\"./algorithms/bubbleSort/bubbleSort\").runBubbleSort()'",
+    "circleArea": "node -e 'require(\"./misc/jsOOPConcepts\").circleArea()'",
+    "curryMultiply": "node -e 'require(\"./misc/jsOOPConcepts\").curryMultiply()'",
+    "debounce": "node -e 'require(\"./challenges/debounce/debounce\").runDebounce()'",
+    "domLoaded": "node -e 'require(\"./misc/jsOOPConcepts\").domLoaded()'",
+    "generateBoilerPlate": "node -e 'require(\"./helpers/generateBoilerPlate\").generateDefaultBoilerPlate()'",
+    "heapSort": "node -e 'require(\"./algorithms/heapSort/heapSort\").runHeapSort()'",
+    "iife": "node -e 'require(\"./misc/jsOOPConcepts\").iife()'",
+    "iifeWindow": "node -e 'require(\"./misc/jsOOPConcepts\").iifeWindow()'",
+    "insertionSort1": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort1()'",
+    "insertionSort2": "node -e 'require(\"./algorithms/insertionSort/insertionSort\").runInsertionSort2()'",
+    "jumpToZero": "node -e 'require(\"./challenges/arrayJumping/arrayJumping\").runJumpToZero()'",
+    "mergeSort": "node -e 'require(\"./algorithms/mergeSort/mergeSort\").runMergeSort()'",
+    "printHello": "node -e 'require(\"./misc/jsOOPConcepts\").printHello()'",
+    "quickSort": "node -e 'require(\"./algorithms/quickSort/quickSort\").runQuickSort()'",
     "reverseWords": "node -e 'require(\"./challenges/reverseWords/reverseWords\").reverseWords()'",
-    "bubbleSort": "node -e 'require(\"./bubbleSort-4-6-19\").bubbleSort()'",
-    "mergeSort": "node -e 'require(\"./mergeSort-4-6-19\").runMergeSort()'",
-    "quickSort": "node -e 'require(\"./quickSort-4-6-19\").runQuickSort()'",
-    "selectionSort": "node -e 'require(\"./selectionSort-4-6-19\").runSelectionSort()'",
-    "binarySearch": "node -e 'require(\"./binarySearch-4-6-19\").runBinarySearch()'",
-    "heapSort": "node -e 'require(\"./heapSort2-4-9-19\").runHeapSort()'",
-    "insertionSort": "node -e 'require(\"./insertionSort2-4-9-19\").runInsertionSort()'",
-    "jumpToZero": "node -e 'require(\"./jumpToZero-4-9-19\").runJumpToZero()'",
-    "yakovChain": "node -e 'require(\"./jsOOPConcepts\").runYakovChain()'",
-    "printHello": "node -e 'require(\"./jsOOPConcepts\").printHello()'",
-    "seniorAge": "node -e 'require(\"./jsOOPConcepts\").seniorAge()'",
-    "curryMultiply": "node -e 'require(\"./jsOOPConcepts\").curryMultiply()'",
-    "iifeWindow": "node -e 'require(\"./jsOOPConcepts\").iifeWindow()'",
-    "iife": "node -e 'require(\"./jsOOPConcepts\").iife()'",
-    "domLoaded": "node -e 'require(\"./jsOOPConcepts\").domLoaded()'",
-    "circleArea": "node -e 'require(\"./jsOOPConcepts\").circleArea()'"
+    "selectionSort": "node -e 'require(\"./algorithms/selectionSort/selectionSort\").runSelectionSort()'",
+    "seniorAge": "node -e 'require(\"./misc/jsOOPConcepts\").seniorAge()'",
+    "yakovChain": "node -e 'require(\"./misc/jsOOPConcepts\").runYakovChain()'"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,7 @@
   },
   "homepage": "https://github.com/chrismcdermut/codePractice#readme",
   "devDependencies": {
+    "codecov": "^3.7.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
@@ -43,5 +46,8 @@
     "jest": "^25.4.0",
     "prettier": "2.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "quadratic-solver": "^0.2.4"
+  }
 }

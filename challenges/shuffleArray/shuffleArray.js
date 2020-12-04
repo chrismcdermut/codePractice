@@ -16,6 +16,7 @@ function naiveShuffle(arrayArg) {
       array[secondIndex] = temp;
     }
   }
+  return array;
 }
 
 function proShuffle(arrayArg) {
@@ -30,6 +31,7 @@ function proShuffle(arrayArg) {
       array[randomIndex] = temp;
     }
   }
+  return array;
 }
 
 module.exports = { naiveShuffle, proShuffle };

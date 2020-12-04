@@ -41,4 +41,4 @@ function mergeArrays(arrays) {
   return finalArray;
 }
 
-module.exports = mergeArrays;
+module.exports = { mergeArrays };

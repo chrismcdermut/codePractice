@@ -1,0 +1,1 @@
+javaScriptPractice Spec goes here!

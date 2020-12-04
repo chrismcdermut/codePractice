@@ -1,5 +1,9 @@
 reverseWords Notes go here!
 
+error    Assignment to function parameter 'leftIndex'   no-param-reassign
+  48:7   error    Assignment to function parameter 'rightIndex'  no-param-reassign
+//mutate is okay but reassignment is not
+
 function reverseWords(message) {
   console.log('initial Message')
   console.log(message)
