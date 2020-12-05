@@ -30,4 +30,4 @@ function duplicateElementCheck(listArg) {
   return duplicateElement;
 }
 
-module.exports = duplicateElementCheck;
+module.exports = { compareNumbers, duplicateElementCheck };

@@ -1,4 +1,4 @@
-const duplicateElementCheck = require('./duplicateElement');
+const { compareNumbers, duplicateElementCheck } = require('./duplicateElement');
 
 describe('duplicateElementCheck Test', () => {
   test('testOne', () => {
@@ -35,5 +35,16 @@ describe('duplicateElementCheck Test', () => {
     };
     const result = duplicateElementCheck(testFour.input);
     expect(result).toEqual(testFour.output);
+  });
+});
+
+describe('duplicateElementCheck Test', () => {
+  test('testOne', () => {
+    const testOne = {
+      input: [1, 2],
+      output: -1,
+    };
+    const result = compareNumbers(testOne.input[0], testOne.input[1]);
+    expect(result).toEqual(testOne.output);
   });
 });
