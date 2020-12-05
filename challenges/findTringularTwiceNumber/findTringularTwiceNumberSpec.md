@@ -1,0 +1,1 @@
+findTringularTwiceNumber Spec goes here!
