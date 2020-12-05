@@ -1,30 +1,30 @@
+function compareNumbers(a, b) {
+  return a - b;
+}
+
 function duplicateElementCheck(listArg) {
   const copiedList = listArg;
-  const sortedList = copiedList.sort();
+  const sortedList = copiedList.sort(compareNumbers);
   let duplicateElement;
-  let min = 0; /* index */
-  let max = sortedList.length; /* index */
+  let bottom = 0; /* index */
+  let top = sortedList.length; /* index */
   let middle; /* index */
-  let counter = 0;
 
   // divide in two, if the last element is less then firstelement plus n the duplicate is in there.
-  while (min <= max && counter < 100) {
-    middle = Math.floor((min + max) / 2);
-    console.log('middle');
-    console.log(middle);
+  while (bottom <= top) {
+    middle = Math.floor((bottom + top) / 2);
     // have a break out/return
-
-    // if last value is < than beginnging + n (length of list), then dup is in that half
-    if (sortedList[max - 1] < (sortedList[middle] + (max - 1 - middle))) {
-      console.log('IN THIS GOOFY IF STATEMENT');
-      console.log('sortedList[middle]');
-      console.log(sortedList[middle]);
-      min = middle;
-    } else {
-      max = middle;
+    if (sortedList[bottom] === sortedList[top]) {
+      duplicateElement = sortedList[bottom];
+      break;
     }
 
-    counter += 1;
+    // if last value is < than beginnging + n (length of list), then dup is in that half
+    if (sortedList[top - 1] < (sortedList[middle] + (top - 1 - middle))) {
+      bottom = middle;
+    } else {
+      top = middle;
+    }
   }
 
   return duplicateElement;

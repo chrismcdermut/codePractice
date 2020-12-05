@@ -10,12 +10,30 @@ describe('duplicateElementCheck Test', () => {
     expect(result).toEqual(testOne.output);
   });
 
-  test('testOneA', () => {
-    const testOneA = {
+  test('testTwo', () => {
+    const testTwo = {
       input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10],
       output: 9,
     };
-    const result = duplicateElementCheck(testOneA.input);
-    expect(result).toEqual(testOneA.output);
+    const result = duplicateElementCheck(testTwo.input);
+    expect(result).toEqual(testTwo.output);
+  });
+
+  test('testThree', () => {
+    const testThree = {
+      input: [10, 11, 12, 12, 13, 14, 15, 16, 17, 18, 19],
+      output: 12,
+    };
+    const result = duplicateElementCheck(testThree.input);
+    expect(result).toEqual(testThree.output);
+  });
+
+  test('testFour', () => {
+    const testFour = {
+      input: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 39],
+      output: 39,
+    };
+    const result = duplicateElementCheck(testFour.input);
+    expect(result).toEqual(testFour.output);
   });
 });
