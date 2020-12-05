@@ -1,6 +1,9 @@
 const fs = require('fs');
 
 // TODO: make this take arguments
+// TODO: allow for classes in concepts/challenges
+// TODO: split up challenges
+// TODO: add appDesignSection?
 // ////SETUP HERE//////
 const solutionName = 'generateTestInputs';
 // TODO: look into setting up map or enum for this
