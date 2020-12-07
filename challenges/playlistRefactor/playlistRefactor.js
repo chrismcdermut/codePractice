@@ -1,4 +1,4 @@
-function playlistRefactor(input) {
+function playlistRefactor() {
 
 }
 
