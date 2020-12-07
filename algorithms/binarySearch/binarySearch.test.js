@@ -83,6 +83,16 @@ describe('binarySearch Test', () => {
 
     expect(result).toEqual(testSix.output);
   });
+
+  xtest('testSeven', () => {
+    const testSeven = {
+      input: [1, 3, 5, 7, 9, 10, 56, 78, 90, 100, 1001],
+      inputLookFor: 2,
+      output: -1,
+    };
+    const result = binarySearch(testSeven.input, testSeven.inputLookFor);
+    expect(result).toEqual(testSeven.output);
+  });
 });
 
 describe('seekElementBinarySearch Test', () => {
@@ -106,7 +116,7 @@ describe('seekElementBinarySearch Test', () => {
     expect(result).toEqual(testTwo.output);
   });
 
-  test('testThree', () => {
+  xtest('testThree', () => {
     const testThree = {
       input: [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91],
       inputLookFor: 200,

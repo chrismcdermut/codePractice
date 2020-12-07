@@ -5,10 +5,19 @@ function binarySearch(list, lookFor) {
 
   // while there is something to search for
   while (min <= max) {
+    console.log('min');
+    console.log(min);
+    console.log('max');
+    console.log(max);
     middle = Math.floor((min + max) / 2);
+    console.log('middle');
+    console.log(middle);
     if (list[middle] === lookFor) {
       return middle;
     }
+    // if (list.length === 1 && list[middle] !== lookFor) {
+    //   return -1;
+    // }
     // eslint-disable-next-line no-unused-expressions
     list[middle] < lookFor ? (min = middle) : (max = middle);
   }
