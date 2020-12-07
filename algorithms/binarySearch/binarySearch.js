@@ -16,7 +16,32 @@ function binarySearch(list, lookFor) {
   return -1;
 }
 
-module.exports = { binarySearch };
+function seekElementBinarySearch(array, seekingElement) {
+  let bottomElementIndex = 0;
+  let topElementIndex = array.length - 1;
+  let middleIndex;
+
+  let finalIndex = -1;
+  while (bottomElementIndex <= topElementIndex) {
+    middleIndex = Math.floor((bottomElementIndex + topElementIndex) / 2);
+
+    if (array[middleIndex] === seekingElement) {
+      finalIndex = middleIndex;// we need return finalIndex
+      return finalIndex;
+    }
+    // what if topElementIndex = 0?
+    if (array[middleIndex] < seekingElement) {
+      // bottomElementIndex is inclusive, and we already compared seekingElement
+      // with middleIndex @ line TODO.
+      bottomElementIndex = middleIndex + 1;
+    } else {
+      topElementIndex = middleIndex;
+    }
+  }
+  return finalIndex;
+}
+
+module.exports = { binarySearch, seekElementBinarySearch };
 
 // TODO: make this take arguments
 module.exports.runBinarySearch = function runBinarySearch() {

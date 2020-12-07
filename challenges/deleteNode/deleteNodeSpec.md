@@ -1,0 +1,1 @@
+deleteNode Spec goes here!
