@@ -21,7 +21,6 @@ describe('binarySearch Test', () => {
     expect(result).toEqual(testTwo.output);
   });
 
-  // TODO: make this case work
   test('testThree', () => {
     const testThree = {
       input: [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91],

@@ -16,6 +16,7 @@ function binarySearch(list, lookFor) {
     // eslint-disable-next-line no-unused-expressions
     list[middle] < lookFor ? (min = middle) : (max = middle);
   }
+  // TODO: cover this line or change
   return -1; /* TODO: consolidate return statements */
 }
 
