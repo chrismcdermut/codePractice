@@ -10,7 +10,7 @@ function bookManagementRefactor(operations) {
   return operations.map((operation) => {
     const [methodName, ...params] = operation;
     const result = bookManager[methodName].call(bookManager, ...params);
-    return result === undefined ? 'null' : JSON.stringify(result);
+    return result === undefined ? null : JSON.stringify(result);
   });
 }
 
@@ -29,16 +29,18 @@ describe('bookingManagement Test', () => {
         'false',
         'true',
         'false',
-        'null',
+        null,
         '{"id":10,"title":"New_Book_10"}',
-        'null',
+        null,
         '{"id":10,"title":"New_Book_10"}'],
     };
     const result = bookManagementRefactor(testOne.input);
+    console.log('result');
+    console.log(result);
     expect(result).toEqual(testOne.output);
   });
 
-  test('testOne', () => {
+  test('testTwo', () => {
     const testOne = {
       input: [['createBook', '10', 'Book 10']],
       output: ['true'],
@@ -48,7 +50,7 @@ describe('bookingManagement Test', () => {
     expect(result).toEqual(testOne.output);
   });
 
-  test('testOne', () => {
+  test('testThree', () => {
     const testOne = {
       input: [['updateBook', '462', 'Book 462']],
       output: ['false'],
@@ -59,7 +61,7 @@ describe('bookingManagement Test', () => {
   });
 
 
-  test('testOne', () => {
+  test('testFour', () => {
     const testOne = {
       input: [['createBook', '23', 'The Greeen Book'],
         ['createBook', '23', 'The Red Book'],
@@ -85,31 +87,31 @@ describe('bookingManagement Test', () => {
     expect(result).toEqual(testOne.output);
   });
 
-  test('testOne', () => {
+  test('testFive', () => {
     const testOne = {
       input: [['createBook', '733', 'Book 733'],
         ['findBookById', '236']],
       output: ['true',
-        'null'],
+        null],
     };
 
     const result = bookManagementRefactor(testOne.input);
     expect(result).toEqual(testOne.output);
   });
 
-  test('testOne', () => {
+  test('testSix', () => {
     const testOne = {
       input: [['createBook', '733', 'Book 733'],
         ['findBookById', '236']],
       output: ['true',
-        'null'],
+        null],
     };
 
     const result = bookManagementRefactor(testOne.input);
     expect(result).toEqual(testOne.output);
   });
 
-  test('testOne', () => {
+  test('testSeven', () => {
     const testOne = {
       input: [['createBook', '733', 'Book 733'],
         ['findBookById', '733']],
@@ -121,7 +123,7 @@ describe('bookingManagement Test', () => {
     expect(result).toEqual(testOne.output);
   });
 
-  test('testOne', () => {
+  test('testEight', () => {
     const testOne = {
       input: [['createBook', '269', 'Book 269'],
         ['updateBook', '454', 'Book 454'],
