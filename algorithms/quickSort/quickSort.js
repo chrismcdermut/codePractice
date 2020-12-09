@@ -1,31 +1,27 @@
-/* eslint-disable */
-// TODO: enable linting
-
-const list1 = [23, 4, 42, 8, 16, 15];
-const quickSort = (listArg) => {
+function quickSort(listArg) {
   let list = listArg;
   if (list.length < 2) return list;
-
-  const left = [];
-  const right = [];
+  const leftList = [];
+  const rightList = [];
   const pivot = list.length - 1;
   const pivotValue = list[pivot];
-
-  console.log('logging list.slice(0,pivot) and wondering about the concat');
-  console.log(list.slice(0, pivot));
-
   list = list.slice(0, pivot).concat(list.slice(pivot + 1));
-  console.log('logging list and wondering about the concat');
-  console.log(list);
-
   // for (const item of list) {
-  //   item < pivotValue ? left.push(item) : right.push(item);
+  //   item < pivotValue ? leftList.push(item) : rightList.push(item);
   // }
   list.forEach((item) => {
-    item < pivotValue ? left.push(item) : right.push(item);
+    // eslint-disable-next-line no-unused-expressions
+    item < pivotValue ? leftList.push(item) : rightList.push(item);
   });
 
-  return quickSort(left).concat([pivotValue], quickSort(right));
-};
+  const sortedList = quickSort(leftList).concat([pivotValue], quickSort(rightList));
+  return sortedList;
+}
 
-console.log(quickSort(list1));
+module.exports = { quickSort };
+
+module.exports.runQuickSort = function runQuickSort() {
+  const exampleList = [4, 56, 1, 14, 11, 67, 23, 3, 7, 89, 16, 2, 91, 34];
+  // answer [1, 2, 3, 4, 7, 11, 14, 16, 23, 34, 56, 67, 89, 91]
+  console.log(quickSort(exampleList)); /* eslint-disable-line no-console */
+};

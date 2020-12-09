@@ -1,5 +1,6 @@
 /* eslint-disable */
-// TODO: FINISH AND ENABLE LINTING
+// TODO: enable linting
+// TODO: finish this damn problem
 
 // remove by finding section of length k with
 // section of K elements with X property
@@ -29,8 +30,8 @@ function removeSection(string, K) {
       }
     });
   }
-  console.log('bestSection');
-  console.log(string.substring(indexOfBestSection, indexOfBestSection + K));
+  // console.log('bestSection');
+  // console.log(string.substring(indexOfBestSection, indexOfBestSection + K));
   return string.substring(indexOfBestSection, indexOfBestSection + K);
 }
 
