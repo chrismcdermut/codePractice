@@ -5,7 +5,7 @@ const fs = require('fs');
 // TODO: split up challenges
 // TODO: add appDesignSection?
 // ////SETUP HERE//////
-const solutionName = 'findArrayIntersect';
+const solutionName = 'determineCourseOrder';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || concept */
 const codeChallengeType = 'challenge';
