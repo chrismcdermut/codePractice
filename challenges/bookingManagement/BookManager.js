@@ -1,76 +1,60 @@
 class BookManager {
   constructor() {
-    // this.books = [];
-    this.books = {};
+    this.books = [];
   }
 
   createBook(idArg, title) {
-    // TODO: return false if the book id already exists
     const id = parseInt(idArg, 10);
-    // const foundBook = this.books.find((book) => book.id === id);
-    if (!this.books[id]) {
+    const foundBook = this.books.find((book) => book.id === id);
+    if (!foundBook) {
       const book = {};
       book.id = id;
       book.title = title;
-      // this.books = [...this.books, book];
-      this.books[id] = book;
+      this.books = [...this.books, book];
       return true;
     }
     return false;
   }
 
   updateBook(idArg, title) {
-    // TODO: return false if the book doesn't exist
     const id = parseInt(idArg, 10);
-    // const foundBook = this.books.find((book) => book.id === id);
-    if (!this.books[id]) {
+    const foundBook = this.books.find((book) => book.id === id);
+    if (!foundBook) {
       return false;
     }
+    const foundBookIndex = this.books.indexOf(foundBook);
+
     const book = {};
     book.id = id;
     book.title = title;
 
-    this.books[id] = book;
-
-    //  = this.books.filter(() => ({
-    //   id,
-    //   title,
-    // })
-
-    // );
-
+    const currentBookList = this.books;
+    currentBookList.splice(foundBookIndex, 1, book);
+    this.books = [...currentBookList];
     return true;
   }
 
   deleteBook(idArg) {
-    // TODO: return false if the book doesn't exist
     const id = parseInt(idArg, 10);
-    // let foundBook = this.books.find((book) => book.id === id);
-    if (!this.books[id]) {
+    const foundBook = this.books.find((book) => book.id === id);
+    const foundBookIndex = this.books.indexOf(foundBook);
+    if (!foundBook) {
       return false;
     }
-    delete this.books[id];
-    // // let foundBook = this.books.find((book) => book.id === id);
-    // console.log('foundBook');
-    // console.log(foundBook);
-    // // delete book;
-    // foundBook = null;
+    const newBookArray = this.books.splice(foundBookIndex, 1);
+    this.books = newBookArray;
     return true;
   }
 
   findBookById(idArg) {
     const id = parseInt(idArg, 10);
-    // const foundBook = this.books.find((book) => book.id === id);
-    // return foundBook || null;
-    // return this.books.find((book) => book.id === id);
-    return this.books[id] ? this.books[id] : null;
+    const foundBook = this.books.find((book) => book.id === id);
+    return foundBook || null;
   }
 
   findBookByTitle(title) {
-    // const foundBook = this.books.find((book) => book.title === title);
-    // return foundBook || null;
-    // return this.books.find((book) => book.title === title);
-    return this.books[title] ? this.books[title] : null;
+    const foundBook = this.books.find((book) => book.title === title);
+    return foundBook || null;
   }
 }
 

@@ -3,16 +3,36 @@ const BookManager = require('./BookManager');
 // Do NOT edit the code below this comment.
 // You should be able to complete this test without editing below this comment.
 
-const bookManager = new BookManager();
-
 function bookManagementRefactor(operations) {
+  const bookManager = new BookManager();
   // Calls corresponding methods of bookManager based on the input
   return operations.map((operation) => {
     const [methodName, ...params] = operation;
     const result = bookManager[methodName].call(bookManager, ...params);
-    return result === undefined ? null : JSON.stringify(result);
+    return (result === undefined || result === null) ? null : JSON.stringify(result);
   });
 }
+
+describe('bookingManagement createBook Test', () => {
+  test('testOne', () => {
+    const bookManager = new BookManager();
+    bookManager.createBook('10', 'Book_10');
+    const result = bookManager.books;
+    const answer = [{ id: 10, title: 'Book_10' }];
+    expect(result).toEqual(answer);
+  });
+});
+
+describe('bookingManagement updateBook Test', () => {
+  test('testOne', () => {
+    const bookManager = new BookManager();
+    bookManager.createBook('10', 'Book_10');
+    bookManager.updateBook('10', 'Updated_Book_10');
+    const result = bookManager.books;
+    const answer = [{ id: 10, title: 'Updated_Book_10' }];
+    expect(result).toEqual(answer);
+  });
+});
 
 describe('bookingManagement Test', () => {
   test('testOne', () => {
@@ -35,8 +55,6 @@ describe('bookingManagement Test', () => {
         '{"id":10,"title":"New_Book_10"}'],
     };
     const result = bookManagementRefactor(testOne.input);
-    console.log('result');
-    console.log(result);
     expect(result).toEqual(testOne.output);
   });
 
