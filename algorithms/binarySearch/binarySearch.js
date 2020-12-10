@@ -5,15 +5,19 @@ function binarySearch(list, lookFor) {
 
   // while there is something to search for
   while (min <= max) {
+    const pseudoLength = max - min;
     middle = Math.floor((min + max) / 2);
     if (list[middle] === lookFor) {
       return middle;
     }
+    if (pseudoLength === 1 && list[middle] !== lookFor) {
+      return -1; /* TODO: consolidate return statements */
+    }
     // eslint-disable-next-line no-unused-expressions
     list[middle] < lookFor ? (min = middle) : (max = middle);
   }
-  // TODO: make this case work
-  return -1;
+  // TODO: cover this line or change
+  return -1; /* TODO: consolidate return statements */
 }
 
 function seekElementBinarySearch(array, seekingElement) {
