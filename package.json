@@ -5,6 +5,9 @@
   "main": "algorithm.js",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
+    "testWatch": "jest --watch",
+    "testWatchAll": "jest --watchAll",
+    "generateSolution": "node -e 'require(\"./helpers/generateSolution\").generateDefaultSolution()'",
     "test": "jest --config jest.config.js",
     "binarySearch": "node -e 'require(\"./algorithms/binarySearch/binarySearch\").runBinarySearch()'",
     "bubbleSort": "node -e 'require(\"./algorithms/bubbleSort/bubbleSort\").runBubbleSort()'",
