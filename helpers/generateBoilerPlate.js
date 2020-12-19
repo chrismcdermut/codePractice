@@ -5,7 +5,7 @@ const fs = require('fs');
 // TODO: split up challenges
 // TODO: add appDesignSection?
 // ////SETUP HERE//////
-const solutionName = 'findArrayIntersect';
+const solutionName = 'jsQuiz';
 // TODO: look into setting up map or enum for this
 /* challenge || dataStructure || algorithm || designPattern || concept */
 const codeChallengeType = 'challenge';
@@ -110,14 +110,13 @@ module.exports = ${solutionName};
 
 const algorithmTestJS = `const ${solutionName} = require('./${solutionName}')
 
-const testOne = {
-  input: '',
-  output: ''
-}
-
 describe('${solutionName} Test', () => {
 
   test('testOne', ()=>{
+    const testOne = {
+      input: '',
+      output: ''
+    }
     let result = ${solutionName}(testOne.input)
     expect(result).toEqual(testOne.output);
   });
